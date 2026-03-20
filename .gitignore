@@ -1,0 +1,26 @@
+# Secrets & credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials.json
+token.json
+client_secret*.json
+oauth_tokens/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Uploaded financial documents (sensitive)
+finance/statements/
