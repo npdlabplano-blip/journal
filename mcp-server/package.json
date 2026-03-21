@@ -1,0 +1,18 @@
+{
+  "name": "journal-mcp-server",
+  "version": "1.0.0",
+  "description": "Custom Google MCP server for the Journal personal organization system",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "auth": "node src/auth.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "googleapis": "^171.4.0"
+  }
+}
