@@ -1,3 +1,26 @@
+# Security Commandments
+
+These rules are NON-NEGOTIABLE and must be followed in every task, recommendation, and code output.
+
+## 1. No Plaintext Secrets
+- NEVER store secrets, passwords, API keys, tokens, or credentials in plaintext files, source code, or environment variables.
+- ALL credentials must be managed through 1Password. Use the 1Password CLI (`op`) or 1Password Connect/SDKs for programmatic access.
+- If a workflow requires a secret, implement 1Password retrieval — do not fall back to `.env` files, hardcoded values, or shell exports.
+
+## 2. Secure by Design
+- All recommendations, architectures, and code must follow secure-by-design principles.
+- When presenting options, always order from MOST secure to LEAST secure.
+- Default to the most secure option unless there is a clear, stated reason to choose otherwise.
+- Apply defense in depth: least privilege, input validation, encryption at rest and in transit, secure defaults.
+
+## 3. Third-Party Software Vetting
+- Any recommendation of a third-party open-source tool that is NOT widely known and battle-tested must include an ALL CAPS risk callout, e.g.:
+  - **THIRD-PARTY RISK WARNING: [tool-name] IS A LESSER-KNOWN OPEN-SOURCE PACKAGE. REVIEW ITS SOURCE, MAINTAINER HISTORY, AND DEPENDENCY CHAIN BEFORE USE.**
+- "Well-known" means broadly adopted with established trust (e.g., Express, React, PostgreSQL, nginx). When in doubt, include the warning.
+- Never silently introduce unfamiliar dependencies.
+
+---
+
 # Journal — Personal Organization System
 
 ## Overview
@@ -147,14 +170,17 @@ This was chosen over third-party community MCP servers for security — user con
 - **Bank statements/transactions** — uploaded manually to `finance/statements/` for security. No direct banking API access. This is an intentional security boundary.
 
 ### Security Principles
-- All API credentials stored in `.env` file (git-ignored, never committed)
+- ALL credentials and API keys managed through 1Password — no `.env` files, no plaintext, no environment variables
+- Use 1Password CLI (`op`) or 1Password Connect/SDKs for runtime secret retrieval
 - OAuth 2.0 for all Google integrations — no stored passwords
+- OAuth tokens stored in 1Password, not on disk
 - Principle of least privilege: each connector gets only the scopes it needs
   - Calendar: read-only
   - Gmail: read-only
   - Drive: read/write (scoped to specific folders)
-- `.env`, credentials, and tokens are in `.gitignore`
+- Credentials and tokens are in `.gitignore` as a safety net, but should not exist as files at all
 - No direct access to banking or financial accounts
 - Secrets never logged, never written to data files
 - Regular review of OAuth token scopes and access
 - Custom MCP server preferred over third-party for full code auditability
+- All third-party dependencies must be vetted — lesser-known packages require explicit risk callout
