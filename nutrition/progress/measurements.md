@@ -31,10 +31,6 @@ Measurements tell the real story — the scale can't tell you if you're losing f
 - **How:** Stand with your weight evenly on both feet. Wrap the tape around the thickest part. Keep it level.
 - **Tip:** You can put your pinky on your knee and stretch out your thumb to find roughly the center of your thigh.
 
-### 5. Arm (Right Arm)
-- **Where:** Around the thickest part of your upper arm (bicep area), roughly halfway between your shoulder and elbow
-- **How:** Let your arm hang relaxed at your side — do NOT flex. Wrap the tape around the peak of the muscle belly.
-
 ## Video Reference
 This is a great step-by-step walkthrough for women measuring themselves at home:
 https://www.youtube.com/watch?v=xSBPaCQQPIQ
@@ -43,17 +39,17 @@ https://www.youtube.com/watch?v=xSBPaCQQPIQ
 
 ## Measurement Log
 
-| Date | Waist | Hips | Bust | Thigh | Arm | Notes |
-|------|-------|------|------|-------|-----|-------|
-| 2026-03-22 | — | — | — | — | — | Starting measurements (fill in today) |
+| Date | Waist | Hips | Bust | Thigh | Notes |
+|------|-------|------|------|-------|-------|
+| 2026-03-22 | — | — | — | — | Starting measurements (fill in today) |
 
 ---
 
 ## Change Tracking
 
-| Period | Waist | Hips | Bust | Thigh | Arm | Total Inches Lost |
-|--------|-------|------|------|-------|-----|-------------------|
-| Starting → Week 2 | — | — | — | — | — | — |
+| Period | Waist | Hips | Bust | Thigh | Total Inches Lost |
+|--------|-------|------|------|-------|-------------------|
+| Starting → Week 2 | — | — | — | — | — |
 
 ---
 

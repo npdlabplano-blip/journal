@@ -221,7 +221,7 @@ Nicole is actively working toward a weight loss goal. The agent should support a
 ### Body Measurements (Every 2 Weeks)
 - **When:** Every other Sunday, same time as progress photos
 - **Log to:** `nutrition/progress/measurements.md`
-- **Measurements:** Waist, hips, bust, thigh (right), arm (right)
+- **Measurements:** Waist, hips, bust, thigh (right)
 - **Coaching notes:**
   - Inches lost matter more than pounds when the scale stalls
   - Waist is the single best health indicator
