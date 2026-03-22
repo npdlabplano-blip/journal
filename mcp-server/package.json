@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "auth": "node src/auth.js"
+    "auth": "node src/auth.js",
+    "kroger-auth": "node src/kroger-auth.js"
   },
   "keywords": [],
   "author": "",

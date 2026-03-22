@@ -10,10 +10,12 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { getAuthClient } from "./auth.js";
+import { getKrogerAuthClients } from "./kroger-auth.js";
 import { registerCalendarTools } from "./calendar.js";
 import { registerGmailTools } from "./gmail.js";
 import { registerDriveTools } from "./drive.js";
 import { registerDocsTools } from "./docs.js";
+import { registerKrogerTools } from "./kroger.js";
 
 async function main() {
   // Create the MCP server instance
@@ -32,6 +34,16 @@ async function main() {
   registerGmailTools(server, authClient);
   registerDriveTools(server, authClient);
   registerDocsTools(server, authClient);
+
+  // Get authenticated Kroger API clients and register Kroger tools
+  // This pulls Kroger credentials and tokens from 1Password
+  try {
+    const krogerClients = await getKrogerAuthClients();
+    registerKrogerTools(server, krogerClients);
+  } catch (err) {
+    // Don't block the entire server if Kroger auth isn't set up yet
+    console.error(`Kroger tools unavailable: ${err.message}`);
+  }
 
   // Connect via stdio transport
   // Claude Code communicates with us through stdin/stdout
