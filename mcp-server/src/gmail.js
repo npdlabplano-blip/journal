@@ -6,6 +6,8 @@
  * - list_emails: Search/list emails using Gmail query syntax
  * - read_email: Read full email content by ID
  * - trash_email: Move an email to trash
+ * - archive_email: Archive an email (remove from inbox, keep in All Mail)
+ * - archive_emails: Archive multiple emails at once
  * - send_email: Compose and send an email
  */
 
@@ -250,6 +252,82 @@ export function registerGmailTools(server, authClient) {
           {
             type: "text",
             text: `Email ${emailId} moved to trash.`,
+          },
+        ],
+      };
+    }
+  );
+
+  /**
+   * Archive a single email.
+   * Removes the INBOX label — email stays in All Mail and is searchable.
+   */
+  server.tool(
+    "archive_email",
+    "Archive an email (removes from inbox, keeps in All Mail). Use list_emails to find IDs first.",
+    {
+      emailId: z
+        .string()
+        .describe("The email ID to archive (from list_emails results)"),
+    },
+    async ({ emailId }) => {
+      await gmail.users.messages.modify({
+        userId: "me",
+        id: emailId,
+        requestBody: {
+          removeLabelIds: ["INBOX"],
+        },
+      });
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Email ${emailId} archived.`,
+          },
+        ],
+      };
+    }
+  );
+
+  /**
+   * Archive multiple emails at once.
+   * Useful for bulk inbox cleanup.
+   */
+  server.tool(
+    "archive_emails",
+    "Archive multiple emails at once (removes from inbox, keeps in All Mail). Use list_emails to find IDs first.",
+    {
+      emailIds: z
+        .array(z.string())
+        .describe("Array of email IDs to archive (from list_emails results)"),
+    },
+    async ({ emailIds }) => {
+      const results = await Promise.all(
+        emailIds.map(async (emailId) => {
+          try {
+            await gmail.users.messages.modify({
+              userId: "me",
+              id: emailId,
+              requestBody: {
+                removeLabelIds: ["INBOX"],
+              },
+            });
+            return { id: emailId, status: "archived" };
+          } catch (error) {
+            return { id: emailId, status: "failed", error: error.message };
+          }
+        })
+      );
+
+      const archived = results.filter((r) => r.status === "archived").length;
+      const failed = results.filter((r) => r.status === "failed").length;
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Archived ${archived} email(s).${failed > 0 ? ` ${failed} failed.` : ""}\n\n${JSON.stringify(results, null, 2)}`,
           },
         ],
       };
