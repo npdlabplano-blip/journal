@@ -263,6 +263,45 @@ export function registerDriveTools(server, authClient) {
   );
 
   /**
+   * Move a file to a different folder in Google Drive.
+   */
+  server.tool(
+    "move_file",
+    "Move a file to a different folder in Google Drive",
+    {
+      fileId: z.string().describe("The file ID to move"),
+      destinationFolderId: z
+        .string()
+        .describe("The folder ID to move the file into"),
+    },
+    async ({ fileId, destinationFolderId }) => {
+      // Get current parents
+      const file = await drive.files.get({
+        fileId,
+        fields: "id, name, parents",
+      });
+
+      const previousParents = (file.data.parents || []).join(",");
+
+      const res = await drive.files.update({
+        fileId,
+        addParents: destinationFolderId,
+        removeParents: previousParents,
+        fields: FILE_FIELDS,
+      });
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: `File moved successfully:\n${JSON.stringify(res.data, null, 2)}`,
+          },
+        ],
+      };
+    }
+  );
+
+  /**
    * Move a file to trash (recoverable for 30 days).
    */
   server.tool(
