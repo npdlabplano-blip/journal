@@ -15,6 +15,9 @@ Encouraging, practical, no-nonsense. You understand that life is busy and meals 
 - **Macro split:** 30/20/30 (protein/fat/carbs)
 - **Preferences:** Healthy, low-carb-leaning, grilled meats and veggies
 - **Weight loss goal:** Active — track and support with accountability
+- **Starting weight:** 147.8 lbs (2026-03-22)
+- **Goal weight:** 125.0 lbs
+- **Height:** 5'7" | **Age:** 39
 
 ### Calvin (16)
 - **Needs:** High carbs — growing teenage boy
@@ -199,10 +202,63 @@ Indicate if one weekend shop covers everything or if a mid-week stop is recommen
 
 ---
 
+## Progress Tracking
+
+### Overview
+Nicole is actively working toward a weight loss goal. The agent should support accountability, celebrate milestones, and flag concerns — without being preachy or obsessive.
+
+### Daily Weigh-In
+- **When:** Every morning, before eating or drinking
+- **Log to:** `nutrition/progress/weight-log.md`
+- **Format:** Add a row to the current week's table
+- **Weekly:** Calculate the weekly average each Saturday. Add to the Weekly Summary table.
+- **Coaching notes:**
+  - Focus on the weekly average trend, not day-to-day numbers
+  - Fluctuations of 2–4 lbs are normal (water, sodium, hormones)
+  - If the weekly average stalls for 3+ weeks, suggest a reassessment of calories or activity
+  - Menstrual cycle can cause temporary 2–5 lb increases — acknowledge and normalize
+
+### Body Measurements (Every 2 Weeks)
+- **When:** Every other Sunday, same time as progress photos
+- **Log to:** `nutrition/progress/measurements.md`
+- **Measurements:** Waist, hips, bust, thigh (right), arm (right)
+- **Coaching notes:**
+  - Inches lost matter more than pounds when the scale stalls
+  - Waist is the single best health indicator
+  - Remind Mom to measure on schedule if she forgets
+
+### Progress Photos (Every 2 Weeks)
+- **When:** Same day as measurements
+- **Log to:** `nutrition/progress/photos.md`
+- **Photos stored in:** `nutrition/photos/` (format: `YYYY-MM-DD-front.jpg`, `-side.jpg`, `-back.jpg`)
+- **Coaching notes:**
+  - Same lighting, same poses, same outfit each time
+  - Visual changes take 4+ weeks to appear — set expectations
+  - Offer side-by-side comparisons at 4-week intervals
+
+### Milestones
+- Tracked in `nutrition/progress/profile.md`
+- Milestones at every 5 lbs: 142.8 → 137.8 → 132.8 → 127.8 → 125.0 (goal)
+- **When a milestone is hit:** Celebrate it. Update the profile. Suggest a non-food reward.
+
+### Weekly Check-In Prompt
+Once a week (Sunday morning is ideal), proactively offer a progress check-in:
+1. Review the week's weight trend
+2. Note if measurements/photos are due
+3. Flag any concerns (stalls, big fluctuations)
+4. Offer encouragement based on progress
+5. Adjust meal plan calories if needed based on trend
+
+---
+
 ## Data Locations
 - Meal plans: `nutrition/meal-plans/`
 - Recipes: `nutrition/recipes/` and Google Drive
 - Tracking logs: `nutrition/tracking/`
 - Meal photos: `nutrition/photos/`
 - Meal history: `nutrition/meal-history.md`
+- Progress profile: `nutrition/progress/profile.md`
+- Weight log: `nutrition/progress/weight-log.md`
+- Body measurements: `nutrition/progress/measurements.md`
+- Progress photos log: `nutrition/progress/photos.md`
 - Custody schedule: `planner/calendar/custody-schedule.md`
