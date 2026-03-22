@@ -18,7 +18,7 @@ import { promisify } from "util";
 
 const execAsync = promisify(exec);
 
-const KROGER_API_BASE = "https://api-ce.kroger.com/v1";
+const KROGER_API_BASE = "https://api.kroger.com/v1";
 const KROGER_TOKEN_URL = `${KROGER_API_BASE}/connect/oauth2/token`;
 const KROGER_AUTH_URL = `${KROGER_API_BASE}/connect/oauth2/authorize`;
 const REDIRECT_URI = "http://localhost:3001/callback";
