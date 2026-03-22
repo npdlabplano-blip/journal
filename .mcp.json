@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "journal-google": {
+      "command": "node",
+      "args": ["mcp-server/src/index.js"],
+      "cwd": "/Users/namsler123/Documents/journal"
+    }
+  }
+}
