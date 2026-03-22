@@ -38,7 +38,12 @@ const OP_TOKEN_ITEM = "Journal MCP - Google Tokens";
  */
 async function opRead(args) {
   const { stdout } = await execAsync(`op ${args}`);
-  return stdout.trim();
+  let val = stdout.trim();
+  // 1Password CLI wraps concealed fields in outer quotes and escapes inner quotes
+  if (val.startsWith('"') && val.endsWith('"')) {
+    val = val.slice(1, -1).replace(/""/g, '"');
+  }
+  return val;
 }
 
 /**
@@ -198,9 +203,6 @@ export async function getAuthClient() {
     await saveTokens(merged);
   });
 
-  // Re-lock 1Password so next access requires biometric
-  await opRead("lock");
-
   return oauth2Client;
 }
 
@@ -217,9 +219,6 @@ async function main() {
 
   const oauth2Client = createOAuth2Client(clientId, clientSecret);
   await authorize(oauth2Client);
-
-  // Re-lock 1Password so next access requires biometric
-  await opRead("lock");
 
   console.log("Setup complete! The MCP server can now access your Google account.");
 }
