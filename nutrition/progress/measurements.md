@@ -41,7 +41,7 @@ https://www.youtube.com/watch?v=xSBPaCQQPIQ
 
 | Date | Waist | Hips | Bust | Thigh | Notes |
 |------|-------|------|------|-------|-------|
-| 2026-03-22 | — | — | — | — | Starting measurements (fill in today) |
+| 2026-03-22 | 29" | 41" | 34.5" | 23.5" | Starting measurements (fill in today) |
 
 ---
 
