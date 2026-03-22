@@ -310,7 +310,13 @@ export async function getKrogerAuthClients() {
       throw new Error(`Kroger API error: ${res.status} ${text}`);
     }
 
-    return res.json();
+    // Some endpoints (e.g., cart PUT) return 204 No Content
+    if (res.status === 204 || res.headers.get("content-length") === "0") {
+      return { success: true };
+    }
+
+    const text = await res.text();
+    return text ? JSON.parse(text) : { success: true };
   }
 
   return { makeClientRequest, makeUserRequest };
