@@ -143,7 +143,7 @@ async function authorize(clientId, clientSecret) {
     `${KROGER_AUTH_URL}?client_id=${encodeURIComponent(clientId)}` +
     `&redirect_uri=${encodeURIComponent(REDIRECT_URI)}` +
     `&response_type=code` +
-    `&scope=${encodeURIComponent("cart.basic:write profile.compact")}`;
+    `&scope=${encodeURIComponent("cart.basic:write")}`;
 
   console.log("\nOpening your browser to authorize with Kroger...\n");
 
