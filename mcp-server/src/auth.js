@@ -163,6 +163,8 @@ async function authorize(oauth2Client) {
     });
 
     server.listen(3000, () => {
+      console.log("If the browser doesn't open automatically, visit this URL:\n");
+      console.log(authUrl + "\n");
       // Open the browser to the Google consent page
       exec(`open "${authUrl}"`);
     });
