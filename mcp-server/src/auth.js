@@ -86,7 +86,7 @@ async function saveTokens(tokens) {
   } catch {
     // Item doesn't exist yet — create it
     await execAsync(
-      `op item create --category=api-credential --title="${OP_TOKEN_ITEM}" --vault="${OP_VAULT}" 'tokens[concealed]'='${tokenJson}'`
+      `op item create --category="API Credential" --title="${OP_TOKEN_ITEM}" --vault="${OP_VAULT}" 'tokens[concealed]'='${tokenJson}'`
     );
   }
 }
