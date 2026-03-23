@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meal Plan — Week of {{WEEK_DATE_RANGE}}</title>
+<style>
+  @media print {
+    body { margin: 0.4in; }
+    .page-break { page-break-before: always; }
+  }
+  body {
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #1a1a1a;
+    max-width: 7.5in;
+    margin: 0 auto;
+    padding: 0.5in;
+  }
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 14px;
+    background: #2c3e50;
+    color: white;
+    padding: 5px 10px;
+    margin: 16px 0 8px 0;
+    border-radius: 3px;
+  }
+  h3 {
+    font-size: 12px;
+    margin: 10px 0 4px 0;
+    color: #2c3e50;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+  th {
+    background: #ecf0f1;
+    font-weight: 600;
+    text-align: left;
+    padding: 4px 8px;
+    border: 1px solid #bdc3c7;
+  }
+  td {
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+  }
+  tr:nth-child(even) { background: #f9f9f9; }
+  .checklist {
+    list-style: none;
+    padding-left: 0;
+    margin: 4px 0;
+  }
+  .checklist li {
+    padding: 3px 0 3px 24px;
+    position: relative;
+    line-height: 1.4;
+  }
+  .checklist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid #555;
+    border-radius: 2px;
+  }
+  .note {
+    font-style: italic;
+    color: #555;
+    font-size: 10px;
+    margin: 2px 0 8px 0;
+  }
+  .section-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 12px 0;
+  }
+</style>
+</head>
+<body>
+
+<!--
+  PRINTABLE MEAL PLAN TEMPLATE
+  ============================
+  Generated alongside the weekly meal plan markdown file.
+  Filename: YYYY-MM-DD-week-printable.html
+  Print: Open in browser → Cmd+P → Save as PDF
+
+  SECTIONS (all required):
+  1. Sunday Prep Plan — grill session table + prep task checklist with checkboxes
+  2. Dinner Menu — each night with meal, headcount, Mom's portion detail, cal/P/F/C
+  3. Packed Lunches — Mon–Thu (or as needed), all 3 family members, Mom gets cal + ingredients
+  4. Mom's Breakfast Rotation — with calories
+  5. Key Times This Week — calendar events that impact meals
+  6. Beverage Rules — weekday/weekend rules
+  7. Recipes (page break) — all recipes referenced in the plan, condensed format:
+     - Header line: prep/cook time, servings, nutrition per serving
+     - Ingredient table
+     - Condensed numbered instructions
+     - Family portion notes where applicable
+     - Ordered: Sunday grill proteins → prep items → weeknight sides/meals in day order
+-->
+
+<h1>Week of {{WEEK_DATE_RANGE}}</h1>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: SUNDAY PREP PLAN                                   -->
+<!-- ============================================================ -->
+<h2>SUNDAY PREP PLAN ({{SUNDAY_DATE}})</h2>
+
+<h3>Grill Session</h3>
+<table>
+  <tr><th>Protein</th><th>Qty</th><th>Marinade</th></tr>
+  <!-- {{GRILL_ROWS}} -->
+</table>
+
+<h3>Prep Tasks</h3>
+<ul class="checklist">
+  <!-- {{PREP_TASK_ITEMS}} — each <li> becomes a printable checkbox -->
+</ul>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 2: DINNER MENU                                        -->
+<!-- Include Mom's portion detail + macros for every night          -->
+<!-- ============================================================ -->
+<h2>DINNER MENU</h2>
+<table>
+  <tr><th>Night</th><th>Meal</th><th>People</th><th>Mom's Portion</th><th>Cal</th><th>P</th><th>F</th><th>C</th></tr>
+  <!-- {{DINNER_ROWS}} -->
+</table>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 3: PACKED LUNCHES                                     -->
+<!-- Include every weekday. Mom gets ingredients + calories.        -->
+<!-- ============================================================ -->
+<h2>PACKED LUNCHES</h2>
+<table>
+  <tr><th>Packed For</th><th>Mom</th><th>Calvin</th><th>Connie</th></tr>
+  <!-- {{LUNCH_ROWS}} -->
+</table>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 4: MOM'S BREAKFAST ROTATION                           -->
+<!-- ============================================================ -->
+<h2>MOM'S BREAKFAST ROTATION</h2>
+<table>
+  <tr><th>Days</th><th>Option</th><th>Cal</th></tr>
+  <tr><td>Mon / Wed / Fri</td><td>Protein Shake</td><td>280</td></tr>
+  <tr><td>Tue / Thu</td><td>Protein Box (egg, cheese stick, grapes, muesli bread, PB)</td><td>310</td></tr>
+  <tr><td>Sat / rushed days</td><td>IQ Bar + hard-boiled egg</td><td>250</td></tr>
+</table>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 5: KEY TIMES THIS WEEK                                -->
+<!-- Calendar events that affect meal timing or headcount           -->
+<!-- ============================================================ -->
+<h2>KEY TIMES THIS WEEK</h2>
+<table>
+  <tr><th>Day</th><th>Event</th><th>Impact</th></tr>
+  <!-- {{EVENT_ROWS}} -->
+</table>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- SECTION 6: BEVERAGE RULES                                     -->
+<!-- ============================================================ -->
+<h2>BEVERAGE RULES</h2>
+<table>
+  <tr><th>When</th><th>Rule</th></tr>
+  <tr><td><strong>Mon–Thu evenings</strong></td><td>Sparkling water only. No IPAs.</td></tr>
+  <tr><td><strong>Fri–Sun evenings</strong></td><td>1–2 IPAs OK (~220 cal each)</td></tr>
+  <tr><td><strong>All day</strong></td><td>Water before every coffee &amp; every Diet Coke</td></tr>
+  <tr><td><strong>Sweet cravings</strong></td><td>Frozen grapes, frozen banana slices, or herbal tea</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 7: RECIPES                                            -->
+<!-- All recipes referenced in the week's plan.                    -->
+<!-- Order: Sunday grill proteins → prep items → weeknight meals   -->
+<!-- Each recipe: header line (time/servings/nutrition),            -->
+<!--   ingredient table, condensed instructions, family notes       -->
+<!-- ============================================================ -->
+<h1>Recipes</h1>
+
+<!-- {{RECIPE_BLOCKS}} -->
+<!--
+  Each recipe block follows this pattern:
+
+  <h2>Recipe Name</h2>
+  <p><strong>Prep:</strong> X min &nbsp;|&nbsp; <strong>Cook:</strong> X min &nbsp;|&nbsp; <strong>Servings:</strong> X &nbsp;|&nbsp; <strong>Per serving:</strong> X cal / Xg P / Xg F / Xg C</p>
+  <table>
+    <tr><th>Ingredient</th><th>Qty</th></tr>
+    ...rows...
+  </table>
+  <ol>
+    <li>Condensed instruction step</li>
+    ...
+  </ol>
+  <p class="note">Family notes if applicable (e.g., Calvin gets buns, Mom does lettuce wrap)</p>
+
+  <hr class="section-divider">
+-->
+
+</body>
+</html>

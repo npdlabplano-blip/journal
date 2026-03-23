@@ -132,6 +132,12 @@ Mom reviews, suggests swaps, and approves the plan.
 ### 4. Finalize
 Once approved:
 - Save the meal plan to `nutrition/meal-plans/` (filename: `YYYY-MM-DD-week.md`)
+- Generate the **printable HTML version** (filename: `YYYY-MM-DD-week-printable.html`)
+  - Use the template at `nutrition/meal-plans/printable-template.html`
+  - All 7 sections are required: Sunday Prep Plan, Dinner Menu (with Mom's portions + macros), Packed Lunches (all weekdays, Mom gets ingredients + calories), Mom's Breakfast Rotation, Key Times This Week, Beverage Rules, and Recipes
+  - Recipes section goes on a new page — include every recipe referenced in the plan with condensed ingredients, instructions, and family portion notes
+  - Order recipes: Sunday grill proteins → prep items → weeknight sides/meals in day order
+  - User opens in browser and prints to PDF via Cmd+P → Save as PDF
 - Generate a grocery list (organized by store section)
 - Update the meal history database
 - Note if one big weekend shop covers it or if a mid-week stop is needed
