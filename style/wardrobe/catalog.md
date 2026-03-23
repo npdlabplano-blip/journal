@@ -158,8 +158,8 @@ Last updated: 2026-03-22
 | 502 | Cowboy boots | — | — | Boots (cowboy) | Fall/Winter | Casual, Church | `1Hm-F7YezsD4NQo-Hjz-2HYV7SASevJUn` |
 | 503 | Grey suede boots | — | Grey | Boots (suede) | Fall/Winter | Work, Church | `1Apg6AXuHwqr3p-bGEWrmfV-D4hlR_Pxm` |
 | 504 | Brown booties | — | Brown | Booties | Fall/Winter | Work, Church | `1HjAQJBw1BGLXzKNQQprQ2cG6nHn1lCeL` |
-| 505 | Brown boots | — | Brown | Boots | Fall/Winter | Work, Church | `1ex8YZ3P_MAElvxa2LN8YOpvleqh_tY8S` |
-| 506 | Brown boots | — | Brown | Boots | Fall/Winter | Casual | `1aAHf--PzEx1YFdjoWnxuN6X_pizTQ68C` |
+| 505 | Brown industrial style boots | — | Brown | Boots (industrial) | Fall/Winter | Casual | `1ex8YZ3P_MAElvxa2LN8YOpvleqh_tY8S` |
+| 506 | Brown knee-high boots | — | Brown | Boots (knee-high) | Fall/Winter | Work, Church | `1aAHf--PzEx1YFdjoWnxuN6X_pizTQ68C` |
 | 507 | Black boots | — | Black | Boots | Fall/Winter | Work, Church | `10VAHSc-LHe89GIIDM9muLznBJ4Mod5Yn` |
 | 508 | White shoes | — | White | Sneakers/Flats | Spring/Summer | Casual | `1R5oGgKJLdrIYuLUIH8oXhCEBb5rblPp8` |
 | 509 | White shoes | — | White | Sneakers | Year-round | Casual | `11VBOUPzOB78319kOBSHHreVpJ30Smin2` |
