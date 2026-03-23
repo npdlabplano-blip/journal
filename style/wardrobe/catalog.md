@@ -162,9 +162,9 @@ Last updated: 2026-03-22
 | 506 | Brown boots | — | Brown | Boots | Fall/Winter | Casual | `1aAHf--PzEx1YFdjoWnxuN6X_pizTQ68C` |
 | 507 | Black boots | — | Black | Boots | Fall/Winter | Work, Church | `10VAHSc-LHe89GIIDM9muLznBJ4Mod5Yn` |
 | 508 | White shoes | — | White | Sneakers/Flats | Spring/Summer | Casual | `1R5oGgKJLdrIYuLUIH8oXhCEBb5rblPp8` |
-| 509 | White shoes (kids event) | — | White | Sneakers | Year-round | Casual | `11VBOUPzOB78319kOBSHHreVpJ30Smin2` |
-| 510 | White shoes (kids event) | — | White | Sneakers | Year-round | Casual | `11W1DIy7gJPgLCbcu6HHkNF7YIHqoh4Ma` |
-| 511 | Butterfly shoes (kids) | — | — | Sneakers | Year-round | Casual | `1Ypg9wJSbo1AqEsQME2JazvuAvhHoDe7A` |
+| 509 | White shoes | — | White | Sneakers | Year-round | Casual | `11VBOUPzOB78319kOBSHHreVpJ30Smin2` |
+| 510 | White shoes | — | White | Sneakers | Year-round | Casual | `11W1DIy7gJPgLCbcu6HHkNF7YIHqoh4Ma` |
+| 511 | Butterfly shoes | — | — | Sneakers | Year-round | Casual | `1Ypg9wJSbo1AqEsQME2JazvuAvhHoDe7A` |
 | 512 | Converse | Converse | — | Sneakers | Year-round | Casual | `1oVzN20KCsmW-fsmi6RLYEW0Gs-rBI_wc` |
 | 513 | Wedge | — | — | Wedge | Spring/Summer | Church, Date Night | `1itW6_SAWvpX_qV6ytde1GhfzTkYdu87R` |
 | 514 | Wedge | — | — | Wedge | Spring/Summer | Church, Date Night | `1gMMmGfpguxggoEWcWORIyIiwS4fjfltm` |
