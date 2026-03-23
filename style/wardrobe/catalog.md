@@ -54,7 +54,7 @@ Last updated: 2026-03-22
 | 84 | Blue sweater | — | Blue | Sweater | Fall/Winter | Work, Church | `1KwGwlqoWk1a3L-EZsa6CjFk28palEZmZ` |
 | 85a | Light blue sweater | — | Light blue | Sweater | Fall/Winter | Work, Church | `1ve5v-x5Dm3QQP3whZLRfhf7xOVFBO64b` |
 | 85b | Pink hoodie | — | Pink | Hoodie | Year-round | Casual, Lounge | `1CFZAzosor2ZQOFyqtNTJbpfkDcfe4t71` |
-| 109 | Sleeveless top | Fortune & Ivy | — | Sleeveless | Spring/Summer | Work, Church | `1eMFoXMLFSAWDPC7aA2gG3z-YcXAqxkFL` |
+| 86 | Sleeveless top | Fortune & Ivy | — | Sleeveless | Spring/Summer | Work, Church | `1eMFoXMLFSAWDPC7aA2gG3z-YcXAqxkFL` |
 | 145 | T-shirt | Victoria's Secret | — | T-shirt | Year-round | Casual, Lounge | `1ZFx_E4LeS0-wuw6KC3fk--QLyIQ6MFFK` |
 | 147 | Hoodie | CBF | — | Hoodie | Year-round | Casual, Lounge | `1nUZUTLikgtBTZytuzH9sHyKCU8dUA5me` |
 | 213 | Top | CBF Kids | — | Top | Year-round | Casual | `1n5dtL4sb4trbspnfl6FZu3cLlOymi2Eu` |
