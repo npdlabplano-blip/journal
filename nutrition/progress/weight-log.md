@@ -13,7 +13,7 @@ Add a row each morning. At the end of each week (Saturday), calculate the weekly
 | Day | Date | Weight | Notes |
 |-----|------|--------|-------|
 | Sun | 2026-03-22 | 147.8 | Starting weight |
-| Mon | 2026-03-23 | | |
+| Mon | 2026-03-23 | 146.3 | -1.5 from yesterday |
 | Tue | 2026-03-24 | | |
 | Wed | 2026-03-25 | | |
 | Thu | 2026-03-26 | | |
