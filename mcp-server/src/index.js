@@ -16,6 +16,8 @@ import { registerGmailTools } from "./gmail.js";
 import { registerDriveTools } from "./drive.js";
 import { registerDocsTools } from "./docs.js";
 import { registerKrogerTools } from "./kroger.js";
+import { getOpenAIClient } from "./openai-auth.js";
+import { registerImageTools } from "./image-generation.js";
 
 async function main() {
   // Create the MCP server instance
@@ -43,6 +45,16 @@ async function main() {
   } catch (err) {
     // Don't block the entire server if Kroger auth isn't set up yet
     console.error(`Kroger tools unavailable: ${err.message}`);
+  }
+
+  // Get authenticated OpenAI client and register image generation tools
+  // This pulls the OpenAI API key from 1Password
+  try {
+    const openaiClient = await getOpenAIClient();
+    registerImageTools(server, openaiClient);
+  } catch (err) {
+    // Don't block the entire server if OpenAI auth isn't set up yet
+    console.error(`Image generation tools unavailable: ${err.message}`);
   }
 
   // Connect via stdio transport
