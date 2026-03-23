@@ -14,7 +14,7 @@ Track what Nicole wears each day to avoid repeats and surface underused pieces.
 
 | Date | Occasion | Top | Bottom | Layer | Shoes | Rating | Notes |
 |------|----------|-----|--------|-------|-------|--------|-------|
-| | | | | | | | |
+| 2026-03-23 | Work | #61 Vera Wang black flowered blouse | #121 Dark wash straight leg jeans | #207 Black jacket | #501 Black booties | | Business casual/cute/techy vibe. [Image](2026-03-23-work.png) |
 
 ---
 
