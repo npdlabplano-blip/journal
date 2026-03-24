@@ -16,6 +16,7 @@
 - **Protein:** 30% → ~98g
 - **Fat:** 20% → ~29g
 - **Carbs:** 30% → ~98g
+- **Fiber:** 25g (FDA recommendation for women)
 
 ## BMI Reference (5'7")
 - **Starting BMI:** 23.1 (normal range)
