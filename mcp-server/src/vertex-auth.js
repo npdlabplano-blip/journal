@@ -37,9 +37,15 @@ async function opRead(args) {
  * - location: the GCP region
  */
 export async function getVertexAIClient() {
-  const serviceAccountJson = await opRead(
+  let serviceAccountJson = await opRead(
     `item get "${OP_ITEM}" --vault="${OP_VAULT}" --fields notesPlain --reveal`
   );
+
+  // 1Password wraps the output in quotes and double-escapes inner quotes
+  // Strip the outer quotes and unescape the doubled quotes
+  if (serviceAccountJson.startsWith('"') && serviceAccountJson.endsWith('"')) {
+    serviceAccountJson = serviceAccountJson.slice(1, -1).replace(/""/g, '"');
+  }
 
   const credentials = JSON.parse(serviceAccountJson);
 
