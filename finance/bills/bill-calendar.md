@@ -34,7 +34,8 @@
 |---|---:|---|---|---|
 | Rhythm Room / VTD Dance | $149 | Monthly (~1st–5th) | Capital One | Constance's dance |
 | Rec Center (Lewisville) | $75 | Monthly (~11th) | Capital One | |
-| Rag Mops Cleaning | $191–242 | ~2x/month | Capital One | Cleaning service |
+| Rag Mops Cleaning | — | — | — | **CANCELED** |
+| House Cleaning (new) | $160 | Every other week (~2x/mo) | TBD | $320/mo — replacing Rag Mops |
 | All-Safe Pest & Termite | $54 | Monthly (~2nd) | Capital One | Pest control |
 | Carnation Auto Spa | $23–30 | ~2x/month | Capital One | Car wash subscription |
 | NTTA Toll Tag | $40 | ~2–3x/month | Capital One | Toll charges — auto-replenish |
