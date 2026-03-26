@@ -16,7 +16,7 @@ const OP_VAULT = "OpenClaw";
 const OP_ITEM = "Journal MCP - Vertex AI";
 
 // Vertex AI configuration
-const GCP_PROJECT_ID = "vertexapi-491411";
+const GCP_PROJECT_ID = "noble-linker-490801-a2";
 const GCP_LOCATION = "us-central1";
 
 /**
