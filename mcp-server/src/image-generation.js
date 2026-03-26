@@ -207,7 +207,7 @@ export function registerImageTools(server, vertexClient) {
             },
             maskImageConfig: {
               maskMode: "MASK_MODE_USER_PROVIDED",
-              dilation: 0.03,
+              dilation: 0.0,
             },
           });
         } else {
