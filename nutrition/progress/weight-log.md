@@ -16,7 +16,7 @@ Add a row each morning. At the end of each week (Saturday), calculate the weekly
 | Mon | 2026-03-23 | 146.3 | -1.5 from yesterday |
 | Tue | 2026-03-24 | 145.8 | -0.5 from yesterday |
 | Wed | 2026-03-25 | 144.0 | -1.8 from yesterday |
-| Thu | 2026-03-26 | | |
+| Thu | 2026-03-26 | 144.4 | +0.4 from yesterday |
 | Fri | 2026-03-27 | | |
 | Sat | 2026-03-28 | | |
 
