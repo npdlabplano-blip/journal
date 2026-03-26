@@ -83,7 +83,16 @@ One number to track. Covers everything discretionary:
 
 | Goal | Target | Monthly Contribution | Timeline |
 |---|---:|---:|---|
-| Cash Reserve | $90,000 | $3,244 | ~28 months (mid-2028) |
+| Cash Reserve | $90,000 | $3,500 | ~26 months (mid-2028) |
+
+### Savings Transfer Schedule
+
+| Transfer | When | Amount | Notes |
+|---|---|---:|---|
+| Savings #1 | 1st of the month | $500 | After end-of-month paycheck (mortgage-heavy period) |
+| Savings #2 | 16th of the month | $3,000 | After 15th paycheck (lighter bill load) |
+| Capital One payoff | 1st of the month | Statement balance | Pay in full |
+| Capital One payoff | 16th of the month | Statement balance | Pay in full |
 
 ---
 

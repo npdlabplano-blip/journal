@@ -2,11 +2,26 @@
 
 > Last updated: 2026-03-26
 
+## Paycheck Rhythm
+
+Paid on the **15th** and **last day of the month** (~$8,000 each).
+
+| Day | Action |
+|---|---|
+| **1st** | Pay off Capital One balance. Savings transfer #1 ($500) |
+| **Sundays** | Fun money gut check — am I under $400 this week? |
+| **16th** | Pay off Capital One balance. Savings transfer #2 ($3,000) |
+
+> Mortgage is paid manually between the 1st and 15th — comes out of the end-of-month paycheck.
+> Total monthly savings target: $3,500
+
+---
+
 ## Monthly Fixed Bills
 
 | Bill | Amount | Due Day | Auto-Pay | Paid From | Notes |
 |---|---:|---|---|---|---|
-| Chase Mortgage | $3,122 | ~17th | Yes (ACH) | Chase Checking | Principal + interest + escrow (increased Apr 2026 after escrow analysis) |
+| Chase Mortgage | $3,122 | 1st–15th | Manual | Chase Checking | Principal + interest + escrow (increased Apr 2026 after escrow analysis) |
 | BMW Financial | $1,141 | ~5th | Yes (ACH) | Chase Checking | Car payment |
 | USAA Insurance (Auto) | $377–398 | ~25th | Yes (debit) | Chase Checking | Fluctuates slightly month to month |
 | American General Life Insurance | $68 | ~12th–14th | Yes (ACH) | Chase Checking | Life insurance |
