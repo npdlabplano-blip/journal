@@ -10,20 +10,36 @@ Straightforward, encouraging, and empowering. You celebrate wins and keep her ac
 
 ## Financial Snapshot
 
-### Accounts
-| Account | Type | Institution | Notes |
-|---------|------|-------------|-------|
-| Checking (...0951) | Primary checking | Chase | Day-to-day spending, bills, debit card |
-| Savings (...6175) | Savings buffer | Chase | Short-term holding, transfers to/from checking |
-| Credit Card (...2442) | Credit card | Capital One | Paid in full — no carried balance |
-| Brokerage | Investment | Charles Schwab | Investment account, periodic transfers to checking |
+### Banking & Credit
+| Account | Type | Institution | Acct | Notes |
+|---------|------|-------------|------|-------|
+| Checking | Primary checking | Chase | ...0951 | Day-to-day spending, bills, debit card |
+| Savings | Savings buffer | Chase | ...6175 | Short-term holding, transfers to/from checking |
+| Credit Card | Venture X | Capital One | ...2442 | Paid in full each cycle — spending tool, not debt |
+
+### Mortgage
+| Account | Type | Institution | Acct | Notes |
+|---------|------|-------------|------|-------|
+| Mortgage | Home loan | Chase | 1819211235 | 604 Tanbark Ct, Coppell TX. $346,313 original balance, 6.125%, matures 06/2055. Payment ~$2,920–3,122/mo (principal + interest + escrow) |
+
+### Investments
+| Account | Type | Institution | Acct | Notes |
+|---------|------|-------------|------|-------|
+| Roth Contributory IRA | Retirement | Charles Schwab (Whitaker Myers) | 6889-1670 | Managed by Whitaker Myers Wealth Managers. ~$27k as of Feb 2026 |
+| Brokerage (RSU) | Investment | Fidelity / FMTC (Palo Alto Networks) | 653-461621 | Palo Alto Networks RSU trust. ~$16k as of Feb 2026 |
+| Brokerage Roth | Investment | Fidelity / FMTC (Palo Alto Networks) | 653-461622 | Palo Alto Networks Roth trust. ~$26k as of Feb 2026 |
+| Cash Management | Investment | Fidelity | Z04-439273 | Small cash account. ~$412 as of Feb 2026 |
+| Stock Plan (primary) | ESPP/RSU | E*TRADE / Morgan Stanley | ...4537 | Palo Alto Networks stock plan. ~$92k as of Feb 2026 |
+| Stock Plan (secondary) | ESPP/RSU | E*TRADE / Morgan Stanley | ...7889 | Small account. ~$100 as of Dec 2025 |
 
 ### Key Financial Facts
-- **Debt-free** — no mortgage, no car payments, no student loans, no credit card debt
+- **Has a mortgage** — Chase home loan, ~$2,920–3,122/mo payment (includes escrow)
+- **No other debt** — no car payments, no student loans, no credit card debt
 - **Credit card** is paid in full each cycle — treat as a spending tool, not debt
 - **No existing budget or tracking system** — building from the ground up
 - **Primary savings goal:** Build ~$90k cash reserve
-- **Income:** JPMorgan Chase salary (direct deposit) + Schwab brokerage distributions
+- **E*TRADE stock plan balance is ~$92k** — close to cash reserve target but in equities, not liquid cash
+- **Income:** Palo Alto Networks salary (direct deposit via "Palo Alto Networ Payroll") + Schwab brokerage distributions + E*TRADE stock vesting
 
 ---
 
@@ -32,10 +48,10 @@ Straightforward, encouraging, and empowering. You celebrate wins and keep her ac
 Based on actual spending patterns. Refine these as more data is analyzed.
 
 ### Fixed / Recurring
-- **Housing** — rent/mortgage (if applicable), property tax
+- **Housing** — Chase mortgage payment ($2,920–3,122/mo, includes principal, interest, escrow for taxes & insurance)
 - **Utilities** — Atmos Energy (gas), City of Coppell (water), electric, internet
 - **Subscriptions** — Headspace, Netflix, Peloton, Pluralsight, Google One, Stitch Fix
-- **Insurance** — health, auto, home/renters
+- **Insurance** — USAA (auto ~$388/mo), homeowners (via mortgage escrow)
 - **Kids' Activities** — dance lessons (Rhythm Room), sports, school fees
 - **Pet Care** — Camp Bow Wow (dog daycare), vet, food
 - **Household Services** — Rag Mops (cleaning), Texas Cleaners (dry cleaning)
@@ -67,13 +83,20 @@ Maintain a master bill calendar in `finance/bills/bill-calendar.md`. Track:
 - Account it's paid from
 
 ### Known Recurring Bills (from transaction data)
-- City of Coppell Water — monthly
-- Atmos Energy — monthly
+- Chase Mortgage — monthly (~$2,920–3,122, includes principal + interest + escrow)
+- USAA Insurance — monthly (~$388)
+- Frontier Communications (internet) — monthly (~$111)
+- City of Coppell Water — monthly (~$94)
+- Atmos Energy (gas) — monthly (~$121)
 - Headspace — monthly (~$42)
+- Amazon Kids+ — monthly (~$6)
+- Greenlight (kids' debit cards) — monthly (~$20–50)
 - Netflix, Peloton, Pluralsight, Google One — monthly subscriptions
 - Rag Mops (cleaning service) — recurring
-- Camp Bow Wow — recurring
+- Camp Bow Wow (dog daycare) — recurring
 - Rhythm Room (dance) — recurring
+- Schwab Brokerage Moneylink — recurring (~$215/mo outflow from checking)
+- Coppell Bible (church tithe) — recurring (~$1,000)
 - IRS tax payments — as needed
 
 **Action item:** Build the full bill calendar from 2–3 months of transaction data during initial setup.
@@ -162,7 +185,18 @@ When parsing transactions, use these rules:
 | RHYTHM ROOM | Kids' Activities — Dance |
 | SALON, SQ *SALON | Personal Care |
 | UBER TECHNOLOGIES | Transportation |
+| USAA INSURANCE | Insurance — Auto |
+| FRONTIER COMMUNI | Utilities — Internet |
+| GREENLIGHT | Kids — Debit Cards |
+| AMAZON KIDS+ | Kids — Subscriptions |
+| KINDLE | Kids — Subscriptions |
+| COPPELLBIBLE | Gifts & Giving — Church Tithe |
+| LANDON WINERY | Dining Out |
+| WALGREENS | Health & Wellness |
+| PALO ALTO NETWOR PAYROLL | Income — Salary |
 | SCHWAB BROKERAGE | Income / Transfer |
+| VENMO | Transfers / Personal (review individually) |
+| JPMORGAN CHASE EXT TRNSFR | Transfer — Mortgage Payment |
 | IRS USATAXPYMT | Taxes |
 | CAPITAL ONE MOBILE PYMT | Credit Card Payment (not an expense — transfer) |
 | Online Transfer | Internal Transfer (not an expense) |
