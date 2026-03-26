@@ -5,10 +5,12 @@
  *
  * Tools:
  * - generate_image: General-purpose image generation from any text prompt
+ * - edit_image: Edit an existing image using a text prompt (mask-free or with auto-masking)
  * - generate_outfit_image: Generate a styled outfit visualization
  */
 
 import { z } from "zod";
+import { readFile } from "fs/promises";
 
 export function registerImageTools(server, vertexClient) {
   /**
@@ -92,6 +94,151 @@ export function registerImageTools(server, vertexClient) {
             {
               type: "text",
               text: `Image generation failed: ${message}`,
+            },
+          ],
+          isError: true,
+        };
+      }
+    }
+  );
+
+  /**
+   * Edit an existing image using Imagen 3 (mask-free editing).
+   * Uses imagen-3.0-capability-001 to modify a photo based on a text prompt.
+   */
+  server.tool(
+    "edit_image",
+    "Edit an existing image using AI. Provide a file path to the source image and a text prompt describing the desired changes. Uses Imagen 3 mask-free editing to modify the image without requiring a mask. Great for visualizing changes to photos — landscaping, remodeling, styling, etc.",
+    {
+      image_path: z
+        .string()
+        .describe(
+          "Absolute file path to the source image to edit (PNG, JPEG, GIF, or BMP). Max 20MB."
+        ),
+      prompt: z
+        .string()
+        .describe(
+          "Text prompt describing the desired edits. Be specific about what to add, change, or modify. Example: 'Add colorful flower beds with brick edging along the front walkway'"
+        ),
+      edit_mode: z
+        .enum(["inpaint_insert", "inpaint_remove", "bgswap", "outpaint"])
+        .default("inpaint_insert")
+        .describe(
+          'Edit mode: "inpaint_insert" (add objects/elements from prompt), "inpaint_remove" (remove objects and fill), "bgswap" (replace background), "outpaint" (extend image). Default: "inpaint_insert".'
+        ),
+      mask_mode: z
+        .enum(["background", "foreground", "semantic"])
+        .default("background")
+        .describe(
+          'Auto-mask mode: "background" (auto-detect and mask background areas), "foreground" (auto-detect and mask foreground), "semantic" (AI determines what to mask based on prompt). Default: "background".'
+        ),
+    },
+    async ({ image_path, prompt, edit_mode, mask_mode }) => {
+      const editModeMap = {
+        inpaint_insert: "EDIT_MODE_INPAINT_INSERTION",
+        inpaint_remove: "EDIT_MODE_INPAINT_REMOVAL",
+        bgswap: "EDIT_MODE_BGSWAP",
+        outpaint: "EDIT_MODE_OUTPAINT",
+      };
+
+      const maskModeMap = {
+        background: "MASK_MODE_BACKGROUND",
+        foreground: "MASK_MODE_FOREGROUND",
+        semantic: "MASK_MODE_SEMANTIC",
+      };
+
+      try {
+        // Read the source image and convert to base64
+        const imageBuffer = await readFile(image_path);
+        const imageBase64 = imageBuffer.toString("base64");
+
+        const accessToken = await vertexClient.getAccessToken();
+        const { projectId, location } = vertexClient;
+
+        const endpoint = `https://${location}-aiplatform.googleapis.com/v1/projects/${projectId}/locations/${location}/publishers/google/models/imagen-3.0-capability-001:predict`;
+
+        const requestBody = {
+          instances: [
+            {
+              prompt,
+              referenceImages: [
+                {
+                  referenceType: "REFERENCE_TYPE_RAW",
+                  referenceId: 1,
+                  referenceImage: {
+                    bytesBase64Encoded: imageBase64,
+                  },
+                },
+              ],
+            },
+          ],
+          parameters: {
+            editMode: editModeMap[edit_mode],
+            sampleCount: 1,
+            safetySetting: "block_few",
+          },
+        };
+
+        // Add mask config for auto-masking
+        requestBody.instances[0].referenceImages.push({
+          referenceType: "REFERENCE_TYPE_MASK",
+          referenceId: 2,
+          referenceImage: {},
+          maskImageConfig: {
+            maskMode: maskModeMap[mask_mode],
+          },
+        });
+
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestBody),
+        });
+
+        if (!response.ok) {
+          const errorBody = await response.text();
+          throw new Error(
+            `Vertex AI API error (${response.status}): ${errorBody}`
+          );
+        }
+
+        const result = await response.json();
+        const imageData = result.predictions[0].bytesBase64Encoded;
+        const mimeType = result.predictions[0].mimeType || "image/png";
+
+        return {
+          content: [
+            {
+              type: "image",
+              data: imageData,
+              mimeType,
+            },
+            {
+              type: "text",
+              text: JSON.stringify(
+                {
+                  model: "imagen-3.0-capability-001",
+                  edit_mode,
+                  mask_mode,
+                  source_image: image_path,
+                  prompt_length: prompt.length,
+                },
+                null,
+                2
+              ),
+            },
+          ],
+        };
+      } catch (err) {
+        const message = err?.message || String(err);
+        return {
+          content: [
+            {
+              type: "text",
+              text: `Image editing failed: ${message}`,
             },
           ],
           isError: true,

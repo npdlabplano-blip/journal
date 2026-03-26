@@ -1,9 +1,13 @@
 # Landscaping Visual Prompt
 
-After restarting Claude Code, paste this to generate the visual:
+After restarting Claude Code, paste this:
 
 ---
 
-Use the `generate_image` tool with this prompt and a 4:3 aspect ratio:
+Use the `edit_image` tool with these parameters:
+- **image_path:** `/Users/namsler123/Documents/journal/00-inbox /IMG_2801.png`
+- **edit_mode:** `inpaint_insert`
+- **mask_mode:** `background`
+- **prompt:** "Add beautifully landscaped front yard flower beds. Brick soldier-course edging lines both sides of the concrete walkway with beds filled with pink Knockout roses, deep purple salvia, and low white dwarf Indian hawthorn in layered rows. Colorful lantana and yellow black-eyed Susans planted in front of the existing boxwood hedges along the house foundation. A circular mulched flower bed surrounds the large shade tree on the right, filled with lush green hostas, vibrant pink and red caladiums, and delicate ferns. All beds have fresh dark brown hardwood mulch. Healthy green lawn. Professional landscaping, realistic, natural lighting."
 
-"Photograph of a two-story brown brick home on a quiet cul-de-sac with a bright blue front door and a large mature shade tree on the right side. The front yard has been beautifully landscaped with new flower beds. Brick soldier-course edging lines both sides of the concrete walkway from the driveway to the front door, with beds filled with pink Knockout roses, deep purple salvia, and low white dwarf Indian hawthorn in layered rows. The existing boxwood hedges along the foundation are refreshed with colorful lantana and black-eyed Susans planted in front. A circular mulched flower bed surrounds the large tree, filled with lush green hostas, vibrant pink and red caladiums, and delicate ferns. All beds have fresh dark brown hardwood mulch, 3 inches deep. The lawn is healthy green St. Augustine grass. Bright spring day, blue sky with white clouds, natural sunlight. Realistic residential landscaping photography, curb appeal showcase."
+If the background mask doesn't work well, try changing mask_mode to `semantic`.
