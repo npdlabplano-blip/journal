@@ -32,7 +32,7 @@
 
 | Service | Typical Amount | Frequency | Paid From | Notes |
 |---|---:|---|---|---|
-| Rhythm Room / VTD Dance | $149 | Monthly (~1st–5th) | Capital One | Constance's dance |
+| Rhythm Room / VTD Dance | — | — | — | **CANCELED** |
 | Rec Center (Lewisville) | $75 | Monthly (~11th) | Capital One | |
 | Rag Mops Cleaning | — | — | — | **CANCELED** |
 | House Cleaning (new) | $160 | Every other week (~2x/mo) | TBD | $320/mo — replacing Rag Mops |
