@@ -7,8 +7,8 @@
 | | Amount |
 |---|---:|
 | **Total Income** | $15,790.92 |
-| **Total Spending** | $34,533.56 |
-| **Net Savings** | $-18,742.64 |
+| **Total Spending** | $34,168.58 |
+| **Net Savings** | $-18,377.66 |
 
 ## Income
 
@@ -22,18 +22,18 @@
 
 | Category | Amount | % of Spend |
 |---|---:|---:|
-| Taxes | $20,339 | 58.9% |
+| Taxes | $20,339 | 59.5% |
 | Housing | $2,920 | 8.5% |
-| Other | $1,532 | 4.4% |
 | Auto | $1,416 | 4.1% |
 | Giving | $1,200 | 3.5% |
+| Other | $1,167 | 3.4% |
 | Subscriptions | $995 | 2.9% |
-| Shopping | $981 | 2.8% |
+| Shopping | $981 | 2.9% |
 | Groceries | $870 | 2.5% |
 | Entertainment | $612 | 1.8% |
 | Personal Care | $544 | 1.6% |
 | Kids | $538 | 1.6% |
-| Dining Out | $534 | 1.5% |
+| Dining Out | $534 | 1.6% |
 | Insurance | $456 | 1.3% |
 | Utilities | $418 | 1.2% |
 | Travel | $349 | 1.0% |
@@ -43,7 +43,7 @@
 | Cash Withdrawal | $100 | 0.3% |
 | Gas | $94 | 0.3% |
 | Household | $88 | 0.3% |
-| **Total** | **$34,534** | **100%** |
+| **Total** | **$34,169** | **100%** |
 
 ## Detailed Breakdown
 
@@ -124,12 +124,6 @@
 | Date | Description | Amount | Source |
 |---|---|---:|---|
 | 2026-03-25 | USAA INSURANCE PAYMEN WWW.USAA.COM TX 03/25 | $388.36 | Chase Checking |
-
-### Other — Barclays Payment — $365
-
-| Date | Description | Amount | Source |
-|---|---|---:|---|
-| 2026-03-23 | BARCLAYCARD US CREDITCARD 1392618749 WEB ID: 2510407970 | $364.98 | Chase Checking |
 
 ### Travel — Airfare — $349
 

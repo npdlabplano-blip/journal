@@ -7,8 +7,8 @@
 | | Amount |
 |---|---:|
 | **Total Income** | $13,609.60 |
-| **Total Spending** | $16,805.92 |
-| **Net Savings** | $-3,196.32 |
+| **Total Spending** | $15,507.68 |
+| **Net Savings** | $-1,898.08 |
 
 ## Income
 
@@ -23,26 +23,26 @@
 
 | Category | Amount | % of Spend |
 |---|---:|---:|
-| Housing | $2,920 | 17.4% |
-| Giving | $2,525 | 15.0% |
-| Other | $2,213 | 13.2% |
-| Auto | $1,274 | 7.6% |
-| Shopping | $1,259 | 7.5% |
-| Groceries | $1,175 | 7.0% |
-| Kids | $814 | 4.8% |
-| Entertainment | $645 | 3.8% |
-| Dining Out | $625 | 3.7% |
-| Utilities | $612 | 3.6% |
-| Household | $522 | 3.1% |
-| Cash Withdrawal | $500 | 3.0% |
-| Insurance | $445 | 2.6% |
-| Subscriptions | $387 | 2.3% |
-| Personal Care | $375 | 2.2% |
-| Phone | $200 | 1.2% |
-| Groceries / Household | $154 | 0.9% |
-| Gas | $126 | 0.7% |
+| Housing | $2,920 | 18.8% |
+| Giving | $2,525 | 16.3% |
+| Auto | $1,274 | 8.2% |
+| Shopping | $1,259 | 8.1% |
+| Groceries | $1,175 | 7.6% |
+| Other | $915 | 5.9% |
+| Kids | $814 | 5.2% |
+| Entertainment | $645 | 4.2% |
+| Dining Out | $625 | 4.0% |
+| Utilities | $612 | 3.9% |
+| Household | $522 | 3.4% |
+| Cash Withdrawal | $500 | 3.2% |
+| Insurance | $445 | 2.9% |
+| Subscriptions | $387 | 2.5% |
+| Personal Care | $375 | 2.4% |
+| Phone | $200 | 1.3% |
+| Groceries / Household | $154 | 1.0% |
+| Gas | $126 | 0.8% |
 | Health | $36 | 0.2% |
-| **Total** | **$16,806** | **100%** |
+| **Total** | **$15,508** | **100%** |
 
 ## Detailed Breakdown
 
@@ -59,12 +59,6 @@
 | 2026-01-05 | COPPELLBIBLE.ORG COPPELLBIBLE. TX 01/04 | $1500.00 | Chase Checking |
 | 2026-01-07 | COPPELLBIBLE.ORG COPPELLBIBLE. TX 01/07 | $25.00 | Chase Checking |
 | 2026-01-30 | COPPELLBIBLE.ORG COPPELLBIBLE. TX 01/30 | $1000.00 | Chase Checking |
-
-### Other — Barclays Payment — $1,298
-
-| Date | Description | Amount | Source |
-|---|---|---:|---|
-| 2026-01-15 | BARCLAYCARD US CREDITCARD 1365168114 WEB ID: 2510407970 | $1298.24 | Chase Checking |
 
 ### Groceries — $1,171
 

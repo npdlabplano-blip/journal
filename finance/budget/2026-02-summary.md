@@ -7,8 +7,8 @@
 | | Amount |
 |---|---:|
 | **Total Income** | $13,825.38 |
-| **Total Spending** | $14,179.87 |
-| **Net Savings** | $-354.49 |
+| **Total Spending** | $13,865.07 |
+| **Net Savings** | $-39.69 |
 
 ## Income
 
@@ -23,29 +23,29 @@
 
 | Category | Amount | % of Spend |
 |---|---:|---:|
-| Housing | $2,920 | 20.6% |
-| Pet Care | $1,473 | 10.4% |
-| Auto | $1,382 | 9.7% |
-| Groceries | $1,073 | 7.6% |
-| Shopping | $990 | 7.0% |
-| Kids | $865 | 6.1% |
-| Travel | $679 | 4.8% |
-| Personal Care | $646 | 4.6% |
-| Dining Out | $582 | 4.1% |
-| Utilities | $559 | 3.9% |
-| Other | $550 | 3.9% |
-| Insurance | $466 | 3.3% |
-| Entertainment | $460 | 3.2% |
-| Health | $373 | 2.6% |
+| Housing | $2,920 | 21.1% |
+| Pet Care | $1,473 | 10.6% |
+| Auto | $1,382 | 10.0% |
+| Groceries | $1,073 | 7.7% |
+| Shopping | $990 | 7.1% |
+| Kids | $865 | 6.2% |
+| Travel | $679 | 4.9% |
+| Personal Care | $646 | 4.7% |
+| Dining Out | $582 | 4.2% |
+| Utilities | $559 | 4.0% |
+| Insurance | $466 | 3.4% |
+| Entertainment | $460 | 3.3% |
+| Health | $373 | 2.7% |
 | Household | $340 | 2.4% |
-| Subscriptions | $259 | 1.8% |
+| Subscriptions | $259 | 1.9% |
+| Other | $235 | 1.7% |
 | Cash Withdrawal | $200 | 1.4% |
 | Groceries / Household | $117 | 0.8% |
 | Gas | $88 | 0.6% |
 | Giving | $70 | 0.5% |
 | Phone | $68 | 0.5% |
 | Education | $19 | 0.1% |
-| **Total** | **$14,180** | **100%** |
+| **Total** | **$13,865** | **100%** |
 
 ## Detailed Breakdown
 
@@ -121,12 +121,6 @@
 | 2026-02-09 | IN *HIS STORY COACHING AN | $120.00 | Capital One |
 | 2026-02-16 | IN *HIS STORY COACHING AN | $120.00 | Capital One |
 | 2026-02-28 | CHRYSALIS SACRED SPACE | $120.00 | Capital One |
-
-### Other — Barclays Payment — $315
-
-| Date | Description | Amount | Source |
-|---|---|---:|---|
-| 2026-02-19 | BARCLAYCARD US CREDITCARD 1379158578 WEB ID: 2510407970 | $314.80 | Chase Checking |
 
 ### Kids — Dance — $298
 

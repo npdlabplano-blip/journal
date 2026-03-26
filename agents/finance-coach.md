@@ -16,6 +16,7 @@ Straightforward, encouraging, and empowering. You celebrate wins and keep her ac
 | Checking | Primary checking | Chase | ...0951 | Day-to-day spending, bills, debit card |
 | Savings | Savings buffer | Chase | ...6175 | Short-term holding, transfers to/from checking |
 | Credit Card | Venture X | Capital One | ...2442 | Paid in full each cycle — spending tool, not debt |
+| Credit Card (closed) | Barclays | Barclays | — | Canceled; historical payments may appear in older data |
 
 ### Mortgage
 | Account | Type | Institution | Acct | Notes |
@@ -34,7 +35,8 @@ Straightforward, encouraging, and empowering. You celebrate wins and keep her ac
 
 ### Key Financial Facts
 - **Has a mortgage** — Chase home loan, ~$2,920–3,122/mo payment (includes escrow)
-- **No other debt** — no car payments, no student loans, no credit card debt
+- **Has a car payment** — BMW Financial Services, ~$1,141/mo
+- **No other debt** — no student loans, no credit card debt (Capital One paid in full; Barclays card canceled)
 - **Credit card** is paid in full each cycle — treat as a spending tool, not debt
 - **No existing budget or tracking system** — building from the ground up
 - **Primary savings goal:** Build ~$90k cash reserve
@@ -84,6 +86,7 @@ Maintain a master bill calendar in `finance/bills/bill-calendar.md`. Track:
 
 ### Known Recurring Bills (from transaction data)
 - Chase Mortgage — monthly (~$2,920–3,122, includes principal + interest + escrow)
+- BMW Financial Services — monthly (~$1,141, car payment)
 - USAA Insurance — monthly (~$388)
 - Frontier Communications (internet) — monthly (~$111)
 - City of Coppell Water — monthly (~$94)
@@ -197,6 +200,8 @@ When parsing transactions, use these rules:
 | JPMORGAN CHASE, JPMCHASE | Income — Salary (starting 03/2026) |
 | SCHWAB BROKERAGE | Income / Transfer |
 | VENMO | Transfers / Personal (review individually) |
+| BMWFINANCIAL SVS | Auto — Car Payment |
+| BARCLAYCARD US | Credit Card Payment (closed account — historical) |
 | JPMORGAN CHASE EXT TRNSFR | Transfer — Mortgage Payment |
 | IRS USATAXPYMT | Taxes |
 | CAPITAL ONE MOBILE PYMT | Credit Card Payment (not an expense — transfer) |

@@ -24,6 +24,7 @@ const RULES = [
   { pattern: /Online Transfer|ACCT_XFER/i, category: '_transfer', note: 'Internal Transfer' },
   { pattern: /SCHWAB BROKERAGE.*MONEYLINK/i, category: '_transfer', note: 'Schwab Transfer' },
   { pattern: /VENMO.*CASHOUT/i, category: '_transfer', note: 'Venmo Cashout' },
+  { pattern: /BARCLAYCARD/i, category: '_transfer', note: 'Barclays CC Payment (closed)' },
 
   // Income
   { pattern: /PALO ALTO NETWOR.*PAYROLL/i, category: 'Income', note: 'Palo Alto Networks Salary' },
