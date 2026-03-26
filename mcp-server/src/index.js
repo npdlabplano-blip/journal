@@ -16,7 +16,7 @@ import { registerGmailTools } from "./gmail.js";
 import { registerDriveTools } from "./drive.js";
 import { registerDocsTools } from "./docs.js";
 import { registerKrogerTools } from "./kroger.js";
-import { getOpenAIClient } from "./openai-auth.js";
+import { getVertexAIClient } from "./vertex-auth.js";
 import { registerImageTools } from "./image-generation.js";
 
 async function main() {
@@ -47,13 +47,13 @@ async function main() {
     console.error(`Kroger tools unavailable: ${err.message}`);
   }
 
-  // Get authenticated OpenAI client and register image generation tools
-  // This pulls the OpenAI API key from 1Password
+  // Get authenticated Vertex AI client and register image generation tools
+  // This pulls the GCP service account key from 1Password
   try {
-    const openaiClient = await getOpenAIClient();
-    registerImageTools(server, openaiClient);
+    const vertexClient = await getVertexAIClient();
+    registerImageTools(server, vertexClient);
   } catch (err) {
-    // Don't block the entire server if OpenAI auth isn't set up yet
+    // Don't block the entire server if Vertex AI auth isn't set up yet
     console.error(`Image generation tools unavailable: ${err.message}`);
   }
 
