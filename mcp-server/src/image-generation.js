@@ -179,13 +179,13 @@ export function registerImageTools(server, vertexClient) {
           },
         };
 
-        // Add mask config for auto-masking
+        // Add mask config for auto-masking (omit referenceImage for auto-mask modes)
         requestBody.instances[0].referenceImages.push({
           referenceType: "REFERENCE_TYPE_MASK",
           referenceId: 2,
-          referenceImage: {},
           maskImageConfig: {
             maskMode: maskModeMap[mask_mode],
+            dilation: 0.01,
           },
         });
 
