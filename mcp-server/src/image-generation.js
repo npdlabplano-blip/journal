@@ -10,7 +10,8 @@
  */
 
 import { z } from "zod";
-import { readFile } from "fs/promises";
+import { readFile, writeFile } from "fs/promises";
+import { basename, join } from "path";
 
 export function registerImageTools(server, vertexClient) {
   /**
@@ -66,6 +67,14 @@ export function registerImageTools(server, vertexClient) {
         const imageData = result.predictions[0].bytesBase64Encoded;
         const mimeType = result.predictions[0].mimeType || "image/png";
 
+        // Save generated image to 00-inbox folder
+        const ext = mimeType === "image/jpeg" ? ".jpg" : ".png";
+        const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
+        const outFileName = `generated_${timestamp}${ext}`;
+        const inboxDir = join(process.cwd(), "00-inbox");
+        const outPath = join(inboxDir, outFileName);
+        await writeFile(outPath, Buffer.from(imageData, "base64"));
+
         return {
           content: [
             {
@@ -79,6 +88,7 @@ export function registerImageTools(server, vertexClient) {
                 {
                   model: "imagen-3.0-generate-002",
                   aspect_ratio,
+                  saved_to: outPath,
                   prompt_length: prompt.length,
                 },
                 null,
@@ -209,6 +219,15 @@ export function registerImageTools(server, vertexClient) {
         const imageData = result.predictions[0].bytesBase64Encoded;
         const mimeType = result.predictions[0].mimeType || "image/png";
 
+        // Save edited image to 00-inbox folder
+        const ext = mimeType === "image/jpeg" ? ".jpg" : ".png";
+        const srcName = basename(image_path, ext).replace(/_resized$/, "");
+        const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
+        const outFileName = `${srcName}_edited_${timestamp}${ext}`;
+        const inboxDir = join(process.cwd(), "00-inbox");
+        const outPath = join(inboxDir, outFileName);
+        await writeFile(outPath, Buffer.from(imageData, "base64"));
+
         return {
           content: [
             {
@@ -224,6 +243,7 @@ export function registerImageTools(server, vertexClient) {
                   edit_mode,
                   mask_mode,
                   source_image: image_path,
+                  saved_to: outPath,
                   prompt_length: prompt.length,
                 },
                 null,
@@ -328,6 +348,14 @@ export function registerImageTools(server, vertexClient) {
         const imageData = result.predictions[0].bytesBase64Encoded;
         const mimeType = result.predictions[0].mimeType || "image/png";
 
+        // Save outfit image to 00-inbox folder
+        const ext = mimeType === "image/jpeg" ? ".jpg" : ".png";
+        const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
+        const outFileName = `outfit_${timestamp}${ext}`;
+        const inboxDir = join(process.cwd(), "00-inbox");
+        const outPath = join(inboxDir, outFileName);
+        await writeFile(outPath, Buffer.from(imageData, "base64"));
+
         return {
           content: [
             {
@@ -343,6 +371,7 @@ export function registerImageTools(server, vertexClient) {
                   style,
                   occasion: occasion || "general",
                   season: season || "not specified",
+                  saved_to: outPath,
                 },
                 null,
                 2
