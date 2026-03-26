@@ -31,23 +31,38 @@
 |---|---:|---|
 | Church Tithe (Coppell Bible) | $2,100 | 2x/month |
 
-## Variable Spending
+## Variable Spending — Essential
 
 | Category | Target | Notes |
 |---|---:|---|
 | Groceries | $1,000 | Kroger, Market Street, Sprouts, Costco, Tom Thumb, Walmart. Coordinate with Nutrition Coach meal plans |
-| Dining Out | $400 | Restaurants, coffee shops, delivery, work cafe. Down from ~$600 avg |
-| Personal Care | $300 | Hair (~$220 every 6–8 weeks), nails ($52–97), massage ($70 occasionally) |
-| Entertainment | $300 | Events, movies, swing dance, outings |
-| Shopping — Clothing | $300 | Intentional purchases only. Stitch Fix canceled |
-| Shopping — Amazon | $150 | Down from ~$250 avg. Be intentional |
-| Shopping — Other | $150 | Home Depot, Target, misc household |
-| Pet Care | $150 | Routine supplies + Camp Bow Wow as needed. Vet emergencies separate |
 | Gas + Auto | $275 | Gas (~$90), tolls (~$120), car wash ($53), parking/rideshare as needed |
-| Travel | $300 | Monthly set-aside — some months $0, some months higher |
+| Pet Care | $150 | Routine supplies + Camp Bow Wow as needed. Vet emergencies separate |
 | Health | $50 | Pharmacy/misc only. Coaching now on HSA |
 | Cash | $100 | ATM withdrawals — trending down |
-| **Total Variable** | **$3,475** | |
+| **Essential Variable Total** | **$1,575** | |
+
+## Fun Money — $400/week ($1,600/mo)
+
+One number to track. Covers everything discretionary:
+
+| Category | Guideline | Notes |
+|---|---:|---|
+| Dining Out | ~$100/wk | Restaurants, coffee, delivery, work cafe |
+| Personal Care | ~$75/wk | Hair, nails, beauty products, massage |
+| Entertainment | ~$75/wk | Events, movies, swing dance, outings |
+| Shopping | ~$75/wk | Clothing, Amazon, Home Depot, Target — be intentional |
+| Misc/Buffer | ~$75/wk | Overflow from any category above |
+
+> **How it works:** Don't track 5 categories. Track ONE number — $400/week across all fun spending.
+> Check your Capital One app Sunday nights. If you're under, great. If you're over, tighten up next week.
+> Big planned expenses (concerts, events) are fine — just means a lean week after.
+
+## Travel Sinking Fund — $300/mo
+
+| Category | Target | Notes |
+|---|---:|---|
+| Travel Set-Aside | $300 | Auto-transfer to savings monthly. Accumulates for trips. NOT counted against weekly fun money |
 
 ---
 
@@ -58,7 +73,9 @@
 | **Income** | $16,000 |
 | **Fixed Costs** | $7,181 |
 | **Giving** | $2,100 |
-| **Variable Spending** | $3,475 |
+| **Essential Variable** | $1,575 |
+| **Fun Money** | $1,600 |
+| **Travel Set-Aside** | $300 |
 | **Total Spending** | $12,756 |
 | **Monthly Surplus** | $3,244 |
 
