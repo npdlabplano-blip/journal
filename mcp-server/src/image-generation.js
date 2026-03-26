@@ -140,10 +140,16 @@ export function registerImageTools(server, vertexClient) {
         .enum(["background", "foreground", "semantic"])
         .default("background")
         .describe(
-          'Auto-mask mode: "background" (auto-detect and mask background areas), "foreground" (auto-detect and mask foreground), "semantic" (AI determines what to mask based on prompt). Default: "background".'
+          'Auto-mask mode (ignored when mask_image_path is provided): "background" (auto-detect and mask background areas), "foreground" (auto-detect and mask foreground), "semantic" (AI determines what to mask based on prompt). Default: "background".'
+        ),
+      mask_image_path: z
+        .string()
+        .optional()
+        .describe(
+          "Optional absolute file path to a custom mask image (PNG). Must be the same dimensions as the source image. White areas (255) will be edited, black areas (0) will be preserved. Use this for precise control over which parts of the image to modify."
         ),
     },
-    async ({ image_path, prompt, edit_mode, mask_mode }) => {
+    async ({ image_path, prompt, edit_mode, mask_mode, mask_image_path }) => {
       const editModeMap = {
         inpaint_insert: "EDIT_MODE_INPAINT_INSERTION",
         inpaint_remove: "EDIT_MODE_INPAINT_REMOVAL",
@@ -189,15 +195,31 @@ export function registerImageTools(server, vertexClient) {
           },
         };
 
-        // Add mask config for auto-masking (omit referenceImage for auto-mask modes)
-        requestBody.instances[0].referenceImages.push({
-          referenceType: "REFERENCE_TYPE_MASK",
-          referenceId: 2,
-          maskImageConfig: {
-            maskMode: maskModeMap[mask_mode],
-            dilation: 0.01,
-          },
-        });
+        // Add mask config: custom mask image if provided, otherwise auto-mask mode
+        if (mask_image_path) {
+          const maskBuffer = await readFile(mask_image_path);
+          const maskBase64 = maskBuffer.toString("base64");
+          requestBody.instances[0].referenceImages.push({
+            referenceType: "REFERENCE_TYPE_MASK",
+            referenceId: 2,
+            referenceImage: {
+              bytesBase64Encoded: maskBase64,
+            },
+            maskImageConfig: {
+              maskMode: "MASK_MODE_USER_PROVIDED",
+              dilation: 0.03,
+            },
+          });
+        } else {
+          requestBody.instances[0].referenceImages.push({
+            referenceType: "REFERENCE_TYPE_MASK",
+            referenceId: 2,
+            maskImageConfig: {
+              maskMode: maskModeMap[mask_mode],
+              dilation: 0.01,
+            },
+          });
+        }
 
         const response = await fetch(endpoint, {
           method: "POST",
@@ -241,7 +263,8 @@ export function registerImageTools(server, vertexClient) {
                 {
                   model: "imagen-3.0-capability-001",
                   edit_mode,
-                  mask_mode,
+                  mask_mode: mask_image_path ? "custom" : mask_mode,
+                  mask_image: mask_image_path || null,
                   source_image: image_path,
                   saved_to: outPath,
                   prompt_length: prompt.length,
