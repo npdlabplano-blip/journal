@@ -76,4 +76,7 @@
 
 Remaining from ~$14k net income: **~$6,200** for groceries, dining, shopping, gas, personal care, entertainment, savings, and one-time expenses.
 
+**Budget targets for variable spending:**
+- Clothing: $300/mo (was $500–800/mo via Stitch Fix)
+
 Note: His Story Coaching ($240/mo) now paid via HSA — still a real cost but won't show in checking/CC spending.
