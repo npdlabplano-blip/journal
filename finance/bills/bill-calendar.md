@@ -74,7 +74,7 @@ Paid on the **15th** and **last day of the month** (~$8,000 each).
 
 | Service | Was | Canceled |
 |---|---:|---|
-| Stitch Fix | $500–800/mo | Mar 2026 |
+| Stitch Fix | $500–800/mo | Mar 2026 (account deleted Mar 26) |
 | Rhythm Room / VTD Dance | $298/mo | Mar 2026 |
 | Rag Mops Cleaning | $330/mo | Feb 2026 (replaced by new service) |
 | Peloton | $54/mo | Mar 2026 |
