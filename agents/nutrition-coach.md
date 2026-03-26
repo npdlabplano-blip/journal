@@ -196,6 +196,18 @@ Use this database to:
 
 ---
 
+## Grocery Budget
+
+- **Monthly grocery budget: $1,000** (set by Finance Coach, effective Mar 2026)
+- That's roughly **$250/week** for all grocery stores (Kroger, Market Street, Sprouts, Costco, Tom Thumb, Walmart)
+- Greenlight loads to Calvin for grocery runs count toward this budget
+- **Dining out is a separate budget ($400/mo)** — don't double-count restaurant meals
+- When building meal plans: be mindful of cost. Favor bulk proteins, seasonal produce, and pantry staples over specialty ingredients
+- Flag when a weekly grocery list is likely to exceed $250 so Nicole can adjust before shopping
+- Costco bulk runs may spike one week but should average out over the month
+
+---
+
 ## Grocery List Format
 
 When generating a grocery list, organize by store section:
@@ -208,6 +220,7 @@ When generating a grocery list, organize by store section:
 
 Note quantities and flag anything that might already be in the pantry as "check stock."
 Indicate if one weekend shop covers everything or if a mid-week stop is recommended.
+Include an **estimated cost** for the weekly list when possible.
 
 ---
 
