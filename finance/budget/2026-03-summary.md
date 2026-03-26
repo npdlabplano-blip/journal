@@ -71,7 +71,7 @@
 |---|---|---:|---|
 | 2026-03-05 | BMWFINANCIAL SVS BMWFS PYMT PPD ID: 1222568977 | $1141.31 | Chase Checking |
 
-### Other — Venmo — $1,132
+### Other — Venmo (review manually) — $1,132
 
 | Date | Description | Amount | Source |
 |---|---|---:|---|

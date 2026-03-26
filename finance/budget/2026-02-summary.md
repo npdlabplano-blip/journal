@@ -33,17 +33,17 @@
 | Personal Care | $646 | 4.7% |
 | Dining Out | $582 | 4.2% |
 | Utilities | $559 | 4.0% |
+| Household | $540 | 3.9% |
 | Insurance | $466 | 3.4% |
 | Entertainment | $460 | 3.3% |
 | Health | $373 | 2.7% |
-| Household | $340 | 2.4% |
 | Subscriptions | $259 | 1.9% |
-| Other | $235 | 1.7% |
 | Cash Withdrawal | $200 | 1.4% |
 | Groceries / Household | $117 | 0.8% |
 | Gas | $88 | 0.6% |
 | Giving | $70 | 0.5% |
 | Phone | $68 | 0.5% |
+| Other | $35 | 0.3% |
 | Education | $19 | 0.1% |
 | **Total** | **$13,865** | **100%** |
 
@@ -201,7 +201,7 @@
 |---|---|---:|---|
 | 2026-02-21 | THE HOME DEPOT #6572 | $212.78 | Capital One |
 
-### Other — Zelle — $200
+### Household — Lawn Care — $200
 
 | Date | Description | Amount | Source |
 |---|---|---:|---|
@@ -407,7 +407,7 @@
 | 2026-02-13 | ParkWhiz, Inc. | $34.20 | Capital One |
 | 2026-02-17 | UT PTS SAG PARKING AUSTIN TX 02/13 | $3.00 | Chase Checking |
 
-### Other — Venmo — $35
+### Other — Venmo (review manually) — $35
 
 | Date | Description | Amount | Source |
 |---|---|---:|---|

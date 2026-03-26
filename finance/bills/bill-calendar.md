@@ -41,6 +41,8 @@
 | Stitch Fix | — | — | — | **CANCELED** — was $500–800/mo |
 | Camp Bow Wow | $278 | As needed | Capital One | Dog daycare |
 | His Story Coaching | $120 | ~2x/month | HSA | Moving to HSA — will no longer appear in checking/CC data |
+| Lawn Care (Zelle) | $200 | Monthly | Chase Checking (Zelle) | Sixtos/Hugo Guerrero |
+| Calvin — Trumpet Lessons (Venmo) | $182 | Monthly | Chase Checking (Venmo) | |
 
 ## Giving
 

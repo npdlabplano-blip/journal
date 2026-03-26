@@ -192,8 +192,9 @@ const RULES = [
 
   // Other Financial
   { pattern: /BARCLAYCARD/i, category: 'Other — Barclays Payment' },
-  { pattern: /VENMO.*PAYMENT/i, category: 'Other — Venmo' },
-  { pattern: /Zelle payment/i, category: 'Other — Zelle' },
+  { pattern: /Zelle.*SIXTOS GUERRERO|Zelle.*Hugo Guerrero/i, category: 'Household — Lawn Care' },
+  { pattern: /VENMO.*PAYMENT/i, category: 'Other — Venmo (review manually)' },
+  { pattern: /Zelle payment/i, category: 'Other — Zelle (review manually)' },
   { pattern: /PAYPAL.*GITHUB/i, category: 'Subscriptions — GitHub' },
   { pattern: /USPS/i, category: 'Other — Shipping' },
   { pattern: /UDEMY/i, category: 'Education' },

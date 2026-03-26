@@ -28,12 +28,12 @@
 | Auto | $1,274 | 8.2% |
 | Shopping | $1,259 | 8.1% |
 | Groceries | $1,175 | 7.6% |
-| Other | $915 | 5.9% |
 | Kids | $814 | 5.2% |
+| Household | $722 | 4.7% |
+| Other | $715 | 4.6% |
 | Entertainment | $645 | 4.2% |
 | Dining Out | $625 | 4.0% |
 | Utilities | $612 | 3.9% |
-| Household | $522 | 3.4% |
 | Cash Withdrawal | $500 | 3.2% |
 | Insurance | $445 | 2.9% |
 | Subscriptions | $387 | 2.5% |
@@ -99,7 +99,7 @@
 | 2026-01-12 | STITCH FIX  *STYLING | $20.00 | Capital One |
 | 2026-01-25 | STITCH FIX, INC. | $215.54 | Capital One |
 
-### Other — Venmo — $707
+### Other — Venmo (review manually) — $707
 
 | Date | Description | Amount | Source |
 |---|---|---:|---|
@@ -197,7 +197,7 @@
 |---|---|---:|---|
 | 2026-01-03 | SOHO SALON, LLC | $240.00 | Capital One |
 
-### Other — Zelle — $200
+### Household — Lawn Care — $200
 
 | Date | Description | Amount | Source |
 |---|---|---:|---|
