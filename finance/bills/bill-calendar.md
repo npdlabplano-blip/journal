@@ -25,7 +25,7 @@
 | Amazon Kids+ | $6 | ~25th | Debit | Chase Checking | |
 | Amazon Prime Video | $11–27 | Varies | Debit | Chase Checking | Multiple channels, fluctuates |
 | Kindle Unlimited | $2–11 | Varies | Debit | Chase Checking | |
-| Greenlight (Kids) | $20–50 | Multiple/month | ACH | Chase Checking | Kids' debit card loads — ~$140–170/mo total |
+| Greenlight (Kids) | $20–50 | Multiple/month | ACH | Chase Checking | Kids' debit card loads — ~$140–170/mo total. Includes gas money and grocery runs (Calvin) |
 | Schwab Brokerage Moneylink | $215 | ~2nd & 15th–17th | Yes (ACH) | Chase Checking | Recurring investment transfer |
 
 ## Recurring Services (Non-Monthly Fixed)
@@ -38,9 +38,9 @@
 | All-Safe Pest & Termite | $54 | Monthly (~2nd) | Capital One | Pest control |
 | Carnation Auto Spa | $23–30 | ~2x/month | Capital One | Car wash subscription |
 | NTTA Toll Tag | $40 | ~2–3x/month | Capital One | Toll charges — auto-replenish |
-| Stitch Fix | $20–284 | ~2–4x/month | Capital One | Styling fee + purchases |
+| Stitch Fix | — | — | — | **CANCELED** — was $500–800/mo |
 | Camp Bow Wow | $278 | As needed | Capital One | Dog daycare |
-| His Story Coaching | $120 | ~2x/month | Capital One | Coaching sessions |
+| His Story Coaching | $120 | ~2x/month | HSA | Moving to HSA — will no longer appear in checking/CC data |
 
 ## Giving
 
@@ -71,8 +71,9 @@
 | Kids (Greenlight + Dance + Rec + School) | $475 |
 | Household Services (Cleaning + Pest + Car Wash) | $380 |
 | Investment Transfer (Schwab) | $430 |
-| Coaching | $240 |
 | Church Tithe | $1,000 |
-| **Total Fixed/Recurring** | **$8,007** |
+| **Total Fixed/Recurring** | **$7,767** |
 
-Remaining from ~$14k net income: **~$6,000** for groceries, dining, shopping, gas, personal care, entertainment, savings, and one-time expenses.
+Remaining from ~$14k net income: **~$6,200** for groceries, dining, shopping, gas, personal care, entertainment, savings, and one-time expenses.
+
+Note: His Story Coaching ($240/mo) now paid via HSA — still a real cost but won't show in checking/CC spending.

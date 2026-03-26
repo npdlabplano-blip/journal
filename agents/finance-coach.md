@@ -52,7 +52,7 @@ Based on actual spending patterns. Refine these as more data is analyzed.
 ### Fixed / Recurring
 - **Housing** — Chase mortgage payment ($2,920–3,122/mo, includes principal, interest, escrow for taxes & insurance)
 - **Utilities** — Atmos Energy (gas), City of Coppell (water), electric, internet
-- **Subscriptions** — Headspace, Netflix, Peloton, Pluralsight, Google One, Stitch Fix
+- **Subscriptions** — Headspace, Netflix, Peloton, Pluralsight, Google One (Stitch Fix canceled)
 - **Insurance** — USAA (auto ~$388/mo), homeowners (via mortgage escrow)
 - **Kids' Activities** — dance lessons (Rhythm Room), sports, school fees
 - **Pet Care** — Camp Bow Wow (dog daycare), vet, food
