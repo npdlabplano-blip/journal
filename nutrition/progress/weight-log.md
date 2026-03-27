@@ -17,7 +17,7 @@ Add a row each morning. At the end of each week (Saturday), calculate the weekly
 | Tue | 2026-03-24 | 145.8 | -0.5 from yesterday |
 | Wed | 2026-03-25 | 144.0 | -1.8 from yesterday |
 | Thu | 2026-03-26 | 144.4 | +0.4 from yesterday |
-| Fri | 2026-03-27 | | |
+| Fri | 2026-03-27 | 145.4 | +1.0 from yesterday |
 | Sat | 2026-03-28 | | |
 
 **Weekly Average:** —
