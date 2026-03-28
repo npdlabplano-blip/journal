@@ -12,6 +12,8 @@
 
 import { google } from "googleapis";
 import { z } from "zod";
+import { createWriteStream, mkdirSync } from "fs";
+import { dirname } from "path";
 
 /**
  * Common Drive file fields to return.
@@ -323,6 +325,114 @@ export function registerDriveTools(server, authClient) {
           {
             type: "text",
             text: `File ${fileId} moved to trash.`,
+          },
+        ],
+      };
+    }
+  );
+
+  /**
+   * Download an image from Drive to a local file path.
+   * Used to view wardrobe photos and other images locally.
+   */
+  server.tool(
+    "download_drive_image",
+    "Download an image from Google Drive to a local file for viewing. Returns the local path.",
+    {
+      fileId: z.string().describe("The Drive file ID of the image"),
+      localPath: z
+        .string()
+        .describe(
+          "Absolute local file path to save the image to (e.g., /Users/.../wardrobe/41.jpg)"
+        ),
+    },
+    async ({ fileId, localPath }) => {
+      // Ensure parent directory exists
+      mkdirSync(dirname(localPath), { recursive: true });
+
+      // Download image bytes from Drive
+      const res = await drive.files.get(
+        { fileId, alt: "media" },
+        { responseType: "stream" }
+      );
+
+      // Pipe to local file
+      const dest = createWriteStream(localPath);
+      await new Promise((resolve, reject) => {
+        res.data.on("end", resolve).on("error", reject).pipe(dest);
+      });
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Image downloaded to: ${localPath}`,
+          },
+        ],
+      };
+    }
+  );
+
+  /**
+   * Download all images from a Drive folder to a local directory.
+   * Useful for batch-downloading wardrobe category folders.
+   */
+  server.tool(
+    "download_drive_folder_images",
+    "Download all images from a Google Drive folder to a local directory. Returns list of downloaded files.",
+    {
+      folderId: z.string().describe("The Drive folder ID containing images"),
+      localDir: z
+        .string()
+        .describe(
+          "Absolute local directory path to save images into (e.g., /Users/.../wardrobe/tops)"
+        ),
+    },
+    async ({ folderId, localDir }) => {
+      mkdirSync(localDir, { recursive: true });
+
+      // List all image files in the folder
+      const listRes = await drive.files.list({
+        q: `'${folderId}' in parents and trashed = false and mimeType contains 'image/'`,
+        pageSize: 100,
+        fields: "files(id, name, mimeType)",
+        orderBy: "name",
+      });
+
+      const files = listRes.data.files || [];
+      if (files.length === 0) {
+        return {
+          content: [{ type: "text", text: "No images found in this folder." }],
+        };
+      }
+
+      const results = [];
+      for (const file of files) {
+        const localPath = `${localDir}/${file.name}`;
+        try {
+          const res = await drive.files.get(
+            { fileId: file.id, alt: "media" },
+            { responseType: "stream" }
+          );
+          const dest = createWriteStream(localPath);
+          await new Promise((resolve, reject) => {
+            res.data.on("end", resolve).on("error", reject).pipe(dest);
+          });
+          results.push({ name: file.name, path: localPath, status: "ok" });
+        } catch (err) {
+          results.push({
+            name: file.name,
+            path: localPath,
+            status: `error: ${err.message}`,
+          });
+        }
+      }
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Downloaded ${results.filter((r) => r.status === "ok").length}/${files.length} images to ${localDir}\n\n${JSON.stringify(results, null, 2)}`,
           },
         ],
       };
