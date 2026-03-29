@@ -26,6 +26,7 @@ services:
     ports:
       - "8084:5000"
     volumes:
+      - ./journal-site:/app/src
       - journal-data:/app/data
     environment:
       - GITHUB_TOKEN=${GITHUB_TOKEN}

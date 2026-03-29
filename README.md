@@ -67,11 +67,11 @@ This starts three containers:
 |-----------|-------|------|-------|
 | `journal-web` | `nginx:alpine` | `8080` | meals.calconam.com, style.calconam.com |
 | `daily-brief` | `nginx:alpine` | `8082` | news.calconam.com |
-| `journal-site` | `node:20-alpine` (built) | `8084` | journal.calconam.com |
+| `journal-site` | `node:20-alpine` | `8084` | journal.calconam.com |
 
-The `web` and `news` containers use volume mounts — no build step needed. They serve files directly from the repo on disk.
+All containers use volume mounts from the repo on disk. The `journal-site` source is mounted at `/app/src` inside the container.
 
-The `journal-site` container is a fullstack Node.js app (Express + React + SQLite) that builds from `journal-site/`. It auto-syncs journal entries to GitHub via the API.
+The `journal-site` container is a fullstack Node.js app (Express + React + SQLite) that auto-syncs journal entries to GitHub via the API. It builds itself on startup and **auto-rebuilds when source changes** — when the host cron pulls new code, the container detects the change within 60 seconds, rebuilds, and restarts the server. No manual rebuild needed.
 
 #### Starting journal-site with 1Password
 
@@ -87,11 +87,7 @@ Or to start everything (the other containers don't need the token):
 GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") docker compose up -d
 ```
 
-To rebuild after code changes:
-
-```bash
-GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") docker compose up -d --build journal-site
-```
+The first start takes a minute or two while it installs dependencies and builds. Subsequent starts are instant if the source hasn't changed.
 
 #### 3. Set up the host cron for git pull
 
@@ -220,7 +216,7 @@ docker compose up -d web news
 # Stop everything
 docker compose down
 
-# Rebuild journal-site after code changes
+# Force image rebuild (only needed if Dockerfile or entrypoint.sh changed)
 GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") docker compose up -d --build journal-site
 
 # View logs
@@ -228,6 +224,8 @@ docker logs -f daily-brief
 docker logs -f journal-web
 docker logs -f journal-site
 ```
+
+Code changes (pushed to GitHub) are picked up automatically by the existing host cron. The container detects changes every 60 seconds, rebuilds, and restarts — no manual intervention needed.
 
 ### Files That Matter
 
