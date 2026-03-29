@@ -166,14 +166,14 @@ Last updated: 2026-03-29
 | 510 | White leather lace-up sneakers with gold eyelet hardware, clean minimal design, rubber sole; crisp classic white sneaker | Keds | White | Sneakers | Year-round | Casual | `11W1DIy7gJPgLCbcu6HHkNF7YIHqoh4Ma` |
 | 511 | White canvas high-top sneakers with colorful butterfly print allover, lace-up, rubber toe cap; fun statement casual shoe | — | White/butterfly print | Sneakers | Year-round | Casual | `1Ypg9wJSbo1AqEsQME2JazvuAvhHoDe7A` |
 | 512 | Black canvas low-top Converse All Stars with white rubber toe cap and sole, classic lace-up; timeless casual staple | Converse | Black/white | Sneakers | Year-round | Casual | `1oVzN20KCsmW-fsmi6RLYEW0Gs-rBI_wc` |
-| 513 | Wedge | — | — | Wedge | Spring/Summer | Church, Date Night | `1itW6_SAWvpX_qV6ytde1GhfzTkYdu87R` |
-| 514 | Wedge | — | — | Wedge | Spring/Summer | Church, Date Night | `1gMMmGfpguxggoEWcWORIyIiwS4fjfltm` |
-| 515 | Slipper | — | — | Slipper | Year-round | Lounge | `1rN0e0QzbIabss2-zK4BjWB1U3BlrMUq9` |
-| 516 | Wedge | — | — | Wedge | Spring/Summer | Church, Work | `1S7Aea1SC_PVjG6ELzDv1W6HaNLrJ6l2O` |
-| 517 | Black heels | — | Black | Heels | Year-round | Work, Date Night | `1ctfcF8qM2S3rbe3llxSJKSAZRpqJ28bh` |
-| 518 | Black heel | — | Black | Heels | Year-round | Work, Date Night | `1wd4MwEBiP3k_DP8YIDbcJ7lpHNJV47Ab` |
-| 519 | Blue slipper | — | Blue | Slipper | Year-round | Lounge | `1x6wWK2SK4u0T0nHTtvsAFSi8DwdCfMGE` |
-| 520 | Black loafer | — | Black | Loafer | Year-round | Work, Casual | `1n58yolSipWkEutgqMMysUulMTsFZowgD` |
+| 513 | Cream/natural canvas espadrille wedge sandals with bow detail at toe, braided jute platform, ankle strap; boho summer | TOMS | Cream/natural | Wedge | Spring/Summer | Church, Date Night | `1itW6_SAWvpX_qV6ytde1GhfzTkYdu87R` |
+| 514 | Tan leather strappy wedge sandals with cork platform heel, crisscross straps, ankle buckle; warm-weather dressy | — | Tan/cork | Wedge | Spring/Summer | Church, Date Night | `1gMMmGfpguxggoEWcWORIyIiwS4fjfltm` |
+| 515 | Cream perforated leather double-strap Mary Jane flats with gold buckle hardware, rounded toe; cute vintage-inspired | MIA | Cream/perforated | Slipper | Year-round | Lounge | `1rN0e0QzbIabss2-zK4BjWB1U3BlrMUq9` |
+| 516 | Heathered gray canvas lace-up sneakers with navy heel tab, low-top, casual everyday shoe; goes with everything | Keds | Heathered gray | Wedge | Spring/Summer | Church, Work | `1S7Aea1SC_PVjG6ELzDv1W6HaNLrJ6l2O` |
+| 517 | Black leather kitten heel pumps with small bow detail at vamp, pointed toe, low heel; classic feminine work shoe | — | Black | Heels | Year-round | Work, Date Night | `1ctfcF8qM2S3rbe3llxSJKSAZRpqJ28bh` |
+| 518 | Black leather pointed-toe stiletto pumps, classic mid-height heel, sleek minimal design; power heel for work and date night | — | Black | Heels | Year-round | Work, Date Night | `1wd4MwEBiP3k_DP8YIDbcJ7lpHNJV47Ab` |
+| 519 | Dark navy/charcoal knit slip-on flats with textured weave pattern, cushioned insole; comfortable everyday shoe | TOMS | Dark navy/charcoal | Slipper | Year-round | Lounge | `1x6wWK2SK4u0T0nHTtvsAFSi8DwdCfMGE` |
+| 520 | Black leather loafers with gold horsebit hardware chain detail, pointed toe, low block heel; polished professional | Franco Sarto | Black | Loafer | Year-round | Work, Casual | `1n58yolSipWkEutgqMMysUulMTsFZowgD` |
 
 ---
 
