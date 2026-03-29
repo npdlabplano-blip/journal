@@ -126,21 +126,21 @@ Last updated: 2026-03-29
 
 | # | Description | Brand | Color/Pattern | Subcategory | Season | Occasion | Drive ID |
 |---|-------------|-------|---------------|-------------|--------|----------|----------|
-| 301 | Green dress | Daniel Rainn | Green | Dress | Spring/Summer | Work, Church | `18m09_vsIAmHEkDQEVXOJxunoNHMB7r1X` |
-| 302 | Maxi green dress | — | Green | Dress (maxi) | Spring/Summer | Church, Casual | `1JmPYElAzDUyEZjK5ijSyxbo6IXtnKtRr` |
-| 303 | White dress | White House Black Market | White | Dress | Spring/Summer | Church, Date Night | `1qVAoo9h6fu7hFWmmvkzSO0jsHi99Ah0n` |
-| 304 | Gold dress | — | Gold | Dress | Year-round | Date Night, Church | `1cV0mFMEi_b65NTkPcZJu-Cb-RsRb6jk2` |
-| 305 | Maxi dress | — | — | Dress (maxi) | Spring/Summer | Casual, Church | `1Eu2_ASfKZw4pPbl1p-qiJNtnXE_3MjrF` |
-| 306 | Black dress | — | Black | Dress | Year-round | Work, Date Night | `1GQ_MC1d2vOXA_gGPbp52kuzem-95zJm4` |
-| 307 | Black dress | — | Black | Dress | Year-round | Work, Date Night | `1evFy18RvcsH71v8KpwMIy_hiS4gM58ep` |
-| 308 | Printed dress | Liz Claiborne | Print | Dress | Spring/Summer | Work, Church | `1voJyGFOMstiyS85BRqHpjRw1d_Yf-aqL` |
-| 309 | Blue sweater dress | — | Blue | Sweater dress | Fall/Winter | Work, Church | `15_hVJA2L-bdCek_ZdusQTKaPLVgr7E_W` |
-| 310 | Purple dress | — | Purple | Dress | Year-round | Work, Church | `1mMLH9Hxpl7acxtuYJvoxmC5Scn4bRl8t` |
-| 311 | Gray dress | — | Gray | Dress | Year-round | Work, Church | `1D6ymdO9_9xKLaTKi59af05-HmjAhi1z5` |
-| 312 | Red dress | Liz Claiborne | Red | Dress | Year-round | Church, Date Night | `1MkJXv-t0fNwj9XY_feZKaaAEWLsUw72J` |
-| 313 | Black dress | Loft | Black | Dress | Year-round | Work | `1WKbnfuQQdGSQ9pyO-7tVNjdKETZF68r2` |
-| 314 | Blue floral dress | — | Blue/floral | Dress | Spring/Summer | Church, Date Night | `1fWLamBAo1g31E-bDhlchiuYoMcffR91Y` |
-| 315 | Red dress | — | Red | Dress | Year-round | Church, Date Night | `13N36NiN8m9RnXrxWrOxm0dzP9UK0J4hh` |
+| 301 | Sleeveless fit-and-flare dress in teal with Swiss dot texture, pintuck pleating at yoke, V-neck, flowy skirt; matches top #59 | Daniel Rainn | Teal | Dress | Spring/Summer | Work, Church | `18m09_vsIAmHEkDQEVXOJxunoNHMB7r1X` |
+| 302 | V-neck maxi dress in bold teal/orange/cream mandala medallion print, halter-style straps, flowy jersey fabric; boho statement | — | Teal/orange medallion | Dress (maxi) | Spring/Summer | Church, Casual | `1JmPYElAzDUyEZjK5ijSyxbo6IXtnKtRr` |
+| 303 | White eyelet lace dress with allover cutwork embroidery, short sleeves, A-line skirt, lined; elegant summer church dress | White House Black Market | White eyelet | Dress | Spring/Summer | Church, Date Night | `1qVAoo9h6fu7hFWmmvkzSO0jsHi99Ah0n` |
+| 304 | Allover gold/champagne sequin mini dress, 3/4 sleeves, crew neck, fitted sheath silhouette; glamorous party/date night piece | — | Gold/champagne sequin | Dress | Year-round | Date Night, Church | `1cV0mFMEi_b65NTkPcZJu-Cb-RsRb6jk2` |
+| 305 | V-neck maxi dress in navy and white oversized floral print, short flutter sleeves, flowy jersey, wrap-style bodice; striking | — | Navy/white bold floral | Dress (maxi) | Spring/Summer | Casual, Church | `1Eu2_ASfKZw4pPbl1p-qiJNtnXE_3MjrF` |
+| 306 | Sleeveless fit-and-flare dress in black ponte, round neck, princess seams, A-line skirt, smooth stretch; versatile LBD | — | Black | Dress | Year-round | Work, Date Night | `1GQ_MC1d2vOXA_gGPbp52kuzem-95zJm4` |
+| 307 | Sleeveless sheath dress in black ponte, V-neckline, back zip, darted bodice, structured fit; polished office LBD | — | Black | Dress | Year-round | Work, Date Night | `1evFy18RvcsH71v8KpwMIy_hiS4gM58ep` |
+| 308 | Sleeveless sheath dress with bold black/white/red Aztec-inspired geometric print, crew neck, structured woven; eye-catching | Liz Claiborne | Black/white/red geometric | Dress | Spring/Summer | Work, Church | `1voJyGFOMstiyS85BRqHpjRw1d_Yf-aqL` |
+| 309 | Long-sleeve sweater dress in deep navy, fine-knit, V-neck, A-line skirt, ribbed cuffs; cozy polished fall/winter option | — | Deep navy | Sweater dress | Fall/Winter | Work, Church | `15_hVJA2L-bdCek_ZdusQTKaPLVgr7E_W` |
+| 310 | Sleeveless sheath dress in deep plum/eggplant, structured ponte fabric, V-neck, back zip, knee-length; rich jewel tone | — | Plum/eggplant | Dress | Year-round | Work, Church | `1mMLH9Hxpl7acxtuYJvoxmC5Scn4bRl8t` |
+| 311 | Sleeveless fit-and-flare dress in medium gray ponte, round neck, smooth stretch fabric, A-line skirt; clean neutral staple | — | Medium gray | Dress | Year-round | Work, Church | `1D6ymdO9_9xKLaTKi59af05-HmjAhi1z5` |
+| 312 | Sleeveless dress in deep red with ornate black and white medallion/paisley print, contrasting black print at sleeves; bold | Liz Claiborne | Red/black medallion | Dress | Year-round | Church, Date Night | `1MkJXv-t0fNwj9XY_feZKaaAEWLsUw72J` |
+| 313 | Long-sleeve ribbed knit bodycon dress in black, crew neck, fitted throughout, midi length, stretchy; sleek modern office dress | Loft | Black ribbed | Dress | Year-round | Work | `1WKbnfuQQdGSQ9pyO-7tVNjdKETZF68r2` |
+| 314 | V-neck wrap-style dress in dusty teal with navy/tan Jacobean floral print, 3/4 sleeves, flowy jersey, midi length; feminine | — | Teal/navy floral | Dress | Spring/Summer | Church, Date Night | `1fWLamBAo1g31E-bDhlchiuYoMcffR91Y` |
+| 315 | Sleeveless V-neck dress in bright cherry red jersey, gathered/knotted detail at bust, flowy A-line skirt; vibrant date night | — | Cherry red | Dress | Year-round | Church, Date Night | `13N36NiN8m9RnXrxWrOxm0dzP9UK0J4hh` |
 | 316 | Black floral dress | — | Black/floral | Dress | Spring/Summer | Work, Church | `1BZRlEXcQP7ehZFG7jSPxaJT48CWyXImt` |
 | 317 | Green dress | — | Green | Dress | Spring/Summer | Work, Church | `1tGaZO8i1enz4JC6kFUh86ogfsf5JG_-g` |
 | 318 | Black printed dress | — | Black/print | Dress | Year-round | Work, Church | `18usXjqEiWy-nEs9anBWvLe-EI7bxfAp5` |

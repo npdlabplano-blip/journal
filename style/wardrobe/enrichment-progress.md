@@ -7,8 +7,8 @@
 - [x] Bottoms 101-116 (batch 4) — done 2026-03-29
 - [x] Bottoms 117-131 + Absolute Pant, Microflare pant (batch 5) — done 2026-03-29
 - [x] Jackets 201-215 (batch 6) — done 2026-03-29
+- [x] Dresses 301-315 (batch 7) — done 2026-03-29
 
 ## Remaining
-- [ ] Dresses 301-315 (batch 7)
 - [ ] Dresses 316-320 + Pointe dress, Shoes 501-512 (batch 8)
 - [ ] Shoes 513-520 (batch 9)
