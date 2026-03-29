@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useTheme } from "@/components/theme-provider";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -21,12 +21,28 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
+const TABS = [
+  { id: "all", label: "All" },
+  { id: "entries", label: "Journal" },
+  { id: "bible-study", label: "Bible Study" },
+  { id: "sermons", label: "Sermons" },
+  { id: "prayers", label: "Prayers" },
+];
+
 export default function HomePage() {
   const { theme, toggleTheme } = useTheme();
   const { toast } = useToast();
   const [, navigate] = useLocation();
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [activeTab, setActiveTab] = useState<string>(() => {
+    // Restore last active tab from session storage
+    return sessionStorage.getItem("journal-active-tab") || "all";
+  });
+
+  // Persist active tab so the editor can read it
+  useEffect(() => {
+    sessionStorage.setItem("journal-active-tab", activeTab);
+  }, [activeTab]);
 
   const { data: entries = [], isLoading } = useQuery<JournalEntry[]>({
     queryKey: ["/api/entries"],
@@ -42,10 +58,21 @@ export default function HomePage() {
     },
   });
 
-  const categories = ["all", ...Array.from(new Set(entries.map((e) => e.category)))];
+  // Count entries per tab
+  const tabCounts = TABS.reduce(
+    (acc, tab) => {
+      if (tab.id === "all") {
+        acc[tab.id] = entries.length;
+      } else {
+        acc[tab.id] = entries.filter((e) => e.category === tab.id).length;
+      }
+      return acc;
+    },
+    {} as Record<string, number>
+  );
 
   const filtered = entries.filter((entry) => {
-    const matchCategory = selectedCategory === "all" || entry.category === selectedCategory;
+    const matchCategory = activeTab === "all" || entry.category === activeTab;
     const matchSearch =
       !searchQuery ||
       entry.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -57,7 +84,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-10 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-label="Journal logo">
               <rect x="5" y="3" width="22" height="26" rx="2" stroke="currentColor" strokeWidth="2" />
@@ -79,7 +106,7 @@ export default function HomePage() {
             >
               {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
-            <Link href="/new">
+            <Link href={`/new${activeTab !== "all" ? `?cat=${activeTab}` : ""}`}>
               <Button size="sm" data-testid="button-new-entry">
                 <Plus className="h-4 w-4 mr-1.5" />
                 New Entry
@@ -89,36 +116,47 @@ export default function HomePage() {
         </div>
       </header>
 
+      {/* Notebook tab dividers */}
+      <div className="notebook-tabs-wrapper sticky top-[65px] z-[9] bg-background">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <nav className="notebook-tabs" role="tablist" aria-label="Journal sections">
+            {TABS.map((tab, index) => {
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  role="tab"
+                  aria-selected={isActive}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`notebook-tab ${isActive ? "notebook-tab-active" : ""}`}
+                  style={{ zIndex: isActive ? 10 : TABS.length - index }}
+                  data-testid={`tab-${tab.id}`}
+                >
+                  <span className="notebook-tab-label">{tab.label}</span>
+                  {tabCounts[tab.id] > 0 && (
+                    <span className="notebook-tab-count">{tabCounts[tab.id]}</span>
+                  )}
+                </button>
+              );
+            })}
+          </nav>
+        </div>
+      </div>
+
       {/* Main content */}
-      <main className="mx-auto max-w-3xl px-4 sm:px-6 py-8">
-        {/* Search and filters */}
-        <div className="flex flex-col sm:flex-row gap-3 mb-8">
-          <div className="relative flex-1">
+      <main className="mx-auto max-w-4xl px-4 sm:px-6 py-6">
+        {/* Search bar */}
+        <div className="mb-6">
+          <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Search entries..."
+              placeholder={`Search ${activeTab === "all" ? "all entries" : TABS.find(t => t.id === activeTab)?.label || "entries"}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-4 py-2 rounded-lg border border-border bg-card text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               data-testid="input-search"
             />
-          </div>
-          <div className="flex gap-1.5 flex-wrap">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
-                  selectedCategory === cat
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-secondary-foreground hover:bg-accent"
-                }`}
-                data-testid={`button-filter-${cat}`}
-              >
-                {cat === "all" ? "All" : cat.charAt(0).toUpperCase() + cat.slice(1)}
-              </button>
-            ))}
           </div>
         </div>
 
@@ -137,12 +175,18 @@ export default function HomePage() {
           <div className="text-center py-20">
             <BookOpen className="h-12 w-12 mx-auto mb-4 text-muted-foreground/40" />
             <h2 className="text-lg font-medium mb-2" style={{ fontFamily: "'General Sans', 'Satoshi', sans-serif", letterSpacing: '-0.01em' }}>
-              {entries.length === 0 ? "Start your journal" : "No matching entries"}
+              {entries.length === 0
+                ? "Start your journal"
+                : searchQuery
+                ? "No matching entries"
+                : `No ${TABS.find(t => t.id === activeTab)?.label || ""} entries yet`}
             </h2>
             <p className="text-sm text-muted-foreground mb-6 max-w-sm mx-auto">
               {entries.length === 0
                 ? "Write your first entry. It will be saved as Markdown and synced to your GitHub repository."
-                : "Try a different search or category filter."}
+                : searchQuery
+                ? "Try a different search term."
+                : `Start writing in this section. Click "New Entry" to begin.`}
             </p>
             {entries.length === 0 && (
               <Link href="/new">
@@ -171,9 +215,11 @@ export default function HomePage() {
                         <span className="text-xs text-muted-foreground">
                           {format(parseISO(entry.createdAt), "MMM d, yyyy")}
                         </span>
-                        <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
-                          {entry.category}
-                        </Badge>
+                        {activeTab === "all" && (
+                          <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
+                            {TABS.find(t => t.id === entry.category)?.label || entry.category}
+                          </Badge>
+                        )}
                         {entry.synced ? (
                           <span className="flex items-center gap-0.5 text-[10px] text-green-600 dark:text-green-400">
                             <Check className="h-3 w-3" />

@@ -35,7 +35,12 @@ import { useToast } from "@/hooks/use-toast";
 import { useTheme } from "@/components/theme-provider";
 import { Link } from "wouter";
 
-const CATEGORIES = ["entries", "bible-study", "prayers", "sermons"];
+const CATEGORIES = [
+  { id: "entries", label: "Journal" },
+  { id: "bible-study", label: "Bible Study" },
+  { id: "sermons", label: "Sermons" },
+  { id: "prayers", label: "Prayers" },
+];
 
 // Configure marked for safe HTML rendering
 marked.setOptions({
@@ -79,7 +84,17 @@ export default function EditorPage() {
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [category, setCategory] = useState("entries");
+  const [category, setCategory] = useState(() => {
+    // Read category from URL query param (?cat=bible-study) or session storage
+    if (typeof window !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.hash.split("?")[1] || "");
+      const catParam = urlParams.get("cat");
+      if (catParam && CATEGORIES.some(c => c.id === catParam)) return catParam;
+      const stored = sessionStorage.getItem("journal-active-tab");
+      if (stored && stored !== "all" && CATEGORIES.some(c => c.id === stored)) return stored;
+    }
+    return "entries";
+  });
   const [tagsInput, setTagsInput] = useState("");
   const [showPreview, setShowPreview] = useState(false);
   const [autoSaveTimer, setAutoSaveTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
@@ -117,7 +132,19 @@ export default function EditorPage() {
     if (!isEditing) {
       setTitle("");
       setContent("");
-      setCategory("entries");
+      // Restore category from URL query or session
+      const urlParams = new URLSearchParams(window.location.hash.split("?")[1] || "");
+      const catParam = urlParams.get("cat");
+      if (catParam && CATEGORIES.some(c => c.id === catParam)) {
+        setCategory(catParam);
+      } else {
+        const stored = sessionStorage.getItem("journal-active-tab");
+        if (stored && stored !== "all" && CATEGORIES.some(c => c.id === stored)) {
+          setCategory(stored);
+        } else {
+          setCategory("entries");
+        }
+      }
       setTagsInput("");
       setIsDirty(false);
     }
@@ -254,8 +281,8 @@ export default function EditorPage() {
 
   const groupedEntries = CATEGORIES.reduce(
     (acc, cat) => {
-      const catEntries = filteredEntries.filter((e) => e.category === cat);
-      if (catEntries.length > 0) acc[cat] = catEntries;
+      const catEntries = filteredEntries.filter((e) => e.category === cat.id);
+      if (catEntries.length > 0) acc[cat.id] = catEntries;
       return acc;
     },
     {} as Record<string, JournalEntry[]>
@@ -395,7 +422,7 @@ export default function EditorPage() {
                   <div key={cat}>
                     <div className="px-3 pt-3 pb-1">
                       <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                        {formatCategoryLabel(cat)}
+                        {CATEGORIES.find(c => c.id === cat)?.label || formatCategoryLabel(cat)}
                       </span>
                     </div>
                     {entries.map((entry) => {
@@ -465,8 +492,8 @@ export default function EditorPage() {
                   data-testid="select-category"
                 >
                   {CATEGORIES.map((c) => (
-                    <option key={c} value={c}>
-                      {formatCategoryLabel(c)}
+                    <option key={c.id} value={c.id}>
+                      {c.label}
                     </option>
                   ))}
                 </select>
