@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meal Plans</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #f8f9fa;
+    color: #1a1a1a;
+    min-height: 100vh;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 24px 16px;
+    text-align: center;
+  }
+  .header h1 { font-size: 22px; }
+  .header p { font-size: 14px; opacity: 0.8; margin-top: 4px; }
+  .content { padding: 16px; max-width: 600px; margin: 0 auto; }
+  .week-card {
+    display: block;
+    background: white;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #1a1a1a;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: transform 0.15s, box-shadow 0.15s;
+    border-left: 4px solid #1abc9c;
+  }
+  .week-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .week-card .date { font-size: 18px; font-weight: 700; color: #2c3e50; }
+  .week-card .label { font-size: 13px; color: #666; margin-top: 2px; }
+  .current { border-left-color: #e74c3c; }
+  .current .date::after {
+    content: " — current";
+    font-size: 12px;
+    font-weight: 600;
+    color: #e74c3c;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Meal Plans</h1>
+    <p>Tap a week to view</p>
+  </div>
+  <div class="content">
+    <a class="week-card current" href="2026-03-29.html">
+      <div class="date">Mar 29 – Apr 4</div>
+      <div class="label">Easter week | Kids home Sun–Wed</div>
+    </a>
+  </div>
+</body>
+</html>
