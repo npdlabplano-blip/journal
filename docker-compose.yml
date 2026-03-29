@@ -19,3 +19,17 @@ services:
       - ./news/site:/var/www/news:ro
       - ./news/site/nginx-news.conf:/etc/nginx/conf.d/default.conf:ro
     restart: unless-stopped
+
+  journal-site:
+    build: ./journal-site
+    container_name: journal-site
+    ports:
+      - "8084:5000"
+    volumes:
+      - journal-data:/app/data
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    restart: unless-stopped
+
+volumes:
+  journal-data:

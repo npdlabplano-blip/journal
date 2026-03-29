@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm literary journal — cream/parchment surfaces, ink text, amber accent */
+    --background: 40 30% 96%;
+    --foreground: 30 30% 12%;
+    --card: 38 28% 97%;
+    --card-foreground: 30 30% 12%;
+    --popover: 38 28% 97%;
+    --popover-foreground: 30 30% 12%;
+    --primary: 28 70% 42%;
+    --primary-foreground: 40 30% 97%;
+    --secondary: 36 16% 90%;
+    --secondary-foreground: 30 25% 20%;
+    --muted: 36 14% 92%;
+    --muted-foreground: 30 8% 48%;
+    --accent: 36 16% 90%;
+    --accent-foreground: 30 25% 20%;
+    --destructive: 0 60% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 34 12% 84%;
+    --input: 34 12% 84%;
+    --ring: 28 70% 42%;
+    --radius: 0.5rem;
+    --chart-1: 28 70% 42%;
+    --chart-2: 150 40% 38%;
+    --chart-3: 36 60% 55%;
+    --chart-4: 200 40% 45%;
+    --chart-5: 340 40% 50%;
+    --sidebar-background: 38 26% 95%;
+    --sidebar-foreground: 30 25% 20%;
+    --sidebar-primary: 28 70% 42%;
+    --sidebar-primary-foreground: 40 30% 97%;
+    --sidebar-accent: 36 18% 89%;
+    --sidebar-accent-foreground: 30 25% 20%;
+    --sidebar-border: 34 12% 86%;
+    --sidebar-ring: 28 70% 42%;
+  }
+
+  .dark {
+    --background: 30 12% 8%;
+    --foreground: 36 8% 82%;
+    --card: 30 10% 10%;
+    --card-foreground: 36 8% 82%;
+    --popover: 30 10% 10%;
+    --popover-foreground: 36 8% 82%;
+    --primary: 28 60% 55%;
+    --primary-foreground: 30 12% 8%;
+    --secondary: 30 8% 16%;
+    --secondary-foreground: 36 8% 78%;
+    --muted: 30 6% 18%;
+    --muted-foreground: 30 6% 52%;
+    --accent: 30 8% 16%;
+    --accent-foreground: 36 8% 78%;
+    --destructive: 0 55% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 6% 20%;
+    --input: 30 6% 20%;
+    --ring: 28 60% 55%;
+    --chart-1: 28 60% 55%;
+    --chart-2: 150 35% 45%;
+    --chart-3: 36 50% 58%;
+    --chart-4: 200 35% 52%;
+    --chart-5: 340 35% 55%;
+    --sidebar-background: 30 10% 9%;
+    --sidebar-foreground: 36 8% 78%;
+    --sidebar-primary: 28 60% 55%;
+    --sidebar-primary-foreground: 30 12% 8%;
+    --sidebar-accent: 30 8% 14%;
+    --sidebar-accent-foreground: 36 8% 78%;
+    --sidebar-border: 30 6% 18%;
+    --sidebar-ring: 28 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Satoshi', 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Markdown preview styles */
+.prose-journal {
+  line-height: 1.75;
+}
+
+.prose-journal h1 {
+  font-family: 'Zodiak', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.prose-journal h2 {
+  font-family: 'Zodiak', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.prose-journal h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.prose-journal p {
+  margin-bottom: 0.75rem;
+  max-width: 72ch;
+}
+
+.prose-journal ul, .prose-journal ol {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.prose-journal ul {
+  list-style: disc;
+}
+
+.prose-journal ol {
+  list-style: decimal;
+}
+
+.prose-journal li {
+  margin-bottom: 0.25rem;
+}
+
+.prose-journal blockquote {
+  border-left: 3px solid hsl(var(--primary));
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: hsl(var(--muted-foreground));
+}
+
+.prose-journal code {
+  background: hsl(var(--muted));
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+}
+
+.prose-journal pre {
+  background: hsl(var(--muted));
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.prose-journal pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose-journal hr {
+  border: none;
+  border-top: 1px solid hsl(var(--border));
+  margin: 1.5rem 0;
+}
+
+.prose-journal a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-journal strong {
+  font-weight: 600;
+}
+
+.prose-journal em {
+  font-style: italic;
+}
