@@ -3,102 +3,196 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicole's Business Casual Capsule</title>
+  <title>Nicole's Style Capsule</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Hub-specific styles */
+    .capsule-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2rem;
+      padding: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .capsule-card {
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 2rem;
+      border-left: 3px solid #c4928a;
+    }
+    .capsule-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .capsule-card .capsule-name {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #c4928a;
+      margin-bottom: 0.5rem;
+    }
+    .capsule-card h2 {
+      font-size: 1.3rem;
+      font-weight: 300;
+      margin-bottom: 0.75rem;
+      color: #1a1a1a;
+    }
+    .capsule-card p {
+      font-size: 0.85rem;
+      color: #9a9490;
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .capsule-card .capsule-meta {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.75rem;
+      color: #b8956a;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .hub-section-title {
+      text-align: center;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #9a9490;
+      padding: 2rem 2rem 0.5rem;
+      border-top: 1px solid #e8e4e0;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
+
   <header class="site-header">
-    <h1>Business Casual Capsule</h1>
-    <p class="subtitle">8 curated picks from 6 stores to upgrade your work-to-weekend wardrobe</p>
-    <p class="date">March 29, 2026</p>
+    <h1>Nicole's Style Capsule</h1>
+    <p class="subtitle">Curated picks to upgrade your wardrobe — one capsule at a time</p>
+    <p class="date">March 2026</p>
   </header>
+
+  <!-- Capsule Navigation -->
+  <p class="hub-section-title">Your Capsules</p>
+
+  <div class="capsule-nav">
+
+    <a href="business-casual/index.html" class="capsule-card">
+      <div class="capsule-name">Capsule 1</div>
+      <h2>Business Casual</h2>
+      <p>Trendy, polished picks for JP Morgan Chase and beyond — trousers, blouses, a statement shoe, and a touch of shimmer.</p>
+      <div class="capsule-meta">8 picks · 6 stores · March 2026</div>
+    </a>
+
+    <a href="casual/index.html" class="capsule-card">
+      <div class="capsule-name">Capsule 2</div>
+      <h2>Casual Weekend</h2>
+      <p>Relaxed but actually cute — joggers, linen pants, a boho henley, a trendy barrel leg, a yellow floral dress, and strappy sandals.</p>
+      <div class="capsule-meta">8 picks · 6 stores · March 2026</div>
+    </a>
+
+  </div>
+
+  <!-- Top Picks Across Both Capsules -->
+  <p class="hub-section-title">Top Picks Across Both Capsules</p>
 
   <div class="picks-grid">
 
-    <a href="picks/pick1.html" class="pick-card">
-      <img src="business-casual/images/pick1-vendor.jpg" alt="Everyday Wide-Leg Pant in TENCEL-Cotton Mushroom Taupe">
+    <!-- BC Top 4 -->
+    <a href="business-casual/picks/pick1.html" class="pick-card">
+      <img src="business-casual/images/pick1-vendor.jpg" alt="Banana Republic Everyday Wide-Leg Pant in Mushroom Taupe">
       <div class="card-body">
-        <p class="brand">Banana Republic</p>
-        <h3>Everyday Wide-Leg Pant in TENCEL-Cotton</h3>
-        <p class="price">$79.99 <small style="text-decoration:line-through;color:#9a9490;">$120</small></p>
-        <span class="tag">Everyday Trouser</span>
+        <div class="brand">Banana Republic</div>
+        <h3>Everyday Wide-Leg Pant — Mushroom Taupe</h3>
+        <div class="price">$79.99 <small style="text-decoration:line-through;color:#9a9490;">$120</small></div>
+        <span class="tag">Business Casual</span>
       </div>
     </a>
 
-    <a href="picks/pick2.html" class="pick-card">
-      <img src="https://anninc.scene7.com/is/image/AN/829129_2159?$pdp$" alt="The Jayne Trouser in Dried Moss">
+    <a href="business-casual/picks/pick3.html" class="pick-card">
+      <img src="https://images.lululemon.com/is/image/lululemon/LW5HCOS_071148_1?wid=750&op_usm=0.8,1,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72" alt="Lululemon Daydrift Wide-Leg Trouser in Olive Brown">
       <div class="card-body">
-        <p class="brand">Ann Taylor</p>
-        <h3>The Jayne Trouser</h3>
-        <p class="price">$119</p>
-        <span class="tag">Bestselling Trouser</span>
+        <div class="brand">Lululemon</div>
+        <h3>Daydrift Wide-Leg Trouser — Olive Brown</h3>
+        <div class="price">$148</div>
+        <span class="tag">Business Casual</span>
       </div>
     </a>
 
-    <a href="picks/pick3.html" class="pick-card">
-      <img src="https://images.lululemon.com/is/image/lululemon/LW5HCOS_071148_1?wid=750&op_usm=0.8,1,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72" alt="Daydrift High-Rise Wide-Leg Trouser in Olive Brown">
+    <a href="business-casual/picks/pick5.html" class="pick-card">
+      <img src="https://anninc.scene7.com/is/image/LO/763220_8967?$pdp$&fmt=jpg&wid=600" alt="Loft Seersucker Cinched Bubble Sleeve Top in Dark Teal">
       <div class="card-body">
-        <p class="brand">Lululemon</p>
-        <h3>Daydrift High-Rise Wide-Leg Trouser</h3>
-        <p class="price">$148</p>
-        <span class="tag">Athleisure-to-Office</span>
+        <div class="brand">Loft</div>
+        <h3>Seersucker Bubble Sleeve Top — Dark Teal</h3>
+        <div class="price">$27.47 <small style="text-decoration:line-through;color:#9a9490;">$54.95</small></div>
+        <span class="tag">Business Casual</span>
       </div>
     </a>
 
-    <a href="picks/pick4.html" class="pick-card">
-      <img src="https://anninc.scene7.com/is/image/AN/847930_528431?$pdp$" alt="Floral Bow Blouse in Aqua Foam">
+    <a href="business-casual/picks/pick7.html" class="pick-card">
+      <img src="https://www.whitehouseblackmarket.com/_assets/products/content/fdwhnl4g3m/jpeg/WHBM_Sequin%20Pinstripe%20Tapered_570406978_IVO007382_OF_MAIN.jpeg" alt="WHBM Sequin Pinstripe Tapered Ankle Pant in Ecru">
       <div class="card-body">
-        <p class="brand">Ann Taylor</p>
-        <h3>Floral Bow Blouse</h3>
-        <p class="price">$109</p>
-        <span class="tag">Statement Bow Blouse</span>
+        <div class="brand">White House Black Market</div>
+        <h3>Sequin Pinstripe Tapered Ankle Pant — Ecru</h3>
+        <div class="price">$97.50 <small style="text-decoration:line-through;color:#9a9490;">$130</small></div>
+        <span class="tag">Business Casual</span>
       </div>
     </a>
 
-    <a href="picks/pick5.html" class="pick-card">
-      <img src="https://anninc.scene7.com/is/image/LO/763220_8967?$pdp$&amp;fmt=jpg&amp;wid=600" alt="Seersucker Cinched Bubble Sleeve Top in Dark Teal">
+    <!-- Casual Top 4 -->
+    <a href="casual/picks/pick1.html" class="pick-card">
+      <img src="https://images.lululemon.com/is/image/lululemon/LW5HVSS_072763_1?wid=750&op_usm=0.8,1,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72" alt="Lululemon Softstreme Jogger in Willow Leaf">
       <div class="card-body">
-        <p class="brand">Loft</p>
-        <h3>Seersucker Cinched Bubble Sleeve Top</h3>
-        <p class="price">$27.47 <small style="text-decoration:line-through;color:#9a9490;">$54.95</small></p>
-        <span class="tag">Trendy Texture Top</span>
+        <div class="brand">Lululemon</div>
+        <h3>Softstreme Classic-Fit Jogger — Willow Leaf</h3>
+        <div class="price">$99 <small style="text-decoration:line-through;color:#9a9490;">$128</small></div>
+        <span class="tag">Casual Weekend</span>
       </div>
     </a>
 
-    <a href="picks/pick6.html" class="pick-card">
-      <img src="https://n.nordstrommedia.com/it/8ed94759-52ca-4333-b6c8-aa71821a3e62.jpeg?crop=pad&amp;w=780&amp;h=1196" alt="Vince Camuto Rumple Satin Top in Rich Taupe">
+    <a href="casual/picks/pick2.html" class="pick-card">
+      <img src="https://www.madewell.com/images/NZ252_BR5558_ld" alt="Madewell Zoe Linen Pant in Safari Khaki">
       <div class="card-body">
-        <p class="brand">Vince Camuto (via Nordstrom)</p>
-        <h3>Rumple Satin Top</h3>
-        <p class="price">$59</p>
-        <span class="tag">Warm Neutral Satin</span>
+        <div class="brand">Madewell</div>
+        <h3>Zoe Relaxed Straight Pant in 100% Linen — Safari Khaki</h3>
+        <div class="price">$118</div>
+        <span class="tag">Casual Weekend</span>
       </div>
     </a>
 
-    <a href="picks/pick7.html" class="pick-card">
-      <img src="https://www.whitehouseblackmarket.com/_assets/products/content/fdwhnl4g3m/jpeg/WHBM_Sequin%20Pinstripe%20Tapered_570406978_IVO007382_OF_MAIN.jpeg" alt="Sequin Pinstripe Tapered Ankle Pant in Ecru">
+    <a href="casual/picks/pick5.html" class="pick-card">
+      <img src="https://target.scene7.com/is/image/Target/GUEST_c726b238-54f0-4c1e-9330-9903f5bcbf74?wid=1200&hei=1200&qlt=80" alt="Target Balloon Sleeve Mini Shirtdress in Yellow Floral">
       <div class="card-body">
-        <p class="brand">White House Black Market</p>
-        <h3>Sequin Pinstripe Tapered Ankle Pant</h3>
-        <p class="price">$97.50 <small style="text-decoration:line-through;color:#9a9490;">$130</small></p>
-        <span class="tag">Statement Pant</span>
+        <div class="brand">Target (A New Day)</div>
+        <h3>Balloon Sleeve Mini Shirtdress — Yellow Floral</h3>
+        <div class="price">$26.25 <small style="text-decoration:line-through;color:#9a9490;">$35</small></div>
+        <span class="tag">Casual Weekend</span>
       </div>
     </a>
 
-    <a href="picks/pick8.html" class="pick-card">
-      <img src="https://cdn.shopify.com/s/files/1/2170/8465/files/STEVEMADDEN_SHOES_RAFE_TAUPE-SUEDE01.jpg?v=1772658027" alt="Steve Madden Rafe Loafer Mule in Taupe Suede">
+    <a href="casual/picks/pick8.html" class="pick-card">
+      <img src="https://www.dolcevita.com/cdn/shop/files/DOLCEVITA-SANDAL_SHORE_CAMELSUEDE-01.jpg?v=1762187395&width=853" alt="Dolce Vita Shore Sandals in Camel Suede">
       <div class="card-body">
-        <p class="brand">Steve Madden (via Nordstrom)</p>
-        <h3>Rafe Loafer Mule</h3>
-        <p class="price">$109</p>
-        <span class="tag">Trendy Mule Loafer</span>
+        <div class="brand">Dolce Vita</div>
+        <h3>Shore Sandals — Camel Suede</h3>
+        <div class="price">$130</div>
+        <span class="tag">Casual Weekend</span>
       </div>
     </a>
 
   </div>
 
   <footer class="site-footer">
-    <p>Nicole's Capsule Collection &mdash; Curated March 29, 2026</p>
+    Nicole's Style Journal · Style Capsule · March 2026
   </footer>
+
 </body>
 </html>
