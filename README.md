@@ -78,19 +78,19 @@ The `journal-site` container is a fullstack Node.js app (Express + React + SQLit
 The GitHub token is pulled from 1Password at launch time using `op read` — it stays in memory only, never on disk:
 
 ```bash
-GITHUB_TOKEN=$(op read "op://Private/GitHub Journal API/token") docker compose up -d journal-site
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/token") docker compose up -d journal-site
 ```
 
 Or to start everything (the other containers don't need the token):
 
 ```bash
-GITHUB_TOKEN=$(op read "op://Private/GitHub Journal API/token") docker compose up -d
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/token") docker compose up -d
 ```
 
 To rebuild after code changes:
 
 ```bash
-GITHUB_TOKEN=$(op read "op://Private/GitHub Journal API/token") docker compose up -d --build journal-site
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/token") docker compose up -d --build journal-site
 ```
 
 #### 3. Set up the host cron for git pull
@@ -209,10 +209,10 @@ Your host cron pulls every 5 minutes, so new content appears on `news.calconam.c
 
 ```bash
 # Start everything (with GitHub token for journal-site)
-GITHUB_TOKEN=$(op read "op://Private/GitHub Journal API/token") docker compose up -d
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/token") docker compose up -d
 
 # Start just one service
-GITHUB_TOKEN=$(op read "op://Private/GitHub Journal API/token") docker compose up -d journal-site
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/token") docker compose up -d journal-site
 
 # Start services that don't need the token
 docker compose up -d web news
@@ -221,7 +221,7 @@ docker compose up -d web news
 docker compose down
 
 # Rebuild journal-site after code changes
-GITHUB_TOKEN=$(op read "op://Private/GitHub Journal API/token") docker compose up -d --build journal-site
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/token") docker compose up -d --build journal-site
 
 # View logs
 docker logs -f daily-brief
