@@ -7,7 +7,6 @@ BUILD_HASH_FILE="$DATA_DIR/.last-build-hash"
 
 mkdir -p "$DATA_DIR" "$BUILD_DIR"
 
-# Compute hash of source files (ignores node_modules, dist, .git, db files)
 compute_hash() {
   find "$SRC_DIR" \
     -not -path '*/node_modules/*' \
@@ -18,10 +17,8 @@ compute_hash() {
     -type f -exec md5sum {} \; 2>/dev/null | sort | md5sum | awk '{print $1}'
 }
 
-# Copy source to build dir, install deps, build
 build_app() {
   echo "[entrypoint] Copying source to build directory..."
-  # Sync source to build dir, excluding artifacts
   rsync -a --delete \
     --exclude='node_modules' \
     --exclude='dist' \
@@ -38,42 +35,34 @@ build_app() {
   echo "[entrypoint] Building..."
   npm run build
 
-  CURRENT_HASH=$(compute_hash)
-  echo "$CURRENT_HASH" > "$BUILD_HASH_FILE"
+  compute_hash > "$BUILD_HASH_FILE"
   echo "[entrypoint] Build complete."
 }
 
-# Build if source changed since last build
-rebuild_if_needed() {
-  CURRENT_HASH=$(compute_hash)
-  LAST_HASH=""
-  if [ -f "$BUILD_HASH_FILE" ]; then
-    LAST_HASH=$(cat "$BUILD_HASH_FILE")
+needs_build() {
+  # Always build if dist doesn't exist
+  if [ ! -f "$BUILD_DIR/dist/index.cjs" ]; then
+    return 0
   fi
+
+  CURRENT_HASH=$(compute_hash)
+  LAST_HASH=$(cat "$BUILD_HASH_FILE" 2>/dev/null || echo "")
 
   if [ "$CURRENT_HASH" != "$LAST_HASH" ]; then
-    build_app
-  else
-    echo "[entrypoint] Source unchanged — skipping build."
-    # Ensure build dir has deps if this is a fresh container
-    if [ ! -d "$BUILD_DIR/node_modules" ]; then
-      build_app
-    fi
+    return 0
   fi
+
+  return 1
 }
 
-# Poll for changes every 60s, rebuild + restart server if needed
 poll_and_rebuild() {
   while true; do
     sleep 60
-    CURRENT_HASH=$(compute_hash)
-    LAST_HASH=$(cat "$BUILD_HASH_FILE" 2>/dev/null || echo "")
 
-    if [ "$CURRENT_HASH" != "$LAST_HASH" ]; then
+    if needs_build; then
       echo "[poll] Source changed — rebuilding..."
       build_app
 
-      # Restart server
       if [ -f /tmp/node.pid ]; then
         kill -TERM $(cat /tmp/node.pid) 2>/dev/null || true
         sleep 2
@@ -87,12 +76,14 @@ poll_and_rebuild() {
 }
 
 # --- Main ---
-rebuild_if_needed
+if needs_build; then
+  build_app
+else
+  echo "[entrypoint] Source unchanged and build exists — skipping build."
+fi
 
-# Start the poller in the background
 poll_and_rebuild &
 
-# Start the server
 cd "$BUILD_DIR"
 node dist/index.cjs &
 echo $! > /tmp/node.pid
