@@ -105,20 +105,20 @@ Last updated: 2026-03-29
 
 | # | Description | Brand | Color/Pattern | Subcategory | Season | Occasion | Drive ID |
 |---|-------------|-------|---------------|-------------|--------|----------|----------|
-| 201 | Gray jacket | — | Gray | Jacket | Fall/Winter | Work, Church | `1LCaBDkUCvPo4t8L3M73YUx0x2nQN4jLY` |
-| 202 | Maroon jacket | — | Maroon | Jacket | Fall/Winter | Work, Church | `1g6V74bG0Yab87mqyx-oSyvodmhLw0jMo` |
-| 203 | Navy jacket | Skies Are Blue | Navy | Jacket | Year-round | Work | `1hcvqdxJgfRNgXlTwnERL4oMV7E9a4aXs` |
-| 204 | Vest | Maurices | — | Vest | Fall/Winter | Casual | `1x1-BQSSU_tvbuuMVsGYixH0WBzP_xFmC` |
-| 205 | Green jacket | Skies Are Blue | Green | Jacket | Fall | Work, Church | `1lw6v0ZFHkxY3cjh9XPnCHVtXtoeK3dfH` |
-| 206 | Maroon jacket | — | Maroon | Jacket | Fall/Winter | Work, Church | `1jaLTZ9xb70XdcL2Hk3XbywW65ceQ_-pQ` |
-| 207 | Black jacket | — | Black | Jacket | Year-round | Work, Church | `1sWDeZdAxfyKWuxtDfTZrXWXDNapSPw4y` |
-| 208 | Beige jacket | — | Beige | Jacket | Spring/Fall | Work, Church | `1CSoNt1mVi99TAJUNYlCgd1TW5vQettTw` |
-| 210 | Navy jacket | — | Navy | Jacket | Year-round | Work | `1mY-jkg5he78tnstXMKjzQ-4U6EBeJMyx` |
-| 211 | Jean jacket | — | Denim | Jacket (denim) | Spring/Summer/Fall | Casual, Church | `1Z_BW_ch72nsWKFPMiS8It6AEiGpC385D` |
-| 212 | Navy vest | — | Navy | Vest | Fall/Winter | Work, Casual | `16CWUD3UlN_Y8zhIW9K09tQ44A9Qy2q-u` |
-| 213 | Black jacket | — | Black | Jacket | Year-round | Work | `14nozVmQjEU5fh160curSuvP3cYn6xkJs` |
-| 214 | White jacket | — | White | Jacket | Spring/Summer | Work, Church | `14KytT0M2rk1OYxhCRnWBO25ElRt3CYCR` |
-| 215 | Pink jacket | — | Pink | Jacket | Spring | Church, Date Night | `1ynY_v1c_rRT56uXq5BTYJpy7P8lI23g2` |
+| 201 | Open-front blazer in gray and black buffalo check plaid, wool-blend feel, notch lapels, structured fit; bold layering piece | Mo.Ki | Gray/black buffalo check | Jacket | Fall/Winter | Work, Church | `1LCaBDkUCvPo4t8L3M73YUx0x2nQN4jLY` |
+| 202 | Single-breasted blazer in warm maroon/rust ponte, notch lapels, plaid-lined interior, tab cuffs, structured polished fit | 41 Hawthorn | Maroon/rust | Jacket | Fall/Winter | Work, Church | `1g6V74bG0Yab87mqyx-oSyvodmhLw0jMo` |
+| 203 | Open-front blazer in navy ponte, notch lapels, floral-print lining visible at cuffs, ruched 3/4 sleeves; effortless work layer | Skies Are Blue | Navy | Jacket | Year-round | Work | `1hcvqdxJgfRNgXlTwnERL4oMV7E9a4aXs` |
+| 204 | Denim vest in medium wash, button-front, chest pockets, fitted cropped cut, contrast stitching; perfect summer layer | Maurices | Medium denim | Vest | Fall/Winter | Casual | `1x1-BQSSU_tvbuuMVsGYixH0WBzP_xFmC` |
+| 205 | Open-front blazer in sage/teal green ponte, notch lapels, floral-print lining, ruched 3/4 sleeves; polished pop of color | Skies Are Blue | Sage/teal green | Jacket | Fall | Work, Church | `1lw6v0ZFHkxY3cjh9XPnCHVtXtoeK3dfH` |
+| 206 | Open-front blazer in dusty mauve/plum ponte, clean notch lapels, no closure, structured silhouette; soft professional | — | Dusty mauve/plum | Jacket | Fall/Winter | Work, Church | `1jaLTZ9xb70XdcL2Hk3XbywW65ceQ_-pQ` |
+| 207 | Single-button blazer in black ponte, notch lapels, structured shoulders, tailored fit; classic power blazer for work | — | Black | Jacket | Year-round | Work, Church | `1sWDeZdAxfyKWuxtDfTZrXWXDNapSPw4y` |
+| 208 | Single-button blazer in light tan/beige textured ponte, notch lapels, fully lined, structured fit; warm neutral layering | — | Light tan/beige | Jacket | Spring/Fall | Work, Church | `1CSoNt1mVi99TAJUNYlCgd1TW5vQettTw` |
+| 210 | Double-breasted peacoat-style jacket in navy wool-blend, gold buttons, stand collar, fully lined; elevated winter layer | — | Navy | Jacket | Year-round | Work | `1mY-jkg5he78tnstXMKjzQ-4U6EBeJMyx` |
+| 211 | Classic denim trucker jacket in medium wash, button-front, chest pockets, brass hardware, fitted cut; essential casual layer | — | Medium denim | Jacket (denim) | Spring/Summer/Fall | Casual, Church | `1Z_BW_ch72nsWKFPMiS8It6AEiGpC385D` |
+| 212 | Quilted puffer vest in dark navy, zip-front, stand collar, channel quilting, lightweight insulated; layering for cool days | — | Dark navy | Vest | Fall/Winter | Work, Casual | `16CWUD3UlN_Y8zhIW9K09tQ44A9Qy2q-u` |
+| 213 | Zip-front moto-style jacket in black ponte, silver asymmetric zipper, notch collar, structured fit; edgy-professional | — | Black | Jacket | Year-round | Work | `14nozVmQjEU5fh160curSuvP3cYn6xkJs` |
+| 214 | White denim trucker jacket, button-front with dark metal snaps, chest pockets, structured cropped fit; fresh spring layer | — | White | Jacket | Spring/Summer | Work, Church | `14KytT0M2rk1OYxhCRnWBO25ElRt3CYCR` |
+| 215 | Open-front blazer in pink/cream/coral boucle tweed, fully lined, textured woven fabric, structured fit; Chanel-inspired statement | — | Pink/cream/coral tweed | Jacket | Spring | Church, Date Night | `1ynY_v1c_rRT56uXq5BTYJpy7P8lI23g2` |
 
 ---
 
