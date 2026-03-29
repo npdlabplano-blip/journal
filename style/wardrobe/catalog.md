@@ -141,12 +141,12 @@ Last updated: 2026-03-29
 | 313 | Long-sleeve ribbed knit bodycon dress in black, crew neck, fitted throughout, midi length, stretchy; sleek modern office dress | Loft | Black ribbed | Dress | Year-round | Work | `1WKbnfuQQdGSQ9pyO-7tVNjdKETZF68r2` |
 | 314 | V-neck wrap-style dress in dusty teal with navy/tan Jacobean floral print, 3/4 sleeves, flowy jersey, midi length; feminine | — | Teal/navy floral | Dress | Spring/Summer | Church, Date Night | `1fWLamBAo1g31E-bDhlchiuYoMcffR91Y` |
 | 315 | Sleeveless V-neck dress in bright cherry red jersey, gathered/knotted detail at bust, flowy A-line skirt; vibrant date night | — | Cherry red | Dress | Year-round | Church, Date Night | `13N36NiN8m9RnXrxWrOxm0dzP9UK0J4hh` |
-| 316 | Black floral dress | — | Black/floral | Dress | Spring/Summer | Work, Church | `1BZRlEXcQP7ehZFG7jSPxaJT48CWyXImt` |
-| 317 | Green dress | — | Green | Dress | Spring/Summer | Work, Church | `1tGaZO8i1enz4JC6kFUh86ogfsf5JG_-g` |
-| 318 | Black printed dress | — | Black/print | Dress | Year-round | Work, Church | `18usXjqEiWy-nEs9anBWvLe-EI7bxfAp5` |
-| 319 | Blue printed dress | — | Blue/print | Dress | Spring/Summer | Work, Church | `1oaDgDCoTCnFkEidtTu4hV7QJ9WEwPBC5` |
-| 320 | Blue striped dress | — | Blue/striped | Dress | Spring/Summer | Work, Church | `1he9Wjd-tiAcFdarNwSTLir-HfdKgWEhx` |
-| — | Pointe dress | — | — | Dress | Year-round | Work | `1JdQA28hAWmY4dTwB9YKkaDRGpNGFj_HK` |
+| 316 | Wrap-style dress in black with scattered small white/cream ditsy floral print, V-neck, tie waist, short sleeves, flowy skirt | — | Black/cream ditsy floral | Dress | Spring/Summer | Work, Church | `1BZRlEXcQP7ehZFG7jSPxaJT48CWyXImt` |
+| 317 | Sleeveless fit-and-flare dress in olive/dark sage ponte, V-neck, princess seams, A-line skirt; earthy-toned work dress | — | Olive/dark sage | Dress | Spring/Summer | Work, Church | `1tGaZO8i1enz4JC6kFUh86ogfsf5JG_-g` |
+| 318 | Short-sleeve dress in black with burnt orange/tan botanical leaf print, gathered waist, flowy A-line skirt; fall-ready floral | — | Black/burnt orange botanical | Dress | Year-round | Work, Church | `18usXjqEiWy-nEs9anBWvLe-EI7bxfAp5` |
+| 319 | Blue printed dress (photo too large for local preview — described from filename and Drive photo) | — | Blue/print | Dress | Spring/Summer | Work, Church | `1oaDgDCoTCnFkEidtTu4hV7QJ9WEwPBC5` |
+| 320 | Crew neck shift dress in white with navy vertical stripes, gold button detail at shoulder, 3/4 sleeves, structured knit; nautical-chic | — | White/navy stripe | Dress | Spring/Summer | Work, Church | `1he9Wjd-tiAcFdarNwSTLir-HfdKgWEhx` |
+| — | Ponte boatneck sheath dress in navy, sleeveless, structured ponte fabric, knee-length, clean lines; classic office essential | Montgomery Post | Navy | Dress | Year-round | Work | `1JdQA28hAWmY4dTwB9YKkaDRGpNGFj_HK` |
 
 ---
 
@@ -154,18 +154,18 @@ Last updated: 2026-03-29
 
 | # | Description | Brand | Color/Pattern | Subcategory | Season | Occasion | Drive ID |
 |---|-------------|-------|---------------|-------------|--------|----------|----------|
-| 501 | Black booties | — | Black | Booties | Fall/Winter | Work, Church | `19YhE04tpxz32SwXF4GeF-JkZtAnOMqUy` |
-| 502 | Cowboy boots | — | — | Boots (cowboy) | Fall/Winter | Casual, Church | `1Hm-F7YezsD4NQo-Hjz-2HYV7SASevJUn` |
-| 503 | Grey suede boots | — | Grey | Boots (suede) | Fall/Winter | Work, Church | `1Apg6AXuHwqr3p-bGEWrmfV-D4hlR_Pxm` |
-| 504 | Brown booties | — | Brown | Booties | Fall/Winter | Work, Church | `1HjAQJBw1BGLXzKNQQprQ2cG6nHn1lCeL` |
-| 505 | Brown industrial style boots | — | Brown | Boots (industrial) | Fall/Winter | Casual | `1ex8YZ3P_MAElvxa2LN8YOpvleqh_tY8S` |
-| 506 | Brown knee-high boots | — | Brown | Boots (knee-high) | Fall/Winter | Work, Church | `1aAHf--PzEx1YFdjoWnxuN6X_pizTQ68C` |
-| 507 | Black boots | — | Black | Boots | Fall/Winter | Work, Church | `10VAHSc-LHe89GIIDM9muLznBJ4Mod5Yn` |
-| 508 | White shoes | — | White | Sneakers/Flats | Spring/Summer | Casual | `1R5oGgKJLdrIYuLUIH8oXhCEBb5rblPp8` |
-| 509 | White shoes | — | White | Sneakers | Year-round | Casual | `11VBOUPzOB78319kOBSHHreVpJ30Smin2` |
-| 510 | White shoes | — | White | Sneakers | Year-round | Casual | `11W1DIy7gJPgLCbcu6HHkNF7YIHqoh4Ma` |
-| 511 | Butterfly shoes | — | — | Sneakers | Year-round | Casual | `1Ypg9wJSbo1AqEsQME2JazvuAvhHoDe7A` |
-| 512 | Converse | Converse | — | Sneakers | Year-round | Casual | `1oVzN20KCsmW-fsmi6RLYEW0Gs-rBI_wc` |
+| 501 | Black leather ankle booties with side zip, stacked block heel, almond toe, smooth finish; versatile go-to boot | — | Black | Booties | Fall/Winter | Work, Church | `19YhE04tpxz32SwXF4GeF-JkZtAnOMqUy` |
+| 502 | Distressed brown leather cowboy boots with ornate cream/tan embroidered stitching, square toe, mid-calf height; western-chic | — | Brown/embroidered | Boots (cowboy) | Fall/Winter | Casual, Church | `1Hm-F7YezsD4NQo-Hjz-2HYV7SASevJUn` |
+| 503 | Slouchy mid-calf boots in light gray suede, flat/low heel, soft unstructured silhouette; casual cozy fall boot | — | Light gray | Boots (suede) | Fall/Winter | Work, Church | `1Apg6AXuHwqr3p-bGEWrmfV-D4hlR_Pxm` |
+| 504 | Brown pebbled leather ankle booties, side zip, low stacked heel, rounded toe, worn-in texture; casual everyday boot | — | Brown | Booties | Fall/Winter | Work, Church | `1HjAQJBw1BGLXzKNQQprQ2cG6nHn1lCeL` |
+| 505 | Tan suede lace-up combat boots with chunky lug sole, brass hardware eyelets, padded collar; rugged-cute statement boot | — | Tan | Boots (industrial) | Fall/Winter | Casual | `1ex8YZ3P_MAElvxa2LN8YOpvleqh_tY8S` |
+| 506 | Brown leather knee-high riding boots, side buckle strap detail, low heel, rounded toe, smooth pebbled leather; classic fall boot | — | Brown | Boots (knee-high) | Fall/Winter | Work, Church | `1aAHf--PzEx1YFdjoWnxuN6X_pizTQ68C` |
+| 507 | Black leather tall knee-high boots, smooth finish, low stacked heel, pull-on style, sleek silhouette; polished dressy boot | — | Black | Boots | Fall/Winter | Work, Church | `10VAHSc-LHe89GIIDM9muLznBJ4Mod5Yn` |
+| 508 | White eyelet/lace slip-on sneakers with textured floral pattern, white rubber sole, casual flat; summer-ready | — | White | Sneakers/Flats | Spring/Summer | Casual | `1R5oGgKJLdrIYuLUIH8oXhCEBb5rblPp8` |
+| 509 | Light gray canvas lace-up sneakers with navy trim at sole, low-top, casual everyday shoe | — | Light gray/navy | Sneakers | Year-round | Casual | `11VBOUPzOB78319kOBSHHreVpJ30Smin2` |
+| 510 | White leather lace-up sneakers with gold eyelet hardware, clean minimal design, rubber sole; crisp classic white sneaker | Keds | White | Sneakers | Year-round | Casual | `11W1DIy7gJPgLCbcu6HHkNF7YIHqoh4Ma` |
+| 511 | White canvas high-top sneakers with colorful butterfly print allover, lace-up, rubber toe cap; fun statement casual shoe | — | White/butterfly print | Sneakers | Year-round | Casual | `1Ypg9wJSbo1AqEsQME2JazvuAvhHoDe7A` |
+| 512 | Black canvas low-top Converse All Stars with white rubber toe cap and sole, classic lace-up; timeless casual staple | Converse | Black/white | Sneakers | Year-round | Casual | `1oVzN20KCsmW-fsmi6RLYEW0Gs-rBI_wc` |
 | 513 | Wedge | — | — | Wedge | Spring/Summer | Church, Date Night | `1itW6_SAWvpX_qV6ytde1GhfzTkYdu87R` |
 | 514 | Wedge | — | — | Wedge | Spring/Summer | Church, Date Night | `1gMMmGfpguxggoEWcWORIyIiwS4fjfltm` |
 | 515 | Slipper | — | — | Slipper | Year-round | Lounge | `1rN0e0QzbIabss2-zK4BjWB1U3BlrMUq9` |
