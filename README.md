@@ -75,17 +75,23 @@ The `journal-site` container is a fullstack Node.js app (Express + React + SQLit
 
 #### Starting journal-site with 1Password
 
-The GitHub token is pulled from 1Password at launch time using `op read` — it stays in memory only, never on disk:
+The GitHub token and Anthropic API key are pulled from 1Password at launch time using `op read` — they stay in memory only, never on disk:
 
 ```bash
-GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") docker compose up -d journal-site
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") \
+ANTHROPIC_API_KEY=$(op read "op://OpenClaw/Anthropic API/credential") \
+docker compose up -d journal-site
 ```
 
-Or to start everything (the other containers don't need the token):
+Or to start everything (the other containers don't need the tokens):
 
 ```bash
-GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") docker compose up -d
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") \
+ANTHROPIC_API_KEY=$(op read "op://OpenClaw/Anthropic API/credential") \
+docker compose up -d
 ```
+
+The `ANTHROPIC_API_KEY` powers the "Generate" button on the journal site, which uses Claude to create personalized devotionals and sermon notes based on the charter in `agents/devotional-companion.md`.
 
 The first start takes a minute or two while it installs dependencies and builds. Subsequent starts are instant if the source hasn't changed.
 
@@ -204,11 +210,15 @@ Your host cron pulls every 5 minutes, so new content appears on `news.calconam.c
 ### Container Management
 
 ```bash
-# Start everything (with GitHub token for journal-site)
-GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") docker compose up -d
+# Start everything (with tokens for journal-site)
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") \
+ANTHROPIC_API_KEY=$(op read "op://OpenClaw/Anthropic API/credential") \
+docker compose up -d
 
 # Start just one service
-GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") docker compose up -d journal-site
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") \
+ANTHROPIC_API_KEY=$(op read "op://OpenClaw/Anthropic API/credential") \
+docker compose up -d journal-site
 
 # Start services that don't need the token
 docker compose up -d web news
@@ -217,7 +227,9 @@ docker compose up -d web news
 docker compose down
 
 # Force image rebuild (only needed if Dockerfile or entrypoint.sh changed)
-GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") docker compose up -d --build journal-site
+GITHUB_TOKEN=$(op read "op://OpenClaw/GitHub Journal API/credential") \
+ANTHROPIC_API_KEY=$(op read "op://OpenClaw/Anthropic API/credential") \
+docker compose up -d --build journal-site
 
 # View logs
 docker logs -f daily-brief

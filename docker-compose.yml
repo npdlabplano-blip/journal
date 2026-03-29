@@ -31,6 +31,7 @@ services:
       - journal-data:/app/data
     environment:
       - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
       - JOURNAL_DIR=/app/journal
     restart: unless-stopped
 

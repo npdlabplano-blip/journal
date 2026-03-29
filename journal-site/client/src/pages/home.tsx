@@ -3,7 +3,8 @@ import { apiRequest, queryClient } from "@/lib/queryClient";
 import { Link, useLocation } from "wouter";
 import type { JournalEntry } from "@shared/schema";
 import { format, parseISO } from "date-fns";
-import { Plus, Moon, Sun, BookOpen, GitBranch, Check, Trash2, Search } from "lucide-react";
+import { Plus, Moon, Sun, BookOpen, GitBranch, Check, Trash2, Search, Sparkles } from "lucide-react";
+import { GenerateDialog } from "@/components/generate-dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useTheme } from "@/components/theme-provider";
@@ -34,6 +35,7 @@ export default function HomePage() {
   const { toast } = useToast();
   const [, navigate] = useLocation();
   const [searchQuery, setSearchQuery] = useState("");
+  const [generateOpen, setGenerateOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<string>(() => {
     // Restore last active tab from session storage
     return sessionStorage.getItem("journal-active-tab") || "all";
@@ -106,6 +108,17 @@ export default function HomePage() {
             >
               {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
+            {(activeTab === "bible-study" || activeTab === "sermons" || activeTab === "all") && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setGenerateOpen(true)}
+                data-testid="button-generate"
+              >
+                <Sparkles className="h-4 w-4 mr-1.5" />
+                Generate
+              </Button>
+            )}
             <Link href={`/new${activeTab !== "all" ? `?cat=${activeTab}` : ""}`}>
               <Button size="sm" data-testid="button-new-entry">
                 <Plus className="h-4 w-4 mr-1.5" />
@@ -311,6 +324,8 @@ export default function HomePage() {
           </p>
         </footer>
       </main>
+
+      <GenerateDialog open={generateOpen} onOpenChange={setGenerateOpen} />
     </div>
   );
 }

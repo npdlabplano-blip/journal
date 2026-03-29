@@ -347,6 +347,101 @@ export async function registerRoutes(server: Server, app: Express) {
     res.json({ message: "Scan complete", count: entries.length });
   });
 
+  // Generate devotional via AI
+  app.post("/api/generate-devotional", async (req, res) => {
+    const apiKey = process.env.ANTHROPIC_API_KEY;
+    if (!apiKey) {
+      return res.status(500).json({ message: "ANTHROPIC_API_KEY not configured" });
+    }
+
+    const { topic, type } = req.body as { topic?: string; type?: string };
+    if (!topic || !topic.trim()) {
+      return res.status(400).json({ message: "Topic or scripture reference is required" });
+    }
+
+    const genType = type || "devotional";
+
+    // Read recent journal entries and prayers for personalization context
+    const recentEntries = storage.getAllEntries().slice(0, 10);
+    const recentPrayers = recentEntries.filter(e => e.category === "prayers").slice(0, 5);
+    const recentJournal = recentEntries.filter(e => e.category === "entries").slice(0, 5);
+
+    const personalContext = [
+      recentPrayers.length > 0
+        ? `Recent prayer requests:\n${recentPrayers.map(p => `- ${p.title}: ${p.content.slice(0, 200)}`).join("\n")}`
+        : "",
+      recentJournal.length > 0
+        ? `Recent journal entries:\n${recentJournal.map(j => `- ${j.title}: ${j.content.slice(0, 200)}`).join("\n")}`
+        : "",
+    ].filter(Boolean).join("\n\n");
+
+    const systemPrompt = `You are a warm, personal devotional companion. You walk alongside a busy single mom of two teenagers, helping her stay grounded in Scripture and connected to God through the chaos of daily life.
+
+Personality: Conversational, warm, and accessible. You are NOT academic or preachy. You speak like a wise, encouraging friend — not a seminary professor. You meet her where she is.
+
+Theological Framework:
+- Tradition: Southern Baptist / Bible Church theology
+- Bible Translation: NIV (New International Version) — always quote from NIV
+- Hermeneutics: Proper historical-grammatical interpretation. Context-driven. Scripture interprets Scripture. No proof-texting or taking verses out of context.
+
+Personalization:
+- Acknowledge her life stage — single parenting, career demands, faith journey
+- Don't be generic — speak to HER life
+${personalContext ? `\nHere is recent context from her journal and prayers:\n${personalContext}` : ""}
+
+Output format: Markdown. Include:
+1. A clear title
+2. The full scripture passage quoted from NIV
+3. Brief conversational commentary that provides historical/cultural context
+4. 2-3 practical reflection questions applicable to life as a single mom of teenagers
+5. A short prayer prompt
+6. 1-2 application points for the week ahead`;
+
+    const userMessage = genType === "sermon-notes"
+      ? `Generate sermon notes on: ${topic}. Format with main theme, key scriptures (NIV), supporting points, illustrations, and a personal takeaways section.`
+      : `Generate a devotional on: ${topic}. Follow the format in your instructions.`;
+
+    try {
+      const response = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+          "anthropic-version": "2023-06-01",
+        },
+        body: JSON.stringify({
+          model: "claude-sonnet-4-20250514",
+          max_tokens: 2000,
+          system: systemPrompt,
+          messages: [{ role: "user", content: userMessage }],
+        }),
+      });
+
+      if (!response.ok) {
+        const errText = await response.text();
+        console.error("Anthropic API error:", response.status, errText);
+        return res.status(502).json({ message: "AI generation failed", detail: errText });
+      }
+
+      const data = await response.json() as { content: Array<{ type: string; text: string }> };
+      const generatedText = data.content?.[0]?.text || "";
+
+      // Extract title from the first markdown heading, or use the topic
+      const titleMatch = generatedText.match(/^#\s+(.+)$/m);
+      const title = titleMatch ? titleMatch[1].trim() : topic;
+
+      // Remove the title heading from content since we store it separately
+      const content = titleMatch
+        ? generatedText.replace(/^#\s+.+\n*/m, "").trim()
+        : generatedText.trim();
+
+      res.json({ title, content, category: genType === "sermon-notes" ? "sermons" : "bible-study" });
+    } catch (error) {
+      console.error("Devotional generation error:", error);
+      res.status(500).json({ message: "Failed to generate devotional" });
+    }
+  });
+
   // Health / sync status
   app.get("/api/status", (_req, res) => {
     const hasToken = !!(
