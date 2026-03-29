@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meal Plan — Mar 29 – Apr 4, 2026</title>
+<style>
+  :root {
+    --navy: #2c3e50;
+    --teal: #1abc9c;
+    --teal-dark: #16a085;
+    --light-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border: #e0e0e0;
+    --text: #1a1a1a;
+    --text-muted: #666;
+    --accent: #e74c3c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--light-bg);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, var(--navy), #34495e);
+    color: white;
+    padding: 20px 16px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .header .subtitle {
+    font-size: 13px;
+    opacity: 0.85;
+  }
+
+  /* Quick nav */
+  .nav {
+    display: flex;
+    gap: 6px;
+    padding: 10px 16px;
+    overflow-x: auto;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav a {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    background: var(--light-bg);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .nav a:active {
+    background: var(--teal);
+    color: white;
+    border-color: var(--teal);
+  }
+
+  /* Main content */
+  .content { padding: 12px; max-width: 800px; margin: 0 auto; }
+
+  /* Accordion sections */
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    background: var(--navy);
+    color: white;
+  }
+  .section-header h2 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .section-header .chevron {
+    font-size: 18px;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+  .section.open .chevron { transform: rotate(180deg); }
+  .section-body {
+    display: none;
+    padding: 12px 16px 16px;
+  }
+  .section.open .section-body { display: block; }
+
+  /* Info note */
+  .note {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: #fef9e7;
+    border-left: 3px solid #f39c12;
+    border-radius: 4px;
+  }
+
+  /* Tables */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 12px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 340px;
+  }
+  th {
+    background: var(--light-bg);
+    font-weight: 600;
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 2px solid var(--border);
+    white-space: nowrap;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+  td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  /* Dinner cards (mobile-first) */
+  .dinner-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .dinner-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: var(--light-bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .dinner-day {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--navy);
+  }
+  .dinner-people {
+    font-size: 12px;
+    background: var(--teal);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .dinner-card-body { padding: 12px 14px; }
+  .dinner-meal {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--navy);
+  }
+  .dinner-portion {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .dinner-macros {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .macro-pill {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+  .macro-cal { background: #fdebd0; color: #e67e22; }
+  .macro-p { background: #d5f5e3; color: #27ae60; }
+  .macro-f { background: #fce4ec; color: #c0392b; }
+  .macro-c { background: #e8eaf6; color: #5c6bc0; }
+  .macro-fiber { background: #e0f2f1; color: #009688; }
+
+  /* Checklist */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li {
+    padding: 10px 0 10px 36px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #bbb;
+    border-radius: 4px;
+  }
+  .checklist li.checked::before {
+    background: var(--teal);
+    border-color: var(--teal);
+  }
+  .checklist li.checked::after {
+    content: "\2713";
+    position: absolute;
+    left: 3px;
+    top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+
+  /* Lunch cards */
+  .lunch-day {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--navy);
+    margin-top: 12px;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--teal);
+  }
+  .lunch-day:first-child { margin-top: 0; }
+  .lunch-person {
+    display: flex;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .lunch-person:last-child { border-bottom: none; }
+  .lunch-name {
+    font-weight: 600;
+    min-width: 60px;
+    flex-shrink: 0;
+    color: var(--teal-dark);
+  }
+
+  /* Recipe section */
+  .recipe {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .recipe-header {
+    padding: 12px 14px;
+    background: var(--light-bg);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .recipe-header h3 {
+    font-size: 16px;
+    color: var(--navy);
+    font-weight: 700;
+  }
+  .recipe-meta {
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .recipe-body {
+    display: none;
+    padding: 12px 14px;
+  }
+  .recipe.open .recipe-body { display: block; }
+  .recipe-body ol {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  .recipe-body ol li {
+    padding: 4px 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .recipe-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 10px;
+    padding: 8px;
+    background: #fef9e7;
+    border-radius: 6px;
+  }
+
+  /* Breakfast / beverage tables */
+  .simple-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    gap: 10px;
+  }
+  .simple-row:last-child { border-bottom: none; }
+  .simple-label {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--teal-dark);
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+  .simple-value { font-size: 14px; flex: 1; }
+  .simple-cal {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e67e22;
+    flex-shrink: 0;
+  }
+
+  /* Key times */
+  .event-card {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .event-card:last-child { border-bottom: none; }
+  .event-day {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--teal-dark);
+  }
+  .event-name { font-size: 14px; font-weight: 600; margin: 2px 0; }
+  .event-impact { font-size: 13px; color: var(--text-muted); }
+
+  /* Interactive checkbox */
+  .checklist li { cursor: pointer; }
+
+  @media (min-width: 600px) {
+    .content { padding: 20px; }
+    .header h1 { font-size: 24px; }
+    .dinner-macros { gap: 10px; }
+  }
+
+  @media print {
+    .header { position: static; }
+    .nav { display: none; }
+    .section-body { display: block !important; }
+    .recipe-body { display: block !important; }
+    .chevron { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Mar 29 – Apr 4, 2026</h1>
+  <div class="subtitle">Kids home Sun–Wed | Kids to Dad Thu | Mom solo Fri–Sun (Easter)</div>
+</div>
+
+<nav class="nav">
+  <a href="#prep">Prep</a>
+  <a href="#dinners">Dinners</a>
+  <a href="#lunches">Lunches</a>
+  <a href="#breakfast">Breakfast</a>
+  <a href="#schedule">Schedule</a>
+  <a href="#beverages">Beverages</a>
+  <a href="#recipes">Recipes</a>
+</nav>
+
+<div class="content">
+
+<!-- SUNDAY PREP PLAN -->
+<div id="prep" class="section open">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>SUNDAY PREP PLAN</h2>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="section-body">
+    <div class="note">Church 9–12 PM | Bible Study 2–4 PM | Grill & prep after ~4:30 PM</div>
+
+    <h3 style="font-size:14px;color:var(--navy);margin-bottom:8px;font-weight:700;">Grill Session</h3>
+    <div class="table-wrap">
+    <table>
+      <tr><th>Protein</th><th>Qty</th><th>Marinade</th></tr>
+      <tr><td>Bone-in pork chops</td><td>4 chops (~2 lbs)</td><td>Lemon-herb (olive oil, lemon, rosemary, thyme, garlic)</td></tr>
+      <tr><td>Chicken thighs (boneless)</td><td>2.5 lbs</td><td>Lemon-herb — Mon wraps + lunches all week</td></tr>
+    </table>
+    </div>
+
+    <h3 style="font-size:14px;color:var(--navy);margin:12px 0 8px;font-weight:700;">Prep Tasks</h3>
+    <ul class="checklist">
+      <li onclick="this.classList.toggle('checked')">Hard boil 6 eggs (breakfast protein boxes + IQ bar pairings)</li>
+      <li onclick="this.classList.toggle('checked')">Make peanut sauce (PB, soy, lime, garlic, sriracha, honey) — Mon dinner</li>
+      <li onclick="this.classList.toggle('checked')">Make cilantro-lime slaw (cabbage, carrots, cilantro, lime, rice vinegar) — Tue tacos</li>
+      <li onclick="this.classList.toggle('checked')">Quick-pickle cucumbers (cucumber, rice vinegar, sugar, salt, sesame) — Wed bowls</li>
+      <li onclick="this.classList.toggle('checked')">Prep Korean beef marinade (gochujang, soy, garlic, ginger, brown sugar, sesame) — toss with chuck roast, refrigerate</li>
+      <li onclick="this.classList.toggle('checked')">Wash & prep green leaf lettuce (2 containers) + butter lettuce (2 heads)</li>
+      <li onclick="this.classList.toggle('checked')">Prep veggies: slice bell peppers, trim asparagus, shred carrots</li>
+      <li onclick="this.classList.toggle('checked')">Cook jasmine rice (2 cups dry) — Calvin's base Mon–Wed</li>
+      <li onclick="this.classList.toggle('checked')">Cook quinoa (1/2 cup dry) — Sunday dinner side</li>
+    </ul>
+  </div>
+</div>
+
+<!-- DINNER MENU -->
+<div id="dinners" class="section open">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>DINNER MENU</h2>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="section-body">
+    <div class="dinner-card">
+      <div class="dinner-card-header">
+        <span class="dinner-day">Sun 3/29</span>
+        <span class="dinner-people">3 people</span>
+      </div>
+      <div class="dinner-card-body">
+        <div class="dinner-meal">Grilled Lemon-Herb Pork Chops, Roasted Asparagus & Quinoa</div>
+        <div class="dinner-portion">1 chop (5 oz), 1 cup asparagus, 1/3 cup quinoa</div>
+        <div class="dinner-macros">
+          <span class="macro-pill macro-cal">378 cal</span>
+          <span class="macro-pill macro-p">43g P</span>
+          <span class="macro-pill macro-f">14g F</span>
+          <span class="macro-pill macro-c">20g C</span>
+          <span class="macro-pill macro-fiber">5g fiber</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dinner-card">
+      <div class="dinner-card-header">
+        <span class="dinner-day">Mon 3/30</span>
+        <span class="dinner-people">3 people</span>
+      </div>
+      <div class="dinner-card-body">
+        <div class="dinner-meal">Thai Peanut Chicken Lettuce Wraps</div>
+        <div class="dinner-portion">5 oz shredded chicken, 4 butter lettuce cups, 2 tbsp peanut sauce, veggies, peanuts</div>
+        <div class="dinner-macros">
+          <span class="macro-pill macro-cal">406 cal</span>
+          <span class="macro-pill macro-p">34g P</span>
+          <span class="macro-pill macro-f">22g F</span>
+          <span class="macro-pill macro-c">15g C</span>
+          <span class="macro-pill macro-fiber">4g fiber</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dinner-card">
+      <div class="dinner-card-header">
+        <span class="dinner-day">Tue 3/31</span>
+        <span class="dinner-people">3 people</span>
+      </div>
+      <div class="dinner-card-body">
+        <div class="dinner-meal">Blackened Salmon Tacos w/ Cilantro-Lime Slaw</div>
+        <div class="dinner-portion">5 oz salmon in lettuce wraps, slaw, avocado crema</div>
+        <div class="dinner-macros">
+          <span class="macro-pill macro-cal">371 cal</span>
+          <span class="macro-pill macro-p">37g P</span>
+          <span class="macro-pill macro-f">19g F</span>
+          <span class="macro-pill macro-c">10g C</span>
+          <span class="macro-pill macro-fiber">4g fiber</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dinner-card">
+      <div class="dinner-card-header">
+        <span class="dinner-day">Wed 4/1</span>
+        <span class="dinner-people">3 people</span>
+      </div>
+      <div class="dinner-card-body">
+        <div class="dinner-meal">Korean Beef Bowls (Crockpot) — NO COOK</div>
+        <div class="dinner-portion">4 oz braised beef, 1/4 cup rice, 1 cup broccoli, pickled cucumber</div>
+        <div class="dinner-macros">
+          <span class="macro-pill macro-cal">410 cal</span>
+          <span class="macro-pill macro-p">39g P</span>
+          <span class="macro-pill macro-f">13g F</span>
+          <span class="macro-pill macro-c">33g C</span>
+          <span class="macro-pill macro-fiber">5g fiber</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dinner-card">
+      <div class="dinner-card-header">
+        <span class="dinner-day">Thu 4/2</span>
+        <span class="dinner-people">1 person</span>
+      </div>
+      <div class="dinner-card-body">
+        <div class="dinner-meal">Shrimp & Avocado Salad</div>
+        <div class="dinner-portion">6 oz shrimp, 1/2 avocado, cherry tomatoes, green leaf, lime dressing</div>
+        <div class="dinner-macros">
+          <span class="macro-pill macro-cal">412 cal</span>
+          <span class="macro-pill macro-p">40g P</span>
+          <span class="macro-pill macro-f">21g F</span>
+          <span class="macro-pill macro-c">13g C</span>
+          <span class="macro-pill macro-fiber">7g fiber</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dinner-card">
+      <div class="dinner-card-header">
+        <span class="dinner-day">Fri 4/3</span>
+        <span class="dinner-people">1 person</span>
+      </div>
+      <div class="dinner-card-body">
+        <div class="dinner-meal">Leftovers (Good Friday — CB service 6 PM)</div>
+        <div class="dinner-portion">Whatever's on hand — eat before church</div>
+        <div class="dinner-macros">
+          <span class="macro-pill macro-cal">~350 cal</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dinner-card">
+      <div class="dinner-card-header">
+        <span class="dinner-day">Sat 4/4</span>
+        <span class="dinner-people">1 person</span>
+      </div>
+      <div class="dinner-card-body">
+        <div class="dinner-meal">Leftovers (Easter Egg Hunt & Picnic 10 AM)</div>
+        <div class="dinner-portion">Light day — leftovers or picnic food</div>
+        <div class="dinner-macros">
+          <span class="macro-pill macro-cal">~350 cal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PACKED LUNCHES -->
+<div id="lunches" class="section">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>PACKED LUNCHES</h2>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="section-body">
+    <div class="lunch-day">Tuesday</div>
+    <div class="lunch-person"><span class="lunch-name">Mom</span><span>Pork chop salad: 4 oz sliced pork, green leaf, cherry tomatoes, avocado, balsamic + lemon (330 cal)</span></div>
+    <div class="lunch-person"><span class="lunch-name">Calvin</span><span>Thai peanut chicken rice bowl: 5 oz chicken, rice, peanut sauce, carrots</span></div>
+    <div class="lunch-person"><span class="lunch-name">Connie</span><span>Thai peanut chicken lettuce cups: 4 oz chicken, lettuce, peanut sauce, carrots</span></div>
+
+    <div class="lunch-day">Wednesday</div>
+    <div class="lunch-person"><span class="lunch-name">Mom</span><span>Leftover protein plate: 4 oz chicken, cucumber, cherry tomatoes, hummus (340 cal)</span></div>
+    <div class="lunch-person"><span class="lunch-name">Calvin</span><span>Salmon taco bowl: leftover salmon, rice, slaw, Colby Jack</span></div>
+    <div class="lunch-person"><span class="lunch-name">Connie</span><span>Salmon lettuce wraps: leftover salmon, slaw, crema</span></div>
+
+    <div class="lunch-day">Thursday</div>
+    <div class="lunch-person"><span class="lunch-name">Mom</span><span>Grilled chicken salad: 4 oz chicken, green leaf, cherry tomatoes, avocado, balsamic + lemon (350 cal)</span></div>
+    <div class="lunch-person"><span class="lunch-name">Calvin</span><span>Korean beef rice bowl: 5 oz beef, rice, pickled cucumber, sesame</span></div>
+    <div class="lunch-person"><span class="lunch-name">Connie</span><span>Korean beef rice bowl: 4 oz beef, rice, pickled cucumber, broccoli</span></div>
+  </div>
+</div>
+
+<!-- BREAKFAST -->
+<div id="breakfast" class="section">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>MOM'S BREAKFAST ROTATION</h2>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="section-body">
+    <div class="simple-row">
+      <span class="simple-label">Mon/Wed/Fri</span>
+      <span class="simple-value">Protein Shake (berries, protein powder, spinach, collagen, mushrooms, walnut milk)</span>
+      <span class="simple-cal">280 cal</span>
+    </div>
+    <div class="simple-row">
+      <span class="simple-label">Tue/Thu</span>
+      <span class="simple-value">Protein Box (egg, cheese stick, grapes, muesli bread, PB)</span>
+      <span class="simple-cal">310 cal</span>
+    </div>
+    <div class="simple-row">
+      <span class="simple-label">Sun/rushed</span>
+      <span class="simple-value">IQ Bar + hard-boiled egg</span>
+      <span class="simple-cal">250 cal</span>
+    </div>
+  </div>
+</div>
+
+<!-- KEY TIMES -->
+<div id="schedule" class="section">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>KEY TIMES THIS WEEK</h2>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="section-body">
+    <div class="event-card">
+      <span class="event-day">Sun 3/29</span>
+      <div class="event-name">Church 9–12 PM, Bible Study 2–4 PM</div>
+      <div class="event-impact">Grill & prep after 4:30. Quick breakfast before church.</div>
+    </div>
+    <div class="event-card">
+      <span class="event-day">Wed 4/1</span>
+      <div class="event-name">Connie: Track 2 PM, Band Pre-UIL 6 PM (CHS), Youth Group 6:30 PM</div>
+      <div class="event-impact">Super busy evening. Crockpot dinner ready by 5:30. Eat fast, out the door.</div>
+    </div>
+    <div class="event-card">
+      <span class="event-day">Thu 4/2</span>
+      <div class="event-name">Kids to Dad after school</div>
+      <div class="event-impact">Mom solo. Simple shrimp salad dinner.</div>
+    </div>
+    <div class="event-card">
+      <span class="event-day">Fri 4/3</span>
+      <div class="event-name">Good Friday — Student Holiday. CB Service 6 PM.</div>
+      <div class="event-impact">No school. Mom solo. Light dinner before church.</div>
+    </div>
+    <div class="event-card">
+      <span class="event-day">Sat 4/4</span>
+      <div class="event-name">CB Easter Egg Hunt & Picnic 10 AM–12 PM</div>
+      <div class="event-impact">Mom solo. Picnic lunch covered. Light day.</div>
+    </div>
+    <div class="event-card">
+      <span class="event-day">Sun 4/5</span>
+      <div class="event-name">Easter Sunday Services 9 AM–12 PM</div>
+      <div class="event-impact">Mom solo. Quick breakfast before service.</div>
+    </div>
+  </div>
+</div>
+
+<!-- BEVERAGES -->
+<div id="beverages" class="section">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>BEVERAGE RULES</h2>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="section-body">
+    <div class="simple-row">
+      <span class="simple-label">Mon–Thu</span>
+      <span class="simple-value">Sparkling water only (Kroger lime or mandarin orange). No IPAs.</span>
+    </div>
+    <div class="simple-row">
+      <span class="simple-label">Fri–Sun</span>
+      <span class="simple-value">1–2 IPAs OK (~220 cal each)</span>
+    </div>
+    <div class="simple-row">
+      <span class="simple-label">All day</span>
+      <span class="simple-value">Water before every coffee & every Diet Coke</span>
+    </div>
+    <div class="simple-row">
+      <span class="simple-label">Cravings</span>
+      <span class="simple-value">Frozen grapes, frozen banana slices, or Celestial Seasonings vanilla tea</span>
+    </div>
+  </div>
+</div>
+
+<!-- RECIPES -->
+<div id="recipes" class="section open">
+  <div class="section-header" onclick="toggleSection(this)">
+    <h2>RECIPES</h2>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div class="section-body">
+
+    <!-- Lemon-Herb Pork Chops -->
+    <div class="recipe" onclick="this.classList.toggle('open')">
+      <div class="recipe-header">
+        <h3>Grilled Lemon-Herb Pork Chops</h3>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="recipe-meta">Prep 10 min + 30 min marinade | Cook 12 min | 4 servings | 220 cal / 36g P / 8g F / 0g C</div>
+      <div class="recipe-body">
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>Bone-in pork chops</td><td>4 chops (~2 lbs)</td></tr>
+          <tr><td>Olive oil</td><td>2 tbsp</td></tr>
+          <tr><td>Lemon juice + zest</td><td>1 lemon</td></tr>
+          <tr><td>Garlic, minced</td><td>4 cloves</td></tr>
+          <tr><td>Fresh rosemary, chopped</td><td>1 tbsp</td></tr>
+          <tr><td>Fresh thyme leaves</td><td>1 tbsp</td></tr>
+          <tr><td>Salt & pepper</td><td>1 tsp / 1/2 tsp</td></tr>
+        </table>
+        </div>
+        <ol>
+          <li>Whisk olive oil, lemon juice, zest, garlic, rosemary, thyme, salt, pepper.</li>
+          <li>Coat pork chops. Refrigerate 30 min–4 hours.</li>
+          <li>Grill medium-high (~400°F), 5–6 min per side until 145°F internal.</li>
+          <li>Rest 5 minutes before serving.</li>
+        </ol>
+        <div class="recipe-note">Calvin: double quinoa/rice. Leftovers slice cold for next-day salads.</div>
+      </div>
+    </div>
+
+    <!-- Lemon-Herb Chicken Thighs -->
+    <div class="recipe" onclick="this.classList.toggle('open')">
+      <div class="recipe-header">
+        <h3>Lemon-Herb Chicken Thighs</h3>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="recipe-meta">Prep 10 min + 30 min marinade | Cook 12 min | 6+ servings | Per 5 oz: 230 cal / 28g P / 12g F / 0g C</div>
+      <div class="recipe-body">
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>Boneless skinless chicken thighs</td><td>2.5 lbs</td></tr>
+          <tr><td>Olive oil</td><td>2 tbsp</td></tr>
+          <tr><td>Lemon juice + zest</td><td>1 lemon</td></tr>
+          <tr><td>Garlic, minced</td><td>4 cloves</td></tr>
+          <tr><td>Fresh rosemary, chopped</td><td>1 tbsp</td></tr>
+          <tr><td>Fresh thyme leaves</td><td>1 tbsp</td></tr>
+          <tr><td>Salt & pepper</td><td>1 tsp / 1/2 tsp</td></tr>
+        </table>
+        </div>
+        <ol>
+          <li>Same marinade as pork chops — make a double batch.</li>
+          <li>Grill medium-high, 5–6 min per side until 165°F internal.</li>
+          <li>Cool, slice or shred. Store in containers for the week.</li>
+        </ol>
+        <div class="recipe-note">Monday: shred for lettuce wraps. Tue–Thu: slice for salads and protein plates.</div>
+      </div>
+    </div>
+
+    <!-- Roasted Asparagus -->
+    <div class="recipe" onclick="this.classList.toggle('open')">
+      <div class="recipe-header">
+        <h3>Roasted Asparagus</h3>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="recipe-meta">Prep 5 min | Cook 12 min | 4 servings | Per cup: 80 cal / 4g P / 5g F / 6g C / 3g fiber</div>
+      <div class="recipe-body">
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>Asparagus, trimmed</td><td>1.5 lbs</td></tr>
+          <tr><td>Olive oil</td><td>1 tbsp</td></tr>
+          <tr><td>Salt, pepper, garlic powder</td><td>to taste</td></tr>
+          <tr><td>Lemon wedge</td><td>for serving</td></tr>
+        </table>
+        </div>
+        <ol>
+          <li>Preheat oven to 425°F. Toss asparagus with oil and seasoning on a sheet pan.</li>
+          <li>Roast 10–12 minutes until tender-crisp and lightly charred.</li>
+          <li>Squeeze lemon over before serving.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Thai Peanut Sauce -->
+    <div class="recipe" onclick="this.classList.toggle('open')">
+      <div class="recipe-header">
+        <h3>Thai Peanut Sauce</h3>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="recipe-meta">Prep 5 min | Makes ~1/2 cup | Per 2 tbsp: 90 cal / 3g P / 6g F / 6g C</div>
+      <div class="recipe-body">
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>Creamy peanut butter</td><td>3 tbsp</td></tr>
+          <tr><td>Low sodium soy sauce</td><td>2 tbsp</td></tr>
+          <tr><td>Lime juice</td><td>1 tbsp</td></tr>
+          <tr><td>Honey</td><td>1 tbsp</td></tr>
+          <tr><td>Sriracha</td><td>1 tsp</td></tr>
+          <tr><td>Garlic, minced</td><td>1 clove</td></tr>
+          <tr><td>Warm water</td><td>2 tbsp</td></tr>
+        </table>
+        </div>
+        <ol>
+          <li>Whisk everything together until smooth. Add water to reach drizzle consistency.</li>
+          <li>Keeps 5 days refrigerated. Thin with water before serving if it thickens.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Thai Peanut Chicken Lettuce Wraps -->
+    <div class="recipe" onclick="this.classList.toggle('open')">
+      <div class="recipe-header">
+        <h3>Thai Peanut Chicken Lettuce Wraps</h3>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="recipe-meta">Prep 15 min | Cook 0 min (pre-grilled) | 4 servings | Mom: 406 cal / 34g P / 22g F / 15g C</div>
+      <div class="recipe-body">
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>Grilled chicken thighs, shredded</td><td>1 lb</td></tr>
+          <tr><td>Butter lettuce</td><td>2 heads</td></tr>
+          <tr><td>Carrots, shredded</td><td>2 medium</td></tr>
+          <tr><td>Cucumber, matchstick</td><td>1 medium</td></tr>
+          <tr><td>Crushed peanuts</td><td>3 tbsp</td></tr>
+          <tr><td>Cilantro + mint</td><td>garnish</td></tr>
+          <tr><td>Peanut sauce</td><td>1/2 cup</td></tr>
+        </table>
+        </div>
+        <ol>
+          <li>Shred grilled chicken with two forks.</li>
+          <li>Set out lettuce cups, fillings, and sauce — everyone builds their own.</li>
+        </ol>
+        <div class="recipe-note">Calvin: add a big bowl of jasmine rice + double sauce. Mom: 4 wraps, 5 oz chicken, skip rice.</div>
+      </div>
+    </div>
+
+    <!-- Cilantro-Lime Slaw -->
+    <div class="recipe" onclick="this.classList.toggle('open')">
+      <div class="recipe-header">
+        <h3>Cilantro-Lime Slaw</h3>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="recipe-meta">Prep 10 min | Makes ~4 cups | Per 1/2 cup: 30 cal / 1g P / 0g F / 6g C / 2g fiber</div>
+      <div class="recipe-body">
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>Green cabbage, shredded</td><td>3 cups</td></tr>
+          <tr><td>Carrots, shredded</td><td>1 large</td></tr>
+          <tr><td>Fresh cilantro, chopped</td><td>1/4 cup</td></tr>
+          <tr><td>Lime juice</td><td>2 tbsp</td></tr>
+          <tr><td>Rice vinegar</td><td>1 tbsp</td></tr>
+          <tr><td>Salt</td><td>1/2 tsp</td></tr>
+          <tr><td>Sugar</td><td>1/4 tsp</td></tr>
+        </table>
+        </div>
+        <ol>
+          <li>Toss all ingredients. Refrigerate 30+ min. Keeps 4–5 days.</li>
+        </ol>
+        <div class="recipe-note">Make Sunday. Use on Tuesday salmon tacos and as a side all week.</div>
+      </div>
+    </div>
+
+    <!-- Blackened Salmon Tacos -->
+    <div class="recipe" onclick="this.classList.toggle('open')">
+      <div class="recipe-header">
+        <h3>Blackened Salmon Tacos</h3>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="recipe-meta">Prep 10 min | Cook 8 min | 4 servings | Mom (lettuce wraps): 371 cal / 37g P / 19g F / 10g C</div>
+      <div class="recipe-body">
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>Salmon fillets, skin-on</td><td>1.5 lbs (4 fillets)</td></tr>
+          <tr><td>Blackening seasoning</td><td>2 tbsp</td></tr>
+          <tr><td>Olive oil</td><td>1 tbsp</td></tr>
+          <tr><td>Green leaf lettuce (Mom)</td><td>6 large leaves</td></tr>
+          <tr><td>Crispy taco shells (kids)</td><td>5–6</td></tr>
+          <tr><td>Cilantro-lime slaw</td><td>2 cups</td></tr>
+        </table>
+        </div>
+        <h3 style="font-size:14px;color:var(--navy);margin:10px 0 6px;font-weight:700;">Avocado Crema</h3>
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>Avocado</td><td>1 ripe</td></tr>
+          <tr><td>Plain Greek yogurt</td><td>1/4 cup</td></tr>
+          <tr><td>Lime juice</td><td>1 tbsp</td></tr>
+          <tr><td>Garlic powder + salt</td><td>pinch each</td></tr>
+        </table>
+        </div>
+        <ol>
+          <li>Mash avocado crema ingredients. Refrigerate.</li>
+          <li>Pat salmon dry. Press blackening seasoning on both sides.</li>
+          <li>Cast iron skillet, medium-high, smoking hot. Add oil.</li>
+          <li>Salmon skin-side up, 3–4 min. Flip, 3–4 min more. 145°F.</li>
+          <li>Remove skin. Break into chunks. Serve in wraps/shells with slaw + crema.</li>
+        </ol>
+        <div class="recipe-note">Mom: lettuce wraps (saves ~120 cal). Kids: crispy shells + Colby Jack. Calvin gets rice on the side.</div>
+      </div>
+    </div>
+
+    <!-- Korean Beef Bowls -->
+    <div class="recipe" onclick="this.classList.toggle('open')">
+      <div class="recipe-header">
+        <h3>Korean Beef Bowls (Crockpot)</h3>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="recipe-meta">Prep 15 min (Sun) | Cook 8 hrs low | 6 servings | Mom: 410 cal / 39g P / 13g F / 33g C</div>
+      <div class="recipe-body">
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>Beef chuck roast</td><td>2 lbs</td></tr>
+          <tr><td>Low sodium soy sauce</td><td>1/4 cup</td></tr>
+          <tr><td>Gochujang paste</td><td>2 tbsp</td></tr>
+          <tr><td>Sesame oil</td><td>1 tbsp</td></tr>
+          <tr><td>Brown sugar</td><td>2 tbsp</td></tr>
+          <tr><td>Garlic, minced</td><td>4 cloves</td></tr>
+          <tr><td>Fresh ginger, grated</td><td>1 tbsp</td></tr>
+          <tr><td>Rice vinegar</td><td>1 tbsp</td></tr>
+        </table>
+        </div>
+        <h3 style="font-size:14px;color:var(--navy);margin:10px 0 6px;font-weight:700;">Quick-Pickled Cucumbers</h3>
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>English cucumber, thin sliced</td><td>1 large</td></tr>
+          <tr><td>Rice vinegar</td><td>1/3 cup</td></tr>
+          <tr><td>Sugar + salt</td><td>1 tbsp / 1/2 tsp</td></tr>
+          <tr><td>Sesame seeds + red pepper flakes</td><td>1 tsp / pinch</td></tr>
+        </table>
+        </div>
+        <ol>
+          <li><strong>Sunday:</strong> Make pickled cucumbers (toss, jar, refrigerate). Mix marinade, pour over chuck roast, refrigerate.</li>
+          <li><strong>Wednesday 7 AM:</strong> Transfer beef + marinade to crockpot. LOW 8 hours.</li>
+          <li><strong>5:30 PM:</strong> Shred beef in pot. Cook rice. Microwave broccoli. Assemble bowls.</li>
+        </ol>
+        <div class="recipe-note">Mom: 4 oz beef, 1/4 cup rice, 1 cup broccoli. Calvin: full bowl, 1 cup rice, 6 oz beef. Ready by 5:30 — eat and out the door for band/church by 6.</div>
+      </div>
+    </div>
+
+    <!-- Shrimp & Avocado Salad -->
+    <div class="recipe" onclick="this.classList.toggle('open')">
+      <div class="recipe-header">
+        <h3>Shrimp & Avocado Salad</h3>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="recipe-meta">Prep 10 min | Cook 5 min | 1 serving | 412 cal / 40g P / 21g F / 13g C / 7g fiber</div>
+      <div class="recipe-body">
+        <div class="table-wrap">
+        <table>
+          <tr><th>Ingredient</th><th>Qty</th></tr>
+          <tr><td>Large shrimp, peeled/deveined</td><td>6 oz</td></tr>
+          <tr><td>Olive oil</td><td>2 tsp</td></tr>
+          <tr><td>Garlic, minced</td><td>2 cloves</td></tr>
+          <tr><td>Lime</td><td>1</td></tr>
+          <tr><td>Avocado, diced</td><td>1/2 medium</td></tr>
+          <tr><td>Cherry tomatoes, halved</td><td>1/2 cup</td></tr>
+          <tr><td>Red onion, sliced</td><td>2 tbsp</td></tr>
+          <tr><td>Green leaf lettuce</td><td>2 cups</td></tr>
+          <tr><td>Fresh cilantro</td><td>small handful</td></tr>
+        </table>
+        </div>
+        <ol>
+          <li>Sauté garlic in olive oil 30 sec. Add shrimp, cook 2 min/side. Squeeze lime.</li>
+          <li>Plate lettuce, avocado, tomatoes, onion. Top with warm shrimp. Drizzle lime.</li>
+        </ol>
+        <div class="recipe-note">Solo Thursday night — quick, light, satisfying. Pairs with sparkling water and quiet.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<script>
+function toggleSection(header) {
+  header.parentElement.classList.toggle('open');
+}
+
+// Persist checkbox state in localStorage
+document.querySelectorAll('.checklist li').forEach((li, i) => {
+  const key = 'prep-' + i;
+  if (localStorage.getItem(key) === 'checked') {
+    li.classList.add('checked');
+  }
+  li.addEventListener('click', function() {
+    this.classList.toggle('checked');
+    localStorage.setItem(key, this.classList.contains('checked') ? 'checked' : '');
+  });
+});
+</script>
+
+</body>
+</html>
