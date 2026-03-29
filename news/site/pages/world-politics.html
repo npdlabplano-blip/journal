@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Politics — The Daily Brief</title>
+  <meta name="description" content="Global affairs, diplomacy, and international developments">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-category="world-politics">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../" class="site-logo">The Daily <span>Brief</span></a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <nav class="site-nav">
+        <a href="../">Home</a>
+        <a href="./world-politics.html" class="active">World</a>
+        <a href="./dfw-politics.html" class="">DFW Politics</a>
+        <a href="./ai-news.html" class="">AI</a>
+        <a href="./jpmorgan-chase.html" class="">JPMC</a>
+        <a href="./dfw-events.html" class="">DFW Events</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-container">
+    <div class="category-hero">
+      <span class="category-tag world">World Politics</span>
+      <h1>World Politics</h1>
+      <p class="subtitle">Global affairs, diplomacy, and international developments</p>
+      <p class="edition-date" id="editionDate" style="margin-top: var(--space-3);"></p>
+    </div>
+
+    <div class="articles-list" id="articlesList">
+      <p class="loading-placeholder">Loading articles...</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container">
+      <p>The Daily Brief &mdash; A personal news journal. Curated daily.</p>
+      <div class="footer-links">
+        <a href="./world-politics.html">World Politics</a>
+        <a href="./dfw-politics.html">DFW Politics</a>
+        <a href="./ai-news.html">AI News</a>
+        <a href="./jpmorgan-chase.html">JPMorgan Chase</a>
+        <a href="./dfw-events.html">DFW Events</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>
