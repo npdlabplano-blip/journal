@@ -27,9 +27,11 @@ services:
       - "8084:5000"
     volumes:
       - ./journal-site:/app/src
+      - ./journal:/app/journal:ro
       - journal-data:/app/data
     environment:
       - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - JOURNAL_DIR=/app/journal
     restart: unless-stopped
 
 volumes:

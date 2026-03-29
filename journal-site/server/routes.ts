@@ -2,6 +2,8 @@ import type { Express } from "express";
 import type { Server } from "http";
 import { storage } from "./storage";
 import { insertJournalEntrySchema } from "@shared/schema";
+import { readFileSync, readdirSync, existsSync, statSync } from "fs";
+import { join, relative } from "path";
 
 const GITHUB_REPO = "namsler1/journal";
 const GITHUB_BRANCH = "main";
@@ -110,7 +112,106 @@ ${content}
 `;
 }
 
+// --- Import entries from disk (journal/ directory) ---
+
+const JOURNAL_DIR = process.env.JOURNAL_DIR || "";
+const CATEGORIES = ["entries", "bible-study", "prayers", "sermons"];
+
+function parseFrontmatter(raw: string): { meta: Record<string, string>; content: string } {
+  const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  if (!match) return { meta: {}, content: raw.trim() };
+
+  const meta: Record<string, string> = {};
+  for (const line of match[1].split("\n")) {
+    const idx = line.indexOf(":");
+    if (idx > 0) {
+      const key = line.slice(0, idx).trim();
+      let val = line.slice(idx + 1).trim();
+      // Strip surrounding quotes
+      if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+        val = val.slice(1, -1);
+      }
+      meta[key] = val;
+    }
+  }
+  return { meta, content: match[2].trim() };
+}
+
+function scanJournalDir(): void {
+  if (!JOURNAL_DIR || !existsSync(JOURNAL_DIR)) {
+    console.log("[scan] JOURNAL_DIR not set or missing — skipping disk import.");
+    return;
+  }
+
+  const existingEntries = storage.getAllEntries();
+  const trackedPaths = new Set(existingEntries.map((e) => e.githubPath).filter(Boolean));
+
+  let imported = 0;
+
+  for (const cat of CATEGORIES) {
+    const catDir = join(JOURNAL_DIR, cat);
+    if (!existsSync(catDir)) continue;
+
+    const files = readdirSync(catDir).filter((f) => f.endsWith(".md"));
+    for (const file of files) {
+      const filePath = join(catDir, file);
+      // Build the github-style path: journal/<category>/<filename>
+      const githubPath = `journal/${cat}/${file}`;
+
+      // Skip if already tracked
+      if (trackedPaths.has(githubPath)) continue;
+
+      try {
+        const raw = readFileSync(filePath, "utf-8");
+        const { meta, content } = parseFrontmatter(raw);
+
+        // Derive title from frontmatter or filename
+        const title = meta.title || file.replace(/\.md$/, "").replace(/^\d{4}-\d{2}-\d{2}-\d+[-_]?/, "") || file;
+
+        // Parse date from frontmatter or filename
+        let createdAt = meta.date || "";
+        if (!createdAt) {
+          const dateMatch = file.match(/^(\d{4}-\d{2}-\d{2})/);
+          createdAt = dateMatch ? new Date(dateMatch[1]).toISOString() : new Date().toISOString();
+        }
+        const updatedAt = meta.updated || createdAt;
+
+        // Parse tags
+        let tags = "[]";
+        if (meta.tags) {
+          const tagMatch = meta.tags.match(/\[([^\]]*)\]/);
+          if (tagMatch) {
+            const tagList = tagMatch[1].split(",").map((t) => t.trim()).filter(Boolean);
+            tags = JSON.stringify(tagList);
+          }
+        }
+
+        const entry = storage.createEntry({
+          title,
+          content,
+          category: cat,
+          tags,
+          createdAt,
+          updatedAt,
+        });
+        storage.markSynced(entry.id, githubPath);
+        imported++;
+      } catch (err) {
+        console.error(`[scan] Failed to import ${filePath}:`, err);
+      }
+    }
+  }
+
+  if (imported > 0) {
+    console.log(`[scan] Imported ${imported} entries from disk.`);
+  } else {
+    console.log("[scan] No new entries to import from disk.");
+  }
+}
+
 export async function registerRoutes(server: Server, app: Express) {
+  // Import entries from disk on startup
+  scanJournalDir();
   // Get all entries
   app.get("/api/entries", (_req, res) => {
     const entries = storage.getAllEntries();
@@ -237,6 +338,13 @@ export async function registerRoutes(server: Server, app: Express) {
     } else {
       res.status(500).json({ message: "GitHub sync failed" });
     }
+  });
+
+  // Re-scan journal directory for new files
+  app.post("/api/scan", (_req, res) => {
+    scanJournalDir();
+    const entries = storage.getAllEntries();
+    res.json({ message: "Scan complete", count: entries.length });
   });
 
   // Health / sync status

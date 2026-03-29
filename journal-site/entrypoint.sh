@@ -89,6 +89,15 @@ fi
 
 poll_and_rebuild &
 
+# Periodically trigger a disk scan for new journal entries (every 5 min)
+scan_journal_entries() {
+  while true; do
+    sleep 300
+    wget -qO- --post-data='' http://localhost:5000/api/scan 2>/dev/null || true
+  done
+}
+scan_journal_entries &
+
 cd "$BUILD_DIR"
 node dist/index.cjs &
 echo $! > /tmp/node.pid
