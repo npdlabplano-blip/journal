@@ -9,3 +9,17 @@ services:
       - ./style/capsule:/var/www/style:ro
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     restart: unless-stopped
+
+  news:
+    build:
+      context: ./news/site
+      dockerfile: Dockerfile
+    container_name: daily-brief
+    # No ports exposed to host — Cloudflare Tunnel routes to this container
+    # If you need local access without the tunnel: uncomment the next two lines
+    # ports:
+    #   - "8081:80"
+    environment:
+      - GIT_REPO_URL=https://github.com/namsler1/journal.git
+      - PULL_INTERVAL_SECONDS=3600
+    restart: unless-stopped
