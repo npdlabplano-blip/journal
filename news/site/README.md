@@ -10,15 +10,17 @@ Perplexity cron (6 AM CDT daily)
   ▼
 GitHub  (namsler1/journal)
   │
-  │  git pull (hourly)
+  │  git pull (every 5 min via host cron)
   ▼
 ┌──────────────────────────────┐
 │  Ubuntu box                  │
+│  ~/journal (git repo)        │
 │                              │
 │  ┌────────────────────────┐  │
 │  │  daily-brief container │  │
 │  │  nginx :80 (internal)  │  │
-│  │  + git pull loop       │  │
+│  │  volume: news/site →   │  │
+│  │    /var/www/news (ro)  │  │
 │  └───────────┬────────────┘  │
 │              │               │
 │  ┌───────────▼────────────┐  │
@@ -38,17 +40,17 @@ GitHub  (namsler1/journal)
 
 ## Quick Start
 
-### 1. Pull the repo and build
+### 1. Pull the repo and start the container
 
 ```bash
 cd ~/journal    # or wherever you cloned it
 git pull
-docker compose build news
 docker compose up -d news
 ```
 
-The container starts nginx on port 80 (internal only — no host ports exposed).
-It immediately clones the repo and copies `news.json`, then re-pulls every hour.
+The container uses `nginx:alpine` with the site directory mounted as a read-only volume.
+No build step required — it serves files directly from `./news/site/` on disk.
+Your host cron pulls from GitHub every 5 minutes, and changes appear immediately (HTML/JSON have no-cache headers).
 
 ### 2. Add the route to your Cloudflare Tunnel
 
@@ -155,19 +157,13 @@ curl -I https://news.calconam.com
 
 ## Force a Content Refresh
 
-Don't want to wait for the hourly pull:
+Since the container serves directly from the mounted volume, just pull on the host:
 
 ```bash
-docker exec daily-brief bash -c \
-  "cd /tmp/journal-repo && git pull && cp news/site/data/news.json /var/www/news/data/news.json"
+cd ~/journal && git pull
 ```
 
-## Environment Variables
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `GIT_REPO_URL` | `https://github.com/namsler1/journal.git` | Repo to pull news data from |
-| `PULL_INTERVAL_SECONDS` | `3600` | Seconds between GitHub pulls |
+Changes appear immediately — HTML and JSON have no-cache headers.
 
 ## Container Management
 
@@ -178,8 +174,9 @@ docker compose up -d news
 # Stop
 docker compose down news
 
-# Rebuild after repo changes
-git pull && docker compose build news && docker compose up -d news
+# No rebuild needed for content/code changes — just git pull on the host
+# Only restart if docker-compose.yml or nginx config changes:
+# docker compose up -d news
 
 # View logs
 docker logs -f daily-brief
