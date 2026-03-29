@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ITEM_NAME}} — Nicole's Capsule</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Spring Capsule</h1>
+    <p class="subtitle">Curated picks for your wardrobe</p>
+  </header>
+
+  <div class="detail-container">
+    <a href="index.html" class="back-link">&larr; Back to all picks</a>
+
+    <div class="detail-hero">
+      <img src="{{VENDOR_IMAGE}}" alt="{{ITEM_NAME}}">
+      <div class="detail-info">
+        <p class="brand">{{BRAND}}</p>
+        <h2>{{ITEM_NAME}}</h2>
+        <p class="price">{{PRICE}}</p>
+        <p class="description">{{DESCRIPTION}}</p>
+        <div class="meta">
+          <strong>Color:</strong> {{COLOR}}<br>
+          <strong>Size:</strong> {{SIZE}}<br>
+          <strong>Store:</strong> {{STORE}}
+        </div>
+        <a href="{{SHOP_URL}}" class="shop-btn" target="_blank" rel="noopener">Shop This Item</a>
+      </div>
+    </div>
+
+    <div class="why-section">
+      <h4>Why This Pick</h4>
+      <p>{{WHY_TEXT}}</p>
+    </div>
+
+    <div class="pairings-section">
+      <h3>Style It With Your Wardrobe</h3>
+      <p class="section-sub">Flat-lay outfit ideas pairing this piece with items you already own</p>
+      <div class="outfit-grid">
+        <!-- OUTFIT_CARDS -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Nicole's Capsule Collection &mdash; Curated {{DATE}}</p>
+  </footer>
+</body>
+</html>

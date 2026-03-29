@@ -1,0 +1,343 @@
+/* Capsule Collection - Curated Shopping Experience */
+:root {
+  --blush: #f5e6e0;
+  --warm-cream: #faf7f4;
+  --charcoal: #2d2d2d;
+  --soft-black: #1a1a1a;
+  --rose: #c4928a;
+  --gold: #b8956a;
+  --light-gray: #e8e4e0;
+  --medium-gray: #9a9490;
+  --white: #ffffff;
+  --shadow: rgba(0,0,0,0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: var(--warm-cream);
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.site-header h1 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--soft-black);
+  margin-bottom: 0.5rem;
+}
+
+.site-header .subtitle {
+  font-size: 0.95rem;
+  color: var(--medium-gray);
+  font-style: italic;
+  font-family: 'Georgia', serif;
+}
+
+.site-header .date {
+  font-size: 0.8rem;
+  color: var(--medium-gray);
+  margin-top: 0.5rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  padding: 1rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+nav a {
+  color: var(--charcoal);
+  text-decoration: none;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--rose);
+}
+
+/* Index Grid */
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pick-card {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.pick-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.pick-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.pick-card .card-body {
+  padding: 1.25rem;
+}
+
+.pick-card .brand {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--medium-gray);
+  margin-bottom: 0.3rem;
+}
+
+.pick-card h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.pick-card .price {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.95rem;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.pick-card .tag {
+  display: inline-block;
+  background: var(--blush);
+  color: var(--rose);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+
+/* Detail Page */
+.detail-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.back-link {
+  display: inline-block;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--medium-gray);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover { color: var(--charcoal); }
+
+.detail-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.detail-hero img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+
+.detail-info h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.detail-info .brand {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--medium-gray);
+  margin-bottom: 1rem;
+}
+
+.detail-info .price {
+  font-size: 1.3rem;
+  color: var(--gold);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.detail-info .description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.detail-info .meta {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  color: var(--medium-gray);
+  line-height: 2;
+}
+
+.detail-info .meta strong {
+  color: var(--charcoal);
+}
+
+.shop-btn {
+  display: inline-block;
+  background: var(--soft-black);
+  color: var(--white);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.9rem 2.5rem;
+  text-decoration: none;
+  border-radius: 2px;
+  margin-top: 1.5rem;
+  transition: background 0.2s;
+}
+
+.shop-btn:hover {
+  background: var(--rose);
+}
+
+/* Outfit Pairings Section */
+.pairings-section {
+  margin-top: 3rem;
+  border-top: 1px solid var(--light-gray);
+  padding-top: 2.5rem;
+}
+
+.pairings-section h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.pairings-section .section-sub {
+  font-size: 0.85rem;
+  color: var(--medium-gray);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.outfit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 2rem;
+}
+
+.outfit-card {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+
+.outfit-card img {
+  width: 100%;
+  display: block;
+}
+
+.outfit-card .outfit-desc {
+  padding: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.outfit-card .outfit-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--rose);
+  margin-bottom: 0.4rem;
+}
+
+/* Why This Pick */
+.why-section {
+  background: var(--blush);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.why-section h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--rose);
+  margin-bottom: 0.5rem;
+}
+
+.why-section p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--light-gray);
+  margin-top: 3rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.75rem;
+  color: var(--medium-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .picks-grid { grid-template-columns: 1fr; padding: 1.5rem; }
+  .detail-hero { grid-template-columns: 1fr; }
+  .outfit-grid { grid-template-columns: 1fr; }
+  .site-header h1 { font-size: 1.6rem; }
+}
