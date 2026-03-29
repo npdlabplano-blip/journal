@@ -4,7 +4,7 @@ import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useLocation, useParams } from "wouter";
 import type { JournalEntry } from "@shared/schema";
 import { marked } from "marked";
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 import {
   ArrowLeft,
   Save,
@@ -24,6 +24,10 @@ import {
   Code,
   Link as LinkIcon,
   Minus,
+  Plus,
+  PanelLeftClose,
+  PanelLeft,
+  Search,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -61,6 +65,10 @@ function ToolbarButton({
   );
 }
 
+function formatCategoryLabel(cat: string) {
+  return cat.charAt(0).toUpperCase() + cat.slice(1).replace("-", " ");
+}
+
 export default function EditorPage() {
   const params = useParams<{ id: string }>();
   const isEditing = Boolean(params.id);
@@ -76,6 +84,13 @@ export default function EditorPage() {
   const [showPreview, setShowPreview] = useState(false);
   const [autoSaveTimer, setAutoSaveTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
   const [isDirty, setIsDirty] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarSearch, setSidebarSearch] = useState("");
+
+  // Load all entries for the sidebar
+  const { data: allEntries = [] } = useQuery<JournalEntry[]>({
+    queryKey: ["/api/entries"],
+  });
 
   // Load existing entry
   const { data: existingEntry, isLoading: loadingEntry } = useQuery<JournalEntry>({
@@ -96,6 +111,17 @@ export default function EditorPage() {
       setTagsInput(tags.join(", "));
     }
   }, [existingEntry]);
+
+  // Reset form when navigating to /new
+  useEffect(() => {
+    if (!isEditing) {
+      setTitle("");
+      setContent("");
+      setCategory("entries");
+      setTagsInput("");
+      setIsDirty(false);
+    }
+  }, [isEditing]);
 
   // Create mutation
   const createMutation = useMutation({
@@ -220,6 +246,21 @@ export default function EditorPage() {
     }
   })();
 
+  // Group entries by category for sidebar
+  const filteredEntries = allEntries.filter((e) => {
+    if (!sidebarSearch) return true;
+    return e.title.toLowerCase().includes(sidebarSearch.toLowerCase());
+  });
+
+  const groupedEntries = CATEGORIES.reduce(
+    (acc, cat) => {
+      const catEntries = filteredEntries.filter((e) => e.category === cat);
+      if (catEntries.length > 0) acc[cat] = catEntries;
+      return acc;
+    },
+    {} as Record<string, JournalEntry[]>
+  );
+
   if (loadingEntry) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -231,9 +272,19 @@ export default function EditorPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
-      <header className="sticky top-0 z-10 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+      <header className="sticky top-0 z-20 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+        <div className="px-4 sm:px-6 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-8 w-8"
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              data-testid="button-toggle-sidebar"
+              aria-label={sidebarOpen ? "Close sidebar" : "Open sidebar"}
+            >
+              {sidebarOpen ? <PanelLeftClose className="h-4 w-4" /> : <PanelLeft className="h-4 w-4" />}
+            </Button>
             <Link href="/">
               <Button variant="ghost" size="icon" className="h-8 w-8" data-testid="button-back">
                 <ArrowLeft className="h-4 w-4" />
@@ -303,108 +354,191 @@ export default function EditorPage() {
         </div>
       </header>
 
-      {/* Editor area */}
-      <main className="flex-1 mx-auto max-w-4xl w-full px-4 sm:px-6 py-6">
-        {/* Title */}
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => {
-            setTitle(e.target.value);
-            markDirty();
-          }}
-          placeholder="Entry title..."
-          className="w-full text-xl font-semibold bg-transparent border-none outline-none placeholder:text-muted-foreground/50 mb-4"
-          style={{ fontFamily: "'Zodiak', Georgia, serif" }}
-          data-testid="input-title"
-        />
-
-        {/* Meta row */}
-        <div className="flex flex-wrap items-center gap-3 mb-5 pb-5 border-b border-border">
-          <div className="flex items-center gap-2">
-            <label className="text-xs text-muted-foreground font-medium">Category</label>
-            <select
-              value={category}
-              onChange={(e) => {
-                setCategory(e.target.value);
-                markDirty();
-              }}
-              className="text-sm bg-secondary rounded-md px-2.5 py-1 border-none outline-none text-secondary-foreground"
-              data-testid="select-category"
-            >
-              {CATEGORIES.map((c) => (
-                <option key={c} value={c}>
-                  {c.charAt(0).toUpperCase() + c.slice(1).replace("-", " ")}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="flex items-center gap-2 flex-1 min-w-[200px]">
-            <label className="text-xs text-muted-foreground font-medium">Tags</label>
-            <input
-              type="text"
-              value={tagsInput}
-              onChange={(e) => {
-                setTagsInput(e.target.value);
-                markDirty();
-              }}
-              placeholder="faith, work, family..."
-              className="flex-1 text-sm bg-secondary rounded-md px-2.5 py-1 border-none outline-none placeholder:text-muted-foreground/50"
-              data-testid="input-tags"
-            />
-          </div>
-          {isEditing && existingEntry && (
-            <span className="text-xs text-muted-foreground">
-              {format(new Date(existingEntry.createdAt), "MMM d, yyyy 'at' h:mm a")}
-            </span>
-          )}
-        </div>
-
-        {showPreview ? (
-          /* Preview */
-          <div
-            className="prose-journal min-h-[400px]"
-            dangerouslySetInnerHTML={{ __html: renderedHtml as string }}
-            data-testid="div-preview"
-          />
-        ) : (
-          /* Editor */
-          <div>
-            {/* Formatting toolbar */}
-            <div className="flex items-center gap-0.5 mb-3 pb-3 border-b border-border flex-wrap">
-              <ToolbarButton icon={Bold} label="Bold" onClick={() => insertFormatting("**", "**")} />
-              <ToolbarButton icon={Italic} label="Italic" onClick={() => insertFormatting("_", "_")} />
-              <div className="w-px h-5 bg-border mx-1" />
-              <ToolbarButton icon={Heading2} label="Heading" onClick={() => insertFormatting("## ", "")} />
-              <ToolbarButton icon={Quote} label="Quote" onClick={() => insertFormatting("> ", "")} />
-              <div className="w-px h-5 bg-border mx-1" />
-              <ToolbarButton icon={List} label="Bullet list" onClick={() => insertFormatting("- ", "")} />
-              <ToolbarButton icon={ListOrdered} label="Numbered list" onClick={() => insertFormatting("1. ", "")} />
-              <div className="w-px h-5 bg-border mx-1" />
-              <ToolbarButton icon={Code} label="Code" onClick={() => insertFormatting("`", "`")} />
-              <ToolbarButton icon={LinkIcon} label="Link" onClick={() => insertFormatting("[", "](url)")} />
-              <ToolbarButton icon={Minus} label="Divider" onClick={() => insertFormatting("\n---\n", "")} />
+      {/* Body: sidebar + editor */}
+      <div className="flex-1 flex overflow-hidden">
+        {/* Sidebar */}
+        <aside
+          className={`${
+            sidebarOpen ? "w-72" : "w-0"
+          } flex-shrink-0 border-r border-border bg-card transition-all duration-200 overflow-hidden`}
+        >
+          <div className="w-72 h-full flex flex-col">
+            {/* Sidebar header */}
+            <div className="p-3 border-b border-border space-y-2">
+              <Link href="/new">
+                <Button size="sm" className="w-full" data-testid="button-sidebar-new">
+                  <Plus className="h-4 w-4 mr-1.5" />
+                  New Entry
+                </Button>
+              </Link>
+              <div className="relative">
+                <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground" />
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  value={sidebarSearch}
+                  onChange={(e) => setSidebarSearch(e.target.value)}
+                  className="w-full pl-8 pr-3 py-1.5 rounded-md border border-border bg-background text-xs placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+                  data-testid="input-sidebar-search"
+                />
+              </div>
             </div>
 
-            <textarea
-              ref={textareaRef}
-              value={content}
+            {/* Entries list */}
+            <div className="flex-1 overflow-y-auto">
+              {Object.keys(groupedEntries).length === 0 ? (
+                <div className="p-4 text-center text-xs text-muted-foreground">
+                  {sidebarSearch ? "No matching entries" : "No entries yet"}
+                </div>
+              ) : (
+                Object.entries(groupedEntries).map(([cat, entries]) => (
+                  <div key={cat}>
+                    <div className="px-3 pt-3 pb-1">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                        {formatCategoryLabel(cat)}
+                      </span>
+                    </div>
+                    {entries.map((entry) => {
+                      const isActive = params.id === String(entry.id);
+                      return (
+                        <Link key={entry.id} href={`/edit/${entry.id}`}>
+                          <button
+                            className={`w-full text-left px-3 py-2 transition-colors ${
+                              isActive
+                                ? "bg-primary/10 border-l-2 border-primary"
+                                : "hover:bg-accent border-l-2 border-transparent"
+                            }`}
+                            data-testid={`sidebar-entry-${entry.id}`}
+                          >
+                            <div className="truncate text-sm font-medium leading-tight">
+                              {entry.title}
+                            </div>
+                            <div className="flex items-center gap-1.5 mt-0.5">
+                              <span className="text-[10px] text-muted-foreground">
+                                {format(parseISO(entry.createdAt), "MMM d, yyyy")}
+                              </span>
+                              {entry.synced ? (
+                                <Check className="h-2.5 w-2.5 text-green-600 dark:text-green-400" />
+                              ) : (
+                                <GitBranch className="h-2.5 w-2.5 text-muted-foreground" />
+                              )}
+                            </div>
+                          </button>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </aside>
+
+        {/* Editor area */}
+        <main className="flex-1 overflow-y-auto">
+          <div className="mx-auto max-w-4xl w-full px-4 sm:px-6 py-6">
+            {/* Title */}
+            <input
+              type="text"
+              value={title}
               onChange={(e) => {
-                setContent(e.target.value);
+                setTitle(e.target.value);
                 markDirty();
               }}
-              placeholder="Start writing in Markdown..."
-              className="w-full min-h-[500px] bg-transparent border-none outline-none resize-none text-sm leading-relaxed placeholder:text-muted-foreground/50 font-mono"
-              style={{ tabSize: 2 }}
-              data-testid="textarea-content"
+              placeholder="Entry title..."
+              className="w-full text-xl font-semibold bg-transparent border-none outline-none placeholder:text-muted-foreground/50 mb-4"
+              style={{ fontFamily: "'General Sans', 'Satoshi', sans-serif", letterSpacing: '-0.02em' }}
+              data-testid="input-title"
             />
+
+            {/* Meta row */}
+            <div className="flex flex-wrap items-center gap-3 mb-5 pb-5 border-b border-border">
+              <div className="flex items-center gap-2">
+                <label className="text-xs text-muted-foreground font-medium">Category</label>
+                <select
+                  value={category}
+                  onChange={(e) => {
+                    setCategory(e.target.value);
+                    markDirty();
+                  }}
+                  className="text-sm bg-secondary rounded-md px-2.5 py-1 border-none outline-none text-secondary-foreground"
+                  data-testid="select-category"
+                >
+                  {CATEGORIES.map((c) => (
+                    <option key={c} value={c}>
+                      {formatCategoryLabel(c)}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex items-center gap-2 flex-1 min-w-[200px]">
+                <label className="text-xs text-muted-foreground font-medium">Tags</label>
+                <input
+                  type="text"
+                  value={tagsInput}
+                  onChange={(e) => {
+                    setTagsInput(e.target.value);
+                    markDirty();
+                  }}
+                  placeholder="faith, work, family..."
+                  className="flex-1 text-sm bg-secondary rounded-md px-2.5 py-1 border-none outline-none placeholder:text-muted-foreground/50"
+                  data-testid="input-tags"
+                />
+              </div>
+              {isEditing && existingEntry && (
+                <span className="text-xs text-muted-foreground">
+                  {format(new Date(existingEntry.createdAt), "MMM d, yyyy 'at' h:mm a")}
+                </span>
+              )}
+            </div>
+
+            {showPreview ? (
+              /* Preview */
+              <div
+                className="prose-journal min-h-[400px]"
+                dangerouslySetInnerHTML={{ __html: renderedHtml as string }}
+                data-testid="div-preview"
+              />
+            ) : (
+              /* Editor */
+              <div>
+                {/* Formatting toolbar */}
+                <div className="flex items-center gap-0.5 mb-3 pb-3 border-b border-border flex-wrap">
+                  <ToolbarButton icon={Bold} label="Bold" onClick={() => insertFormatting("**", "**")} />
+                  <ToolbarButton icon={Italic} label="Italic" onClick={() => insertFormatting("_", "_")} />
+                  <div className="w-px h-5 bg-border mx-1" />
+                  <ToolbarButton icon={Heading2} label="Heading" onClick={() => insertFormatting("## ", "")} />
+                  <ToolbarButton icon={Quote} label="Quote" onClick={() => insertFormatting("> ", "")} />
+                  <div className="w-px h-5 bg-border mx-1" />
+                  <ToolbarButton icon={List} label="Bullet list" onClick={() => insertFormatting("- ", "")} />
+                  <ToolbarButton icon={ListOrdered} label="Numbered list" onClick={() => insertFormatting("1. ", "")} />
+                  <div className="w-px h-5 bg-border mx-1" />
+                  <ToolbarButton icon={Code} label="Code" onClick={() => insertFormatting("`", "`")} />
+                  <ToolbarButton icon={LinkIcon} label="Link" onClick={() => insertFormatting("[", "](url)")} />
+                  <ToolbarButton icon={Minus} label="Divider" onClick={() => insertFormatting("\n---\n", "")} />
+                </div>
+
+                <textarea
+                  ref={textareaRef}
+                  value={content}
+                  onChange={(e) => {
+                    setContent(e.target.value);
+                    markDirty();
+                  }}
+                  placeholder="Start writing in Markdown..."
+                  className="w-full min-h-[500px] bg-transparent border-none outline-none resize-none text-sm leading-relaxed placeholder:text-muted-foreground/50 font-mono"
+                  style={{ tabSize: 2 }}
+                  data-testid="textarea-content"
+                />
+              </div>
+            )}
           </div>
-        )}
-      </main>
+        </main>
+      </div>
 
       {/* Status bar */}
       <footer className="border-t border-border bg-background">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 py-2 flex items-center justify-between text-xs text-muted-foreground">
+        <div className="px-4 sm:px-6 py-2 flex items-center justify-between text-xs text-muted-foreground">
           <span>{content.split(/\s+/).filter(Boolean).length} words</span>
           <div className="flex items-center gap-3">
             {isDirty && <span className="text-amber-600 dark:text-amber-400">Unsaved changes</span>}

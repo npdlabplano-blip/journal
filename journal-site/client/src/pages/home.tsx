@@ -65,7 +65,7 @@ export default function HomePage() {
               <rect x="3" y="8" width="2" height="4" rx="1" fill="currentColor" />
               <rect x="3" y="16" width="2" height="4" rx="1" fill="currentColor" />
             </svg>
-            <h1 className="text-lg font-semibold" style={{ fontFamily: "'Zodiak', Georgia, serif" }} data-testid="text-app-title">
+            <h1 className="text-lg font-semibold" style={{ fontFamily: "'General Sans', 'Satoshi', sans-serif", letterSpacing: '-0.01em' }} data-testid="text-app-title">
               Journal
             </h1>
           </div>
@@ -136,7 +136,7 @@ export default function HomePage() {
         ) : filtered.length === 0 ? (
           <div className="text-center py-20">
             <BookOpen className="h-12 w-12 mx-auto mb-4 text-muted-foreground/40" />
-            <h2 className="text-lg font-medium mb-2" style={{ fontFamily: "'Zodiak', Georgia, serif" }}>
+            <h2 className="text-lg font-medium mb-2" style={{ fontFamily: "'General Sans', 'Satoshi', sans-serif", letterSpacing: '-0.01em' }}>
               {entries.length === 0 ? "Start your journal" : "No matching entries"}
             </h2>
             <p className="text-sm text-muted-foreground mb-6 max-w-sm mx-auto">
@@ -188,7 +188,7 @@ export default function HomePage() {
                       </div>
                       <h2
                         className="font-semibold text-base mb-1 truncate"
-                        style={{ fontFamily: "'Zodiak', Georgia, serif" }}
+                        style={{ fontFamily: "'General Sans', 'Satoshi', sans-serif", letterSpacing: '-0.01em' }}
                         data-testid={`text-entry-title-${entry.id}`}
                       >
                         {entry.title}
