@@ -117,13 +117,7 @@ Each agent should be a standalone agent with its own charter, personality, and s
      - **Work:** Cute and professional (executive director at a global bank); some days business casual
      - **Church:** Cute, not too conservative — church is casual but she likes to look put-together
      - **Date night:** Really cute — rare but important
-   - **Budget ranges:**
-     - Tops: $50–100
-     - Bottoms: ~$100
-     - Shoes: $70–100
-     - Bags: ~$100
-     - Accessories: $20–50
-   - Recommends future purchases to fill wardrobe gaps or refresh looks within budget
+   - Recommends future purchases to fill wardrobe gaps or refresh looks
    - _Full charter TBD_
 
 4. **Finance Coach Agent** — personal financial advisor and accountability partner

@@ -149,15 +149,6 @@ Each item in the local catalog should include:
 - **Fill gaps strategically** — identify missing pieces that would unlock more outfit combinations
 - **Stitch Fix alignment** — recommendations should feel like they'd come in a Stitch Fix box (brands and aesthetic she already loves)
 
-### Budget Ranges
-| Category | Budget |
-|----------|--------|
-| Tops | $50–100 |
-| Bottoms | ~$100 |
-| Shoes | $70–100 |
-| Bags | ~$100 |
-| Accessories | $20–50 |
-
 ### Where to Shop
 - **Stitch Fix** — primary source for curated pieces
 - **Banana Republic** — work staples
