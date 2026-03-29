@@ -40,24 +40,24 @@ Last updated: 2026-03-29
 | 70 | Chunky knit crew neck sweater in deep teal-green, textured stitch, relaxed slouchy fit, cozy weight | — | Teal-green | Sweater | Fall/Winter | Work, Church | `1hXQv6B3wynWnywYFaCJ7f3-8n9XGODLA` |
 | 71 | Wide-ribbed knit crew neck sweater in black, fitted silhouette, prominent vertical rib texture, stretchy | — | Black | Sweater | Fall/Winter | Work, Church | `15HSbbfnCfxYunUlvg9Ki-vHwgN6urzWH` |
 | 72 | Fine-ribbed knit crew neck sweater in ivory/white, lightweight, slim fit, subtle vertical rib texture throughout | Calvin Klein | Ivory/white | Sweater | Fall/Winter | Work, Church | `163W-kv5RZpWTeV_nBW4i3uYrTWkZExz-` |
-| 73 | Red sweater | — | Red | Sweater | Fall/Winter | Work, Church | `1bTi4yivVF47kOheTWrMcvQTo4mD94tgJ` |
-| 74 | Black turtleneck | — | Black | Turtleneck | Fall/Winter | Work, Church | `1juxmaGWkyxgB_eDMOZATRAR5ZXk83PRj` |
-| 75 | Gray sweater | — | Gray | Sweater | Fall/Winter | Work, Church | `12uxSahBhP4KYUqLFvkGxArF_LwM3H9hU` |
-| 76 | Brown turtleneck | — | Brown | Turtleneck | Fall/Winter | Work, Church | `1POZMRDIxZoegi2-ExGv7yVIY_iGaI0aw` |
-| 77 | White turtleneck | — | White | Turtleneck | Fall/Winter | Work, Church | `10RNqRFxqepYph9K92m3LzJ6PR6QpUrL6` |
-| 78 | Red sweater | — | Red | Sweater | Fall/Winter | Work, Church | `158bKN_asPYamVBx59hXAmG01hEGzplb0` |
-| 79 | Red sweater | — | Red | Sweater | Fall/Winter | Work, Church | `1zUjO22L_X5leZKfHQS9cG-ZGeNJI0KGS` |
-| 80 | Brown turtleneck | — | Brown | Turtleneck | Fall/Winter | Work, Church | `13ZVh0AlX9-MndODgcSKbZ5q1LLO7cIAL` |
-| 81 | Blue sweater | — | Blue | Sweater | Fall/Winter | Work, Church | `1gAzL_wkJ8DV8j_3zwCwW4zyiayIzGGdP` |
-| 82 | Black sweater | — | Black | Sweater | Fall/Winter | Work, Church | `1o76nZKxW7z0e_q9YQRtyXTLHp0Grv6dh` |
-| 83 | Cream sweater | — | Cream | Sweater | Fall/Winter | Work, Church | `1gFZFfc5IDfkFXZN0Zqs5HV7DsstcCROP` |
-| 84 | Blue sweater | — | Blue | Sweater | Fall/Winter | Work, Church | `1KwGwlqoWk1a3L-EZsa6CjFk28palEZmZ` |
-| 85a | Light blue sweater | — | Light blue | Sweater | Fall/Winter | Work, Church | `1ve5v-x5Dm3QQP3whZLRfhf7xOVFBO64b` |
-| 85b | Pink hoodie | — | Pink | Hoodie | Year-round | Casual, Lounge | `1CFZAzosor2ZQOFyqtNTJbpfkDcfe4t71` |
-| 86 | Sleeveless top | Fortune & Ivy | — | Sleeveless | Spring/Summer | Work, Church | `1eMFoXMLFSAWDPC7aA2gG3z-YcXAqxkFL` |
-| 145 | T-shirt | Victoria's Secret | — | T-shirt | Year-round | Casual, Lounge | `1ZFx_E4LeS0-wuw6KC3fk--QLyIQ6MFFK` |
-| 147 | Hoodie | CBF | — | Hoodie | Year-round | Casual, Lounge | `1nUZUTLikgtBTZytuzH9sHyKCU8dUA5me` |
-| 213 | Top | CBF Kids | — | Top | Year-round | Casual | `1n5dtL4sb4trbspnfl6FZu3cLlOymi2Eu` |
+| 73 | Chunky knit mock-neck sweater in deep cranberry red, soft fuzzy texture, ribbed cuffs and hem, relaxed cozy fit | — | Cranberry red | Sweater | Fall/Winter | Work, Church | `1bTi4yivVF47kOheTWrMcvQTo4mD94tgJ` |
+| 74 | Wide-ribbed knit turtleneck in black, vertical rib texture, fitted silhouette, fold-over neck; polished base layer | — | Black | Turtleneck | Fall/Winter | Work, Church | `1juxmaGWkyxgB_eDMOZATRAR5ZXk83PRj` |
+| 75 | Henley-style sweater in heathered gray with subtle plaid-like texture, button placket at neck, structured knit | — | Heathered gray | Sweater | Fall/Winter | Work, Church | `12uxSahBhP4KYUqLFvkGxArF_LwM3H9hU` |
+| 76 | Wide-ribbed knit turtleneck in warm camel/tan, soft texture, relaxed fit, fold-over neck; pairs with everything | — | Camel/tan | Turtleneck | Fall/Winter | Work, Church | `1POZMRDIxZoegi2-ExGv7yVIY_iGaI0aw` |
+| 77 | Soft fine-knit turtleneck in ivory/cream, lightweight smooth texture, relaxed fit, fold-over neck; classic layering | — | Ivory/cream | Turtleneck | Fall/Winter | Work, Church | `10RNqRFxqepYph9K92m3LzJ6PR6QpUrL6` |
+| 78 | Soft crew neck sweater in deep burgundy/wine, smooth knit with slight fuzz, relaxed fit, ribbed cuffs | — | Burgundy/wine | Sweater | Fall/Winter | Work, Church | `158bKN_asPYamVBx59hXAmG01hEGzplb0` |
+| 79 | Plush fuzzy crew neck sweater in bright cherry red, mohair-like soft texture, oversized relaxed fit; bold statement | — | Cherry red | Sweater | Fall/Winter | Work, Church | `1zUjO22L_X5leZKfHQS9cG-ZGeNJI0KGS` |
+| 80 | Wide-ribbed knit turtleneck in dark chocolate brown, vertical rib texture, fitted, fold-over neck | — | Dark brown | Turtleneck | Fall/Winter | Work, Church | `13ZVh0AlX9-MndODgcSKbZ5q1LLO7cIAL` |
+| 81 | Textured knit henley sweater in dark navy with subtle stitch pattern, button placket detail at cuffs, fitted | — | Dark navy | Sweater | Fall/Winter | Work, Church | `1gAzL_wkJ8DV8j_3zwCwW4zyiayIzGGdP` |
+| 82 | Smooth crew neck sweater in black, lightweight fine knit, relaxed fit, ribbed cuffs and hem; everyday versatile | — | Black | Sweater | Fall/Winter | Work, Church | `1o76nZKxW7z0e_q9YQRtyXTLHp0Grv6dh` |
+| 83 | Fine-knit V-neck sweater in soft cream/oatmeal, lightweight, relaxed fit, ribbed trim; easy layering staple | — | Cream/oatmeal | Sweater | Fall/Winter | Work, Church | `1gFZFfc5IDfkFXZN0Zqs5HV7DsstcCROP` |
+| 84 | Soft knit crew neck sweater in deep navy blue, smooth fine-gauge texture, relaxed fit; classic and polished | — | Deep navy | Sweater | Fall/Winter | Work, Church | `1KwGwlqoWk1a3L-EZsa6CjFk28palEZmZ` |
+| 85a | Fine-knit crew neck sweater in soft powder blue, lightweight smooth texture, relaxed fit, ribbed cuffs and hem | — | Powder blue | Sweater | Fall/Winter | Work, Church | `1ve5v-x5Dm3QQP3whZLRfhf7xOVFBO64b` |
+| 85b | Full-zip hoodie in soft blush pink fleece, gold hardware zipper, kangaroo pockets, structured athletic fit | — | Blush pink | Hoodie | Year-round | Casual, Lounge | `1CFZAzosor2ZQOFyqtNTJbpfkDcfe4t71` |
+| 86 | Sleeveless button-front blouse in white with crinkle texture, notch collar, structured woven fabric; polished summer top | Fortune & Ivy | White | Sleeveless | Spring/Summer | Work, Church | `1eMFoXMLFSAWDPC7aA2gG3z-YcXAqxkFL` |
+| 145 | Heathered light gray oversized crew neck t-shirt with small gold embroidered logo crest, soft cotton jersey, relaxed | Victoria's Secret | Heathered gray | T-shirt | Year-round | Casual, Lounge | `1ZFx_E4LeS0-wuw6KC3fk--QLyIQ6MFFK` |
+| 147 | Cream pullover hoodie with "Taste & See — Coppell Bible Women" graphic, fleece-lined, kangaroo pocket, relaxed fit | CBF | Cream | Hoodie | Year-round | Casual, Lounge | `1nUZUTLikgtBTZytuzH9sHyKCU8dUA5me` |
+| 213 | Dusty blue-gray crew neck t-shirt with white "Kids — Coppell Bible" graphic, soft cotton jersey, relaxed fit | CBF Kids | Dusty blue | Top | Year-round | Casual | `1n5dtL4sb4trbspnfl6FZu3cLlOymi2Eu` |
 
 ---
 
