@@ -65,22 +65,22 @@ Last updated: 2026-03-29
 
 | # | Description | Brand | Color/Pattern | Subcategory | Season | Occasion | Drive ID |
 |---|-------------|-------|---------------|-------------|--------|----------|----------|
-| 101 | Wide leg cut jeans | — | Denim | Jeans (wide leg) | Year-round | Casual | `195nWXnQHQ0X101cpQlZCEg4TndA28OWw` |
-| 102 | Mid length black skirt | 41 Hawthorn | Black | Skirt (mid) | Year-round | Work, Church | `1oIS3OMY-iT9F3BrSDYUb4MzEl7CXgIbJ` |
-| 103 | Short red checkered skirt | Gilley | Red/checkered | Skirt (short) | Fall/Winter | Church, Casual | `11b2I2quoOlY_i_Dyaac-4DMmOXQqrRJb` |
-| 104 | Burnt orange skirt | — | Burnt orange | Skirt | Fall | Church, Casual | `1KZGLuFXzyzBGArFtSPkY2KX436QJZuoo` |
-| 105 | Straight leg jeans | Studio Blue | Blue | Jeans (straight) | Year-round | Casual | `169uSsyD_2J11e4Uhp0wRKFthn2XNCnO_` |
-| 106 | Wide leg black trousers | — | Black | Trousers (wide leg) | Year-round | Work | `124oF8ZYPtBK9c1NvT8P3a320dRQyjYzG` |
-| 107 | Straight leg light jeans | — | Light denim | Jeans (straight) | Spring/Summer | Casual | `13hOpvtBYLX4exLKST23EN75oX0IpCOfF` |
-| 108 | Green pants | Studio Blue | Green | Pants | Year-round | Work, Casual | `1bBg3U9CjGdOXWj2bxr8UW0JdpvNuiKzy` |
-| 109 | Straight leg jeans | Indigo Six | Indigo | Jeans (straight) | Year-round | Casual | `1oN3Zg2vQNPdYHp8LPMqy5BVnWp33pxon` |
-| 110 | White jeans | Banana Republic | White | Jeans | Spring/Summer | Casual, Church | `1dkNPj7L_yIDeW1Fcbf2Liang6MNk05Wb` |
-| 111 | Ripped jeans | Buckle | Denim | Jeans (ripped) | Year-round | Casual | `1MSbSghWcbaxiAgUWfdtlmlwS1pXcBn-O` |
-| 112 | Short navy blue skirt | — | Navy | Skirt (short) | Year-round | Work, Church | `1_U9QMtbD796esddEtJiTClYXM9etzqif` |
-| 113 | Brown corduroy skirt | Market & Spruce | Brown | Skirt (corduroy) | Fall/Winter | Church, Casual | `1oPpYs6EjUK0n_ZtqCLhvz1Dc1tJtiROR` |
-| 114 | Short green skirt | — | Green | Skirt (short) | Spring/Summer | Church, Casual | `1GE0tY2oFp6tUfzF3XYIQYJFO87GwReP_` |
-| 115 | Plaid blue short skirt | Skies Are Blue | Blue/plaid | Skirt (short) | Fall | Church, Casual | `15yDFnlHXCR3499nTBhapirmxOElpjWJ1` |
-| 116 | Short jean skirt | — | Denim | Skirt (short) | Spring/Summer | Casual | `1EjVVkIHfFSNkeG8a5VX1kNZzv04pFp8K` |
+| 101 | Medium wash wide-leg jeans with whiskering detail, high-rise, cropped ankle length, relaxed through thigh; trendy weekend denim | — | Medium denim | Jeans (wide leg) | Year-round | Casual | `195nWXnQHQ0X101cpQlZCEg4TndA28OWw` |
+| 102 | A-line midi skirt in black and white herringbone weave, pull-on elastic waist, structured woven fabric; polished work piece | 41 Hawthorn | Black/white herringbone | Skirt (mid) | Year-round | Work, Church | `1oIS3OMY-iT9F3BrSDYUb4MzEl7CXgIbJ` |
+| 103 | Short A-line skirt in burgundy and black micro-gingham check, gathered waist, lightweight woven fabric; fall-ready | Gilley | Burgundy/black gingham | Skirt (short) | Fall/Winter | Church, Casual | `11b2I2quoOlY_i_Dyaac-4DMmOXQqrRJb` |
+| 104 | Five-pocket mini skirt in washed burnt orange cotton twill, belt loops, zip fly, relaxed casual fit | — | Burnt orange | Skirt | Fall | Church, Casual | `1KZGLuFXzyzBGArFtSPkY2KX436QJZuoo` |
+| 105 | Medium-light wash straight leg jeans, high-rise, slight whiskering, clean hem, classic everyday denim | Studio Blue | Medium-light denim | Jeans (straight) | Year-round | Casual | `169uSsyD_2J11e4Uhp0wRKFthn2XNCnO_` |
+| 106 | Wide-leg black trousers with fabric tie belt at waist, smooth woven crepe, high-rise, flowy drape; elegant work pant | — | Black | Trousers (wide leg) | Year-round | Work | `124oF8ZYPtBK9c1NvT8P3a320dRQyjYzG` |
+| 107 | Medium wash straight-leg jeans with slight fading, mid-rise, leather patch at back, clean classic cut | — | Medium denim | Jeans (straight) | Spring/Summer | Casual | `13hOpvtBYLX4exLKST23EN75oX0IpCOfF` |
+| 108 | Deep forest green five-pocket pants in soft cotton twill, straight leg, zip fly; great alternative to jeans | Studio Blue | Forest green | Pants | Year-round | Work, Casual | `1bBg3U9CjGdOXWj2bxr8UW0JdpvNuiKzy` |
+| 109 | Medium-dark wash straight leg jeans with natural fading at thighs, mid-rise, classic five-pocket styling | Indigo Six | Medium-dark denim | Jeans (straight) | Year-round | Casual | `1oN3Zg2vQNPdYHp8LPMqy5BVnWp33pxon` |
+| 110 | Crisp white straight-leg jeans, high-rise, clean no-distressing finish, five-pocket styling; fresh summer staple | Banana Republic | White | Jeans | Spring/Summer | Casual, Church | `1dkNPj7L_yIDeW1Fcbf2Liang6MNk05Wb` |
+| 111 | Heavily distressed boyfriend jeans with large rips at knees and thighs, medium wash, relaxed fit, frayed edges; edgy casual | Buckle | Medium denim/distressed | Jeans (ripped) | Year-round | Casual | `1MSbSghWcbaxiAgUWfdtlmlwS1pXcBn-O` |
+| 112 | Smooth woven A-line mini skirt in navy, back zip closure, lined, structured fabric; clean polished work skirt | — | Navy | Skirt (short) | Year-round | Work, Church | `1_U9QMtbD796esddEtJiTClYXM9etzqif` |
+| 113 | Five-pocket mini skirt in warm brown corduroy, zip fly, brass button, soft textured fabric; fall essential | Market & Spruce | Warm brown | Skirt (corduroy) | Fall/Winter | Church, Casual | `1oPpYs6EjUK0n_ZtqCLhvz1Dc1tJtiROR` |
+| 114 | A-line mini skirt in rich emerald green faux suede, smooth soft texture, back zip; bold statement piece | — | Emerald green | Skirt (short) | Spring/Summer | Church, Casual | `1GE0tY2oFp6tUfzF3XYIQYJFO87GwReP_` |
+| 115 | Short A-line skirt in brown/black/cream tweed-like woven plaid, textured boucle fabric; fall-ready with boots | Skies Are Blue | Brown/black tweed plaid | Skirt (short) | Fall | Church, Casual | `15yDFnlHXCR3499nTBhapirmxOElpjWJ1` |
+| 116 | Button-front denim mini skirt in medium wash, exposed button fly, five-pocket styling, A-line shape; casual weekend | — | Medium denim | Skirt (short) | Spring/Summer | Casual | `1EjVVkIHfFSNkeG8a5VX1kNZzv04pFp8K` |
 | 117 | Short red skirt | — | Red | Skirt (short) | Year-round | Church, Date Night | `1BATfRy9VUbpuV3nlly9WNJ_axfoH0rLe` |
 | 118 | Short gray skirt | 41 Hawthorn | Gray | Skirt (short) | Year-round | Work, Church | `14qzZqCI_C9HgJ707Eyju_-zcev2d3tYw` |
 | 119 | Mid length black skirt | — | Black | Skirt (mid) | Year-round | Work, Church | `1YlfrkH_6NRZTK8STin5CJtxb4-bjt3Pz` |
