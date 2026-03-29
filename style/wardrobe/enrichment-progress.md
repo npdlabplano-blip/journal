@@ -2,9 +2,9 @@
 
 ## Completed
 - [x] Tops 41-55 (batch 1) — done 2026-03-29
+- [x] Tops 56-72 (batch 2) — done 2026-03-29
 
 ## Remaining
-- [ ] Tops 56-72 (batch 2)
 - [ ] Tops 73-86, 145, 147, 213 (batch 3)
 - [ ] Bottoms 101-116 (batch 4)
 - [ ] Bottoms 117-131 + Absolute Pant, Microflare pant (batch 5)
