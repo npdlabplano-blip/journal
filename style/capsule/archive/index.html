@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previous Capsules — Nicole's Style Capsule</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .archive-intro {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 2rem 2rem 0;
+      font-size: 0.95rem;
+      color: #9a9490;
+      font-style: italic;
+    }
+    .archive-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 3rem;
+    }
+    .archive-date-header {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #c4928a;
+      padding: 1.5rem 0 0.5rem;
+      border-bottom: 1px solid #e8e4e0;
+      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+    }
+    .archive-capsule-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #b8956a;
+      margin-bottom: 0.75rem;
+    }
+    .archive-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2.5rem;
+      font-size: 0.88rem;
+    }
+    .archive-table th {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9a9490;
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 2px solid #e8e4e0;
+      font-weight: 400;
+    }
+    .archive-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #f0ece8;
+      vertical-align: top;
+    }
+    .archive-table tr:hover {
+      background: rgba(196, 146, 138, 0.04);
+    }
+    .archive-table .item-name {
+      font-weight: 400;
+      color: #1a1a1a;
+    }
+    .archive-table .item-store {
+      color: #9a9490;
+    }
+    .archive-table .item-price {
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #b8956a;
+      white-space: nowrap;
+    }
+    .archive-table a {
+      color: #c4928a;
+      text-decoration: none;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .archive-table a:hover {
+      color: #1a1a1a;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: #9a9490;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Previous Capsules</h1>
+    <p class="subtitle">A lookback at past recommendations — your style evolution over time</p>
+  </header>
+
+  <nav>
+    <a href="../index.html">← Back to Current Capsules</a>
+  </nav>
+
+  <p class="archive-intro">
+    Every two weeks, your capsules refresh with new picks. Previous recommendations are preserved here so you can always revisit a piece you loved.
+  </p>
+
+  <div class="archive-section">
+    <!-- ARCHIVE ENTRIES WILL BE INSERTED HERE BY THE CRON JOB -->
+    <!-- Each entry follows this pattern:
+    <div class="archive-date-header">March 29, 2026</div>
+    <div class="archive-capsule-label">Business Casual</div>
+    <table class="archive-table">
+      <thead><tr><th>#</th><th>Item</th><th>Store</th><th>Price</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td class="item-name">...</td><td class="item-store">...</td><td class="item-price">$...</td><td><a href="...">Shop</a></td></tr>
+      </tbody>
+    </table>
+    -->
+
+    <p class="empty-state">No archived capsules yet. Your first archive will appear after the next refresh.</p>
+  </div>
+
+  <footer class="site-footer">
+    Nicole's Style Journal · Previous Capsules
+  </footer>
+
+</body>
+</html>
