@@ -1,6 +1,6 @@
 # Wardrobe Catalog
 
-Last updated: 2026-03-22
+Last updated: 2026-03-29
 
 ---
 
@@ -8,21 +8,21 @@ Last updated: 2026-03-22
 
 | # | Description | Brand | Color/Pattern | Subcategory | Season | Occasion | Drive ID |
 |---|-------------|-------|---------------|-------------|--------|----------|----------|
-| 41 | Navy blue blouse | Fortune & Ivy | Navy | Blouse | Year-round | Work, Church | `1UGp5vJuXONwU_-ko92NTdefTFjXBvQzT` |
-| 42 | Navy sweater | 41 Hawthorn | Navy | Sweater | Fall/Winter | Work, Church | `1Om_dAs1E9auElA94y2AM7shJhjpxT63X` |
-| 43 | Navy blouse | Daniel Rainn | Navy | Blouse | Year-round | Work, Church | `1ljDvdCYi2eKb0ynxuDJMb844NLchy9JD` |
-| 44 | Navy rainbow blouse | Daniel Rainn | Navy/multicolor | Blouse | Spring/Summer | Work, Church | `1TyYWffkTbQq7JPRH96-TThDmC6BuDDcl` |
-| 45 | Black long sleeve shirt | — | Black | Long sleeve | Fall/Winter | Work, Casual | `1sgN4kvG7Uxw8PPV-2iRDx6DBgVZ6t5uZ` |
-| 46 | Gray crop hoodie | Lululemon | Gray | Hoodie | Year-round | Casual, Lounge | `1VLpvaFHUoTr02YNIoxdu2GfxsaoFVNpK` |
-| 47 | Navy sweater | Threads & Thoughts | Navy | Sweater | Fall/Winter | Work, Church | `1Rms1r4vPIqZnGnqxfQ7Zt6AGp8McUJzK` |
-| 48 | Long sleeve navy shirt | Market & Spruce | Navy | Long sleeve | Fall/Winter | Work, Casual | `1NxT4IPK8pWBLCJhSy-HSRzFWkMKZ_jM-` |
-| 49 | Light blue hoodie | Lululemon | Light blue | Hoodie | Year-round | Casual, Lounge | `1sTf-O_d37T9AHi66QATTvpdMfDFmBLG2` |
-| 50 | Light brown tank top | White Crow | Light brown | Tank top | Spring/Summer | Casual | `1eE6MrgzrV5cqHes2P7q8mQAk7g69Xpye` |
-| 51 | Black sleeveless blouse | Daniel Rainn | Black | Sleeveless blouse | Spring/Summer | Work, Church | `1giWOsuxfRapqGAo8D-F7CYmvanl8etei` |
-| 52 | Long sleeve light blue shirt | Market & Spruce | Light blue | Long sleeve | Fall/Winter | Work, Casual | `19MTB9vtvzRsMqfheGWTvDEcSLe_t14t5` |
-| 53 | Green tank top | White Crow | Green | Tank top | Spring/Summer | Casual | `13YWu0_6yAqjAxJt9djE2Wx5BeyD03zd_` |
-| 54 | Sleeveless sweater | Banana Republic | Neutral | Sleeveless sweater | Spring/Fall | Work, Church | `1_hA8wo9np7lPKa_L5kBJmLvSF4swl4e9` |
-| 55 | Light blue mama hoodie | Amazon | Light blue | Hoodie | Year-round | Casual, Lounge | `1z21lWl_mfC355rS5xhggBNzAxErkjdOW` |
+| 41 | Smooth woven V-neck blouse with front pleat detail, relaxed fit, cap sleeves; great for tucking into skirts | Fortune & Ivy | Navy | Blouse | Year-round | Work, Church | `1UGp5vJuXONwU_-ko92NTdefTFjXBvQzT` |
+| 42 | Fine-knit crew neck sweater with navy and white horizontal stripes, fitted cut, ribbed cuffs and hem | 41 Hawthorn | Navy/white stripe | Sweater | Fall/Winter | Work, Church | `1Om_dAs1E9auElA94y2AM7shJhjpxT63X` |
+| 43 | Elegant navy blouse with intricate crochet lace trim at neckline and sleeves, pintuck pleating at waist, sleeveless | Daniel Rainn | Navy | Blouse | Year-round | Work, Church | `1ljDvdCYi2eKb0ynxuDJMb844NLchy9JD` |
+| 44 | Swiss dot textured blouse with crochet lace yoke detail, gold button accents at cuff, 3/4 sleeves, boho-feminine vibe | Daniel Rainn | Navy/multicolor | Blouse | Spring/Summer | Work, Church | `1TyYWffkTbQq7JPRH96-TThDmC6BuDDcl` |
+| 45 | Soft jersey crew neck long sleeve tee, slim fit, lightweight stretch fabric; perfect layering piece under blazers | — | Black | Long sleeve | Fall/Winter | Work, Casual | `1sgN4kvG7Uxw8PPV-2iRDx6DBgVZ6t5uZ` |
+| 46 | Cropped half-zip hoodie in heathered light gray fleece, kangaroo pocket, ribbed cuffs, relaxed athletic fit | Lululemon | Gray | Hoodie | Year-round | Casual, Lounge | `1VLpvaFHUoTr02YNIoxdu2GfxsaoFVNpK` |
+| 47 | Space-dye heathered navy pullover sweater, crew neck, relaxed fit with subtle texture variation throughout | Threads & Thoughts | Navy heathered | Sweater | Fall/Winter | Work, Church | `1Rms1r4vPIqZnGnqxfQ7Zt6AGp8McUJzK` |
+| 48 | Soft cotton crew neck long sleeve tee, slim fit, ribbed neckline, smooth jersey knit; great base layer | Market & Spruce | Navy | Long sleeve | Fall/Winter | Work, Casual | `1NxT4IPK8pWBLCJhSy-HSRzFWkMKZ_jM-` |
+| 49 | Full-zip hoodie in baby blue fleece, silver hardware zip, hood with drawstring, structured athletic fit | Lululemon | Light blue | Hoodie | Year-round | Casual, Lounge | `1sTf-O_d37T9AHi66QATTvpdMfDFmBLG2` |
+| 50 | Lightweight striped tank with scoop neck, tan and white vertical stripes, soft jersey fabric, relaxed summer fit | White Crow | Tan/white stripe | Tank top | Spring/Summer | Casual | `1eE6MrgzrV5cqHes2P7q8mQAk7g69Xpye` |
+| 51 | Flowy sleeveless blouse with round neck, gathered waist seam creating a peplum-like shape, smooth woven fabric | Daniel Rainn | Black | Sleeveless blouse | Spring/Summer | Work, Church | `1giWOsuxfRapqGAo8D-F7CYmvanl8etei` |
+| 52 | Fine-ribbed crew neck long sleeve top, light periwinkle blue, slim fit with subtle horizontal texture | Market & Spruce | Light blue | Long sleeve | Fall/Winter | Work, Casual | `19MTB9vtvzRsMqfheGWTvDEcSLe_t14t5` |
+| 53 | Ribbed knit racerback tank in sage green, scoop neck, fitted stretch fabric with visible texture | White Crow | Sage green | Tank top | Spring/Summer | Casual | `13YWu0_6yAqjAxJt9djE2Wx5BeyD03zd_` |
+| 54 | Ribbed knit sleeveless sweater in olive-sage, wide rib pattern, boat-ish neckline, fitted silhouette; pairs with blazers | Banana Republic | Olive/sage | Sleeveless sweater | Spring/Fall | Work, Church | `1_hA8wo9np7lPKa_L5kBJmLvSF4swl4e9` |
+| 55 | Oversized pullover hoodie in mint blue with bold black "MAMA" graphic, crew-style hood, soft fleece, relaxed fit | Amazon | Mint blue | Hoodie | Year-round | Casual, Lounge | `1z21lWl_mfC355rS5xhggBNzAxErkjdOW` |
 | 56 | Green shirt | BKE | Green | Shirt | Year-round | Casual | `1fzK7QVRGqMSQG3kXizJnqpW507aKHzOt` |
 | 57 | Black shirt | BKE | Black | Shirt | Year-round | Casual | `1JDehOXzLzMfKTWsveIyn1_7onOC3q2oO` |
 | 58 | Green hooded cardigan | BKE | Green | Hooded cardigan | Fall/Winter | Casual | `14NSvOIZo4_vdbrEFqya0Fj7KKK3yZmee` |
