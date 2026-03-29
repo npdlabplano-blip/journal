@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring 2026 Capsule - Nicole's Wardrobe Refresh</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #faf8f5;
+      color: #2d2d2d;
+      line-height: 1.6;
+    }
+    .hero {
+      background: linear-gradient(135deg, #3d405b 0%, #81b29a 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .summary-bar {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: white;
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid #e8e4df;
+      flex-wrap: wrap;
+    }
+    .summary-stat {
+      text-align: center;
+    }
+    .summary-stat .num {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #3d405b;
+    }
+    .summary-stat .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2.5rem 0 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid #81b29a;
+    }
+    .section-header h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #3d405b;
+    }
+    .section-header .badge {
+      background: #81b29a;
+      color: white;
+      font-size: 0.7rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .category-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    .category-header {
+      background: #f5f0eb;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .category-header h3 {
+      font-size: 1.1rem;
+      color: #3d405b;
+    }
+    .category-header .why {
+      font-size: 0.8rem;
+      color: #81b29a;
+      font-style: italic;
+      max-width: 400px;
+      text-align: right;
+    }
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1px;
+      background: #eee;
+    }
+    .option {
+      background: white;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .option-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .option .brand {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #81b29a;
+      font-weight: 600;
+    }
+    .option .price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #3d405b;
+    }
+    .option .price .sale {
+      color: #c1666b;
+      margin-left: 0.4rem;
+    }
+    .option .price .orig {
+      text-decoration: line-through;
+      color: #aaa;
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+    .option .name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2d2d2d;
+      line-height: 1.3;
+    }
+    .option .desc {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.5;
+    }
+    .option .details {
+      font-size: 0.78rem;
+      color: #999;
+      margin-top: 0.25rem;
+    }
+    .option .pairs-with {
+      font-size: 0.78rem;
+      color: #81b29a;
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid #f0f0f0;
+    }
+    .option .pairs-with strong {
+      color: #3d405b;
+    }
+    .shop-link {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.5rem 1.2rem;
+      background: #3d405b;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .shop-link:hover {
+      background: #81b29a;
+    }
+    .shop-link.alt {
+      background: transparent;
+      color: #3d405b;
+      border: 1px solid #ccc;
+      margin-left: 0.4rem;
+    }
+    .shop-link.alt:hover {
+      border-color: #81b29a;
+      color: #81b29a;
+    }
+    .sizing-note {
+      background: #fff8f0;
+      border-left: 4px solid #e07a5f;
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+    }
+    .sizing-note strong {
+      color: #e07a5f;
+    }
+    .verdict-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .verdict {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    .verdict.best-value { background: #e8f5e9; color: #2e7d32; }
+    .verdict.splurge { background: #fff3e0; color: #e65100; }
+    .verdict.top-pick { background: #e3f2fd; color: #1565c0; }
+    .verdict.budget { background: #f3e5f5; color: #7b1fa2; }
+
+    .total-section {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .total-section h3 {
+      color: #3d405b;
+      margin-bottom: 1rem;
+    }
+    .total-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .total-item {
+      padding: 0.75rem;
+      border-radius: 8px;
+      background: #faf8f5;
+    }
+    .total-item .cat { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+    .total-item .range { font-size: 1.1rem; font-weight: 600; color: #3d405b; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #aaa;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 700px) {
+      .options-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.6rem; }
+      .summary-bar { gap: 1rem; }
+      .category-header { flex-direction: column; gap: 0.5rem; }
+      .category-header .why { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Spring 2026 Capsule</h1>
+  <p>8 pieces to extend your wardrobe &mdash; clean, cool, professional. No overthinking, no jackets in the Texas heat.</p>
+</div>
+
+<div class="summary-bar">
+  <div class="summary-stat"><div class="num">8</div><div class="label">New Pieces</div></div>
+  <div class="summary-stat"><div class="num">30+</div><div class="label">New Outfit Combos</div></div>
+  <div class="summary-stat"><div class="num">$500&ndash;750</div><div class="label">Est. Total</div></div>
+  <div class="summary-stat"><div class="num">5 / 2 / 1</div><div class="label">Tops / Bottoms / Shoes</div></div>
+</div>
+
+<div class="container">
+
+  <div class="sizing-note">
+    <strong>Your Sizing Notes:</strong> 5'7" &bull; 32.5" inseam (look for "Long" or "Tall" in pants/jeans) &bull; 16" armpit-to-hip &bull; Currently losing weight &mdash; lean toward drapey/relaxed tops and stretch/pull-on bottoms
+  </div>
+
+  <!-- ============================================ -->
+  <div class="section-header">
+    <h2>Tops</h2>
+    <span class="badge">5 Pieces</span>
+  </div>
+
+  <!-- ITEM 1: White/Ivory Drapey Blouse -->
+  <div class="category-card">
+    <div class="category-header">
+      <h3>1. White/Ivory Drapey Blouse</h3>
+      <div class="why">You have zero white work tops &mdash; this goes with every bottom you own</div>
+    </div>
+    <div class="options-grid">
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Vince Camuto</span>
+          <span class="price">$59</span>
+        </div>
+        <div class="name">Sleeveless V-Neck Rumple Blouse</div>
+        <div class="desc">Soft, drapey rumple fabric with a beautiful sheen. V-neck, sleeveless, polished enough for the bank. 100% polyester, machine washable.</div>
+        <div class="details">Color: New Ivory &bull; Also in Navy, Black</div>
+        <div class="verdict-row">
+          <span class="verdict top-pick">TOP PICK</span>
+          <span class="verdict best-value">BEST VALUE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Black trousers (#106), dark navy pants (#125), charcoal microflare, dark denim</div>
+        <div>
+          <a class="shop-link" href="https://www.zappos.com/vince-camuto-sleeveless-v-neck-rumple-blouse" target="_blank">Shop on Zappos</a>
+          <a class="shop-link alt" href="https://www.amazon.com/Vince-Camuto-Womens-Sleeveless-V-Neck/dp/B07DCP3L6V" target="_blank">Amazon</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">J.Crew</span>
+          <span class="price"><span class="orig">$79.50</span> <span class="sale">$64.50</span></span>
+        </div>
+        <div class="name">Sleeveless Shell Top in Everyday Crepe</div>
+        <div class="desc">Clean lines, button-up detail in back, smooth drapey crepe. Cap sleeves. Machine washable. 4.4 stars (80 reviews) &mdash; "fits slightly big."</div>
+        <div class="details">Colors: Ivory, Black, Navy, Fresh Orchid &bull; Body length 24.25"</div>
+        <div class="verdict-row">
+          <span class="verdict top-pick">TOP PICK</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Everything &mdash; herringbone skirt (#102), black ponte skirt (#128), any trouser</div>
+        <div>
+          <a class="shop-link" href="https://www.jcrew.com/p/womens/categories/clothing/suiting/city-crepe/sleeveless-shell-top-in-everyday-crepe/BP574" target="_blank">Shop at J.Crew</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">LOFT</span>
+          <span class="price">~$55&ndash;60</span>
+        </div>
+        <div class="name">Cap Sleeve Mixed Media Blouse</div>
+        <div class="desc">Woven front with jersey knit back for comfort. Cap sleeves, polished look. Multiple white/ivory options available. Machine washable.</div>
+        <div class="details">Colors: White, Ivory &bull; LOFT runs frequent 40-50% off sales</div>
+        <div class="verdict-row">
+          <span class="verdict budget">WAIT FOR SALE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Dark denim, black trousers, any skirt</div>
+        <div>
+          <a class="shop-link" href="https://www.loft.com/clothing/tops/catl000011/cap-sleeve-mixed-media-blouse/782218.html" target="_blank">Shop at LOFT</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ITEM 2: Printed Camp Shirt -->
+  <div class="category-card">
+    <div class="category-header">
+      <h3>2. Printed Camp Collar Shirt</h3>
+      <div class="why">"Creative executive" energy &mdash; cool, professional, never stuffy</div>
+    </div>
+    <div class="options-grid">
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">AllSaints</span>
+          <span class="price">~$89&ndash;109</span>
+        </div>
+        <div class="name">Frequency Floral Short Sleeve Camp Shirt</div>
+        <div class="desc">Muted floral print in dark tones, relaxed camp collar, lightweight. Elevated enough for the bank, cool enough for weekend.</div>
+        <div class="details">Short sleeve &bull; Button front &bull; Relaxed fit</div>
+        <div class="verdict-row">
+          <span class="verdict top-pick">TOP PICK</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Dark denim (#121), black trousers (#106), forest green pants (#108)</div>
+        <div>
+          <a class="shop-link" href="https://www.nordstrom.com/s/allsaints-frequency-floral-short-sleeve-button-up-camp-shirt/7286459" target="_blank">Shop at Nordstrom</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Nordstrom</span>
+          <span class="price">~$60&ndash;80</span>
+        </div>
+        <div class="name">Abstract Floral Print Camp Shirt</div>
+        <div class="desc">Abstract floral in soft, muted tones. Short sleeve button-up with camp collar. Lightweight woven fabric.</div>
+        <div class="details">Multiple print options available &bull; Relaxed fit</div>
+        <div class="verdict-row">
+          <span class="verdict best-value">BEST VALUE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Navy pants (#125), charcoal microflare, cream jeans (#131)</div>
+        <div>
+          <a class="shop-link" href="https://www.nordstrom.com/s/abstract-floral-print-short-sleeve-button-up-camp-shirt/7504519" target="_blank">Shop at Nordstrom</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Madewell</span>
+          <span class="price">~$69.50</span>
+        </div>
+        <div class="name">Camp Collar Short Sleeve Shirt</div>
+        <div class="desc">Madewell's signature relaxed camp shirt. Multiple prints available seasonally. Great for half-tucking into trousers or jeans.</div>
+        <div class="details">Check current spring prints on site &bull; Runs relaxed</div>
+        <div class="verdict-row">
+          <span class="verdict best-value">GOOD VALUE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Any dark bottom &mdash; versatile print piece</div>
+        <div>
+          <a class="shop-link" href="https://www.madewell.com/womens/clothing/tops-shirts/" target="_blank">Shop at Madewell</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ITEM 3: Structured Knit Shell -->
+  <div class="category-card">
+    <div class="category-header">
+      <h3>3. Structured Knit Shell in Warm Neutral</h3>
+      <div class="why">Your olive sleeveless sweater (#54) is fall-weight &mdash; you need a lighter warm-neutral for spring</div>
+    </div>
+    <div class="options-grid">
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">J.Crew</span>
+          <span class="price"><span class="orig">$79.50</span> <span class="sale">$64.50</span></span>
+        </div>
+        <div class="name">Sleeveless Shell Top in Everyday Crepe</div>
+        <div class="desc">Same crepe shell as #1 but grab it in a warm neutral &mdash; the pesto or warm harbor colors would fill this gap perfectly. Button-back detail, 4.4 stars.</div>
+        <div class="details">Colors: Pesto (olive), Warm Harbor &bull; Body length 24.25"</div>
+        <div class="verdict-row">
+          <span class="verdict top-pick">TOP PICK</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Black trousers (#106), dark navy pants (#125), herringbone skirt (#102)</div>
+        <div>
+          <a class="shop-link" href="https://www.jcrew.com/p/womens/categories/clothing/suiting/city-crepe/sleeveless-shell-top-in-everyday-crepe/BP574" target="_blank">Shop at J.Crew</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">J.Crew Factory</span>
+          <span class="price">$29.99</span>
+        </div>
+        <div class="name">Drapey Sleeveless Top</div>
+        <div class="desc">Budget-friendly option in 10 colors including Fresh Cream, Pesto, Warm Harbor, and Seashore. Polyester, runs big (size down). Thin fabric &mdash; may need a cami.</div>
+        <div class="details">10 colors &bull; XXS-XXL + Petite &bull; 3.9 stars (78 reviews)</div>
+        <div class="verdict-row">
+          <span class="verdict budget">BUDGET PICK</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Great layering piece under blazers you already own</div>
+        <div>
+          <a class="shop-link" href="https://factory.jcrew.com/p/womens_shops/weartowork/drapey-sleeveless-top/B7682" target="_blank">Shop at J.Crew Factory</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Halogen (Nordstrom)</span>
+          <span class="price">~$35&ndash;45</span>
+        </div>
+        <div class="name">Sleeveless Stretch Cotton Knit Shell</div>
+        <div class="desc">Clean crew neck, stretch cotton knit, structured enough to wear without a layer. Nordstrom house brand &mdash; reliable quality at a great price.</div>
+        <div class="details">Multiple neutral colors typically available &bull; Cotton blend</div>
+        <div class="verdict-row">
+          <span class="verdict best-value">BEST VALUE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Every trouser and skirt in your closet</div>
+        <div>
+          <a class="shop-link" href="https://www.nordstrom.com/s/halogen-sleeveless-stretch-cotton-knit-shell-top/7527204" target="_blank">Shop at Nordstrom</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ITEM 4: Soft Blouse in Dusty Rose or Sage -->
+  <div class="category-card">
+    <div class="category-header">
+      <h3>4. Soft Drape Blouse in Dusty Rose or Sage</h3>
+      <div class="why">You're heavy on navy/black tops &mdash; a softer color freshens everything up</div>
+    </div>
+    <div class="options-grid">
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">CeCe</span>
+          <span class="price">~$59&ndash;69</span>
+        </div>
+        <div class="name">Flutter-Sleeve Button-Front Blouse</div>
+        <div class="desc">Tiered flutter sleeves, split-neck with button detail. Feminine and polished. CeCe consistently delivers in the blush/sage color range. Available at Macy's.</div>
+        <div class="details">Check Macy's for current color options &bull; Multiple flutter-sleeve styles available</div>
+        <div class="verdict-row">
+          <span class="verdict top-pick">TOP PICK</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Dark denim (#121), black trousers (#106), navy skirt (#112)</div>
+        <div>
+          <a class="shop-link" href="https://www.macys.com/shop/product/cece-womens-flutter-sleeve-button-front-blouse?ID=21044694" target="_blank">Shop at Macy's</a>
+          <a class="shop-link alt" href="https://www.macys.com/shop/womens/clothing/tops/Brand/CeCe?id=255" target="_blank">All CeCe Tops</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">LOFT</span>
+          <span class="price">~$50&ndash;65</span>
+        </div>
+        <div class="name">Flutter Sleeve Blouse</div>
+        <div class="desc">LOFT's flutter sleeve collection features lightweight fabrics and elegant designs. Great selection in soft pinks, greens, and sage tones. Wait for their frequent 40-50% off sales.</div>
+        <div class="details">Multiple styles &bull; Lightweight woven &bull; Machine washable</div>
+        <div class="verdict-row">
+          <span class="verdict budget">WAIT FOR SALE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Charcoal microflare, black ponte skirt (#128), cream jeans (#131)</div>
+        <div>
+          <a class="shop-link" href="https://www.loft.com/l/flutter-sleeve-blouse-0aaz02b" target="_blank">Shop at LOFT</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">J.Crew</span>
+          <span class="price">~$59&ndash;79</span>
+        </div>
+        <div class="name">Sleeveless Drapey Top</div>
+        <div class="desc">Clean, drapey cap-sleeve top. 4.6 stars from 132 reviews. "Inspired by a classic tomboy tank but much chicer." Available in Poppy (pink-orange mix). Runs slightly big.</div>
+        <div class="details">Colors: Navy, Black, Ivory, Poppy &bull; Body length 27" &bull; Polyester</div>
+        <div class="verdict-row">
+          <span class="verdict best-value">VERSATILE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Literally everything &mdash; this is a wardrobe workhorse</div>
+        <div>
+          <a class="shop-link" href="https://www.jcrew.com/p/womens/categories/clothing/shirts-and-tops/sleeveless-drapey-top/A6293" target="_blank">Shop at J.Crew</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ITEM 5: Elevated Black Crew Tee -->
+  <div class="category-card">
+    <div class="category-header">
+      <h3>5. Elevated Black Crew Neck Tee</h3>
+      <div class="why">Your "I don't want to think today" top &mdash; black + any bottom = done</div>
+    </div>
+    <div class="options-grid">
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Spanx</span>
+          <span class="price">$98</span>
+        </div>
+        <div class="name">The Perfect Short Sleeve Crew Neck Top</div>
+        <div class="desc">Premium ponte fabric with built-in smoothing. Machine washable. Versatile enough to dress up or down. This is the gold standard for "not a regular tee" at work.</div>
+        <div class="details">Style #20420R &bull; Ponte fabric &bull; Check spanx.com for size availability</div>
+        <div class="verdict-row">
+          <span class="verdict splurge">SPLURGE</span>
+          <span class="verdict top-pick">BEST QUALITY</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Everything. Trousers, jeans, skirts. Your #1 no-brainer piece.</div>
+        <div>
+          <a class="shop-link" href="https://shopsatoriboutique.com/products/spanx-the-perfect-short-sleeve-crew-neck-top" target="_blank">Shop Boutique</a>
+          <a class="shop-link alt" href="https://www.nordstrom.com/browse/women/clothing/tops-tees?filterByBrand=spanx" target="_blank">Nordstrom</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">J.Crew</span>
+          <span class="price">~$45&ndash;60</span>
+        </div>
+        <div class="name">Drapey T-Shirt Top</div>
+        <div class="desc">Polished crew neck with a structured drape. Not your weekend cotton tee &mdash; this reads professional. Polyester blend, machine washable.</div>
+        <div class="details">Available in Black &bull; Multiple sizes</div>
+        <div class="verdict-row">
+          <span class="verdict best-value">BEST VALUE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Herringbone skirt (#102), any trouser, dark denim</div>
+        <div>
+          <a class="shop-link" href="https://www.jcrew.com/p/womens/categories/clothing/shirts-and-tops/drapey-t-shirt-top/CD050" target="_blank">Shop at J.Crew</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Banana Republic</span>
+          <span class="price">~$40&ndash;55</span>
+        </div>
+        <div class="name">Sculpted / Luxe Crew Neck Tee</div>
+        <div class="desc">Smooth, structured fabric that elevates the basic tee. BR's ponte and sculpted lines are built for exactly this &mdash; polished casual. Frequent sales bring price down.</div>
+        <div class="details">Check bananarepublic.com for current ponte/luxe tee options</div>
+        <div class="verdict-row">
+          <span class="verdict budget">GOOD VALUE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> All trousers, dark denim, midi skirts</div>
+        <div>
+          <a class="shop-link" href="https://www.nordstrom.com/c/womens-pants/black/ponte" target="_blank">Shop at Nordstrom</a>
+          <a class="shop-link alt" href="https://bananarepublic.gap.com" target="_blank">Banana Republic</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <div class="section-header">
+    <h2>Bottoms</h2>
+    <span class="badge">2 Pieces</span>
+  </div>
+
+  <!-- ITEM 6: Dark Wash Professional Jeans -->
+  <div class="category-card">
+    <div class="category-header">
+      <h3>6. Dark Wash Straight-Leg Jeans (No Distressing)</h3>
+      <div class="why">Your current jeans are medium wash or distressed &mdash; none that say "bank meeting ready"</div>
+    </div>
+    <div class="options-grid">
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">NYDJ</span>
+          <span class="price">$99</span>
+        </div>
+        <div class="name">Marilyn Straight Jeans &mdash; Rinse</div>
+        <div class="desc">Dark rinse, no distressing, clean straight leg. NYDJ's signature "Lift Tuck" technology is flattering through the hip. Their sizing accommodates body changes well.</div>
+        <div class="details">$99 &bull; Multiple inseam options available &bull; Also in Cooper (dark) and Quinn (dark)</div>
+        <div class="verdict-row">
+          <span class="verdict top-pick">TOP PICK</span>
+          <span class="verdict best-value">IN BUDGET</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Every top in this capsule + your existing blouses (#41, #43, #44, #61)</div>
+        <div>
+          <a class="shop-link" href="https://nydj.com/collections/marilyn-straight-jeans" target="_blank">Shop at NYDJ</a>
+          <a class="shop-link alt" href="https://www.nordstrom.com/browse/women/clothing/jeans/straight-leg-jeans?filterByBrand=nydj" target="_blank">Nordstrom</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">AG</span>
+          <span class="price">~$178&ndash;198</span>
+        </div>
+        <div class="name">Mari High Waist Slim Straight Leg Jeans</div>
+        <div class="desc">Premium denim, high waist, slim straight leg. Dark washes available. The quality is exceptional &mdash; these last years. Look for "Long" inseam for your 32.5".</div>
+        <div class="details">Check Nordstrom Rack for 40-60% off &bull; Look for Long inseam</div>
+        <div class="verdict-row">
+          <span class="verdict splurge">SPLURGE</span>
+          <span class="verdict top-pick">BEST QUALITY</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Everything &mdash; these are your "dress up the jean" jean</div>
+        <div>
+          <a class="shop-link" href="https://www.nordstrom.com/s/ag-mari-high-waist-slim-straight-leg-jeans/5185314" target="_blank">Shop at Nordstrom</a>
+          <a class="shop-link alt" href="https://www.nordstromrack.com/s/ag-mari-high-waist-slim-straight-leg-jeans/5485979" target="_blank">Nordstrom Rack</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Madewell</span>
+          <span class="price">~$138</span>
+        </div>
+        <div class="name">The '90s Straight Jean &mdash; Dark Wash</div>
+        <div class="desc">High rise, straight through the leg, modern fit. Multiple dark wash options. Look for "Tall" sizing for 32"+ inseam. Madewell runs 20-30% off sales regularly.</div>
+        <div class="details">Standard inseam 30.5" &mdash; get Tall for 32" &bull; Comfort stretch denim</div>
+        <div class="verdict-row">
+          <span class="verdict best-value">GOOD MID-RANGE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> All new tops + existing Daniel Rainn blouses</div>
+        <div>
+          <a class="shop-link" href="https://www.madewell.com/womens/jeans/straight-leg-jeans/" target="_blank">Shop at Madewell</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ITEM 7: Lightweight Ankle Trouser -->
+  <div class="category-card">
+    <div class="category-header">
+      <h3>7. Lightweight Ankle Trouser in Tan/Khaki</h3>
+      <div class="why">You have black, charcoal, navy bottoms &mdash; no lighter neutral for warm months</div>
+    </div>
+    <div class="options-grid">
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Banana Republic</span>
+          <span class="price"><span class="orig">$89.50</span> <span class="sale">~$55&ndash;89</span></span>
+        </div>
+        <div class="name">Sloan Slim-Fit Ankle Pant</div>
+        <div class="desc">The gold standard work pant. 4.24 stars from 585 ratings. Slim fit, ankle length. Available in multiple colors including tan/khaki. Frequently on sale for $55-65.</div>
+        <div class="details">Sizes 00-16 &bull; Multiple colors &bull; Check for current sale pricing</div>
+        <div class="verdict-row">
+          <span class="verdict top-pick">TOP PICK</span>
+          <span class="verdict best-value">BEST VALUE ON SALE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Navy blouses (#41, #43), black tops, new white blouse, forest green pants alternative</div>
+        <div>
+          <a class="shop-link" href="https://bananarepublic.gap.com/browse/product.do?pid=656152112" target="_blank">Shop at BR</a>
+          <a class="shop-link alt" href="https://bananarepublic.gap.com/shop/sloan-pants" target="_blank">All Sloan Pants</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">LOFT</span>
+          <span class="price">~$70&ndash;80</span>
+        </div>
+        <div class="name">Riviera Slim Pants in Doubleweave</div>
+        <div class="desc">Slim, stretchy, comfortable doubleweave fabric. LOFT's go-to work pant. Comes in ankle length. Runs frequent 40-50% off sales &mdash; can get these for $35-45.</div>
+        <div class="details">Multiple colors including neutrals &bull; Ankle length available &bull; Petite + Regular</div>
+        <div class="verdict-row">
+          <span class="verdict budget">BEST DEAL ON SALE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> All dark tops, especially your navy and black blouses</div>
+        <div>
+          <a class="shop-link" href="https://www.loft.com/clothing/pants/catl000014/riviera-slim-pants-doubleweave/607290.html" target="_blank">Shop at LOFT</a>
+          <a class="shop-link alt" href="https://www.loft.com/l/riviera-pants-0zcz02a" target="_blank">All Riviera</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">J.Crew</span>
+          <span class="price">~$89&ndash;98</span>
+        </div>
+        <div class="name">Cameron Slim Crop Pant</div>
+        <div class="desc">Classic J.Crew work pant. Structured, slim through hip, cropped ankle. Available in khaki/stone. Great quality &mdash; a closet staple for years.</div>
+        <div class="details">Multiple colors &bull; Check for seasonal sale pricing</div>
+        <div class="verdict-row">
+          <span class="verdict top-pick">CLASSIC</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Bold tops, print camp shirt, structured shells</div>
+        <div>
+          <a class="shop-link" href="https://www.jcrew.com/plp/womens/categories/clothing/suiting" target="_blank">Shop at J.Crew</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <div class="section-header">
+    <h2>Shoes</h2>
+    <span class="badge">1 Piece</span>
+  </div>
+
+  <!-- ITEM 8: Pointed Toe Mule -->
+  <div class="category-card">
+    <div class="category-header">
+      <h3>8. Pointed-Toe Mule in Tan/Nude</h3>
+      <div class="why">No easy spring professional shoe &mdash; this bridges boots and heels</div>
+    </div>
+    <div class="options-grid">
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Franco Sarto</span>
+          <span class="price">~$79&ndash;99</span>
+        </div>
+        <div class="name">Sela 2 Pointed-Toe Slip-On Loafer Mule</div>
+        <div class="desc">Classic loafer-mule hybrid with pointed toe. 1" covered block heel. You already love Franco Sarto (your black loafers #520). Available in tan/camel tones.</div>
+        <div class="details">Pointed toe &mdash; consider sizing up 1/2 size &bull; Multiple colors</div>
+        <div class="verdict-row">
+          <span class="verdict top-pick">TOP PICK</span>
+          <span class="verdict best-value">BEST VALUE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Every outfit in this capsule. Trousers, jeans, skirts. Your new daily shoe.</div>
+        <div>
+          <a class="shop-link" href="https://www.macys.com/shop/product/franco-sarto-sela-2-pointed-toe-slip-on-loafer-mules?ID=4931682" target="_blank">Shop at Macy's</a>
+          <a class="shop-link alt" href="https://www.nordstrom.com/s/franco-sarto-sela-pointed-toe-mule-women/6608573" target="_blank">Nordstrom</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Sam Edelman</span>
+          <span class="price">~$120&ndash;130</span>
+        </div>
+        <div class="name">Cleo Pointed Toe Mule</div>
+        <div class="desc">Buff Tan color, sleek pointed toe, polished leather. Sam Edelman quality and comfort. Slightly higher price but gorgeous finish.</div>
+        <div class="details">Cleo in Buff Tan &bull; Also check Aggie in Sienna Tan ($130)</div>
+        <div class="verdict-row">
+          <span class="verdict splurge">SPLURGE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Everything &mdash; elevates even a jeans-and-tee outfit</div>
+        <div>
+          <a class="shop-link" href="https://www.zappos.com/sam-edelman-women-flats/CK_XARC11wE6AsgKWgL4BMABAeICBQECCxgH.zso" target="_blank">Shop at Zappos</a>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-header">
+          <span class="brand">Marc Fisher LTD</span>
+          <span class="price">~$80&ndash;100</span>
+        </div>
+        <div class="name">Daner Pointed Toe Flat</div>
+        <div class="desc">Sleek pointed-toe flat (not technically a mule but serves the same role). Modern, polished, comfortable. Available in neutral tones at Nordstrom.</div>
+        <div class="details">Check Nordstrom for current color availability</div>
+        <div class="verdict-row">
+          <span class="verdict best-value">FLAT ALTERNATIVE</span>
+        </div>
+        <div class="pairs-with"><strong>Pairs with:</strong> Ankle trousers, cropped jeans, midi skirts</div>
+        <div>
+          <a class="shop-link" href="https://www.nordstrom.com/s/marc-fisher-ltd-daner-pointed-toe-flat-women/7839632" target="_blank">Shop at Nordstrom</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <div class="total-section">
+    <h3>Budget Summary &mdash; "Top Pick" Selections</h3>
+    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">If you pick one from each category, here's what you're looking at:</p>
+    <div class="total-grid">
+      <div class="total-item">
+        <div class="cat">1. White Blouse</div>
+        <div class="range">$59 <span style="color:#999;font-size:0.8rem;">(Vince Camuto)</span></div>
+      </div>
+      <div class="total-item">
+        <div class="cat">2. Camp Shirt</div>
+        <div class="range">$60&ndash;109 <span style="color:#999;font-size:0.8rem;">(Nordstrom / AllSaints)</span></div>
+      </div>
+      <div class="total-item">
+        <div class="cat">3. Knit Shell</div>
+        <div class="range">$30&ndash;65 <span style="color:#999;font-size:0.8rem;">(Factory / J.Crew)</span></div>
+      </div>
+      <div class="total-item">
+        <div class="cat">4. Soft Blouse</div>
+        <div class="range">$59&ndash;69 <span style="color:#999;font-size:0.8rem;">(CeCe)</span></div>
+      </div>
+      <div class="total-item">
+        <div class="cat">5. Black Tee</div>
+        <div class="range">$45&ndash;98 <span style="color:#999;font-size:0.8rem;">(J.Crew / Spanx)</span></div>
+      </div>
+      <div class="total-item">
+        <div class="cat">6. Dark Jeans</div>
+        <div class="range">$99 <span style="color:#999;font-size:0.8rem;">(NYDJ)</span></div>
+      </div>
+      <div class="total-item">
+        <div class="cat">7. Ankle Trouser</div>
+        <div class="range">$55&ndash;90 <span style="color:#999;font-size:0.8rem;">(BR Sloan)</span></div>
+      </div>
+      <div class="total-item">
+        <div class="cat">8. Mule</div>
+        <div class="range">$79&ndash;99 <span style="color:#999;font-size:0.8rem;">(Franco Sarto)</span></div>
+      </div>
+    </div>
+    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 2px solid #81b29a;">
+      <span style="font-size: 0.85rem; color: #888;">ESTIMATED TOTAL (picking top picks):</span><br>
+      <span style="font-size: 1.8rem; font-weight: 700; color: #3d405b;">$486 &ndash; $688</span><br>
+      <span style="font-size: 0.8rem; color: #81b29a;">Even less if you catch LOFT/BR/J.Crew sales</span>
+    </div>
+  </div>
+
+  <div class="sizing-note">
+    <strong>Pro Tips:</strong>
+    <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+      <li><strong>LOFT</strong> runs 40-50% off nearly every week &mdash; never pay full price there</li>
+      <li><strong>Nordstrom Rack</strong> often has AG, Vince Camuto, and Franco Sarto at 40-60% off</li>
+      <li><strong>J.Crew</strong> runs 30-40% off sales regularly &mdash; sign up for email alerts</li>
+      <li><strong>Banana Republic</strong> frequently runs 40% off &mdash; the Sloan at $55 is a steal</li>
+      <li>For your 32.5" inseam: look for <strong>"Long"</strong> or <strong>"Tall"</strong> in jeans; most ankle trousers will hit right</li>
+      <li>While losing weight: <strong>pull-on styles and stretch fabrics</strong> are your friend</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  Spring 2026 Capsule &bull; Built for Nicole &bull; Prices as of March 2026 (verify at checkout)
+</footer>
+
+</body>
+</html>
