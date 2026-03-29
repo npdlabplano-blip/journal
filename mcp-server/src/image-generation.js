@@ -1,7 +1,8 @@
 /**
- * Image Generation Tools (Imagen 3 via Vertex AI)
+ * Image Generation Tools (Imagen 3 via Vertex AI, DALL-E 3 fallback)
  *
- * Uses Google's Imagen 3 model on Vertex AI to generate images.
+ * Primary: Google's Imagen 3 model on Vertex AI
+ * Fallback: OpenAI's DALL-E 3 (used when Imagen hits rate limits or errors)
  *
  * Tools:
  * - generate_image: General-purpose image generation from any text prompt
@@ -13,7 +14,28 @@ import { z } from "zod";
 import { readFile, writeFile } from "fs/promises";
 import { basename, join } from "path";
 
-export function registerImageTools(server, vertexClient) {
+/**
+ * Generate an image using DALL-E 3 as a fallback.
+ * Returns { imageData (base64), mimeType } or throws on failure.
+ */
+async function generateWithDallE(openaiClient, prompt, size = "1024x1024") {
+  const response = await openaiClient.images.generate({
+    model: "dall-e-3",
+    prompt,
+    n: 1,
+    size,
+    response_format: "b64_json",
+    quality: "hd",
+  });
+
+  return {
+    imageData: response.data[0].b64_json,
+    mimeType: "image/png",
+    revisedPrompt: response.data[0].revised_prompt,
+  };
+}
+
+export function registerImageTools(server, vertexClient, openaiClient) {
   /**
    * General-purpose image generation using Imagen 3.
    */
@@ -34,7 +56,12 @@ export function registerImageTools(server, vertexClient) {
         ),
     },
     async ({ prompt, aspect_ratio }) => {
+      const inboxDir = join(process.cwd(), "00-inbox");
+      const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
+      let usedModel = "imagen-3.0-generate-002";
+
       try {
+        // Try Imagen 3 first
         const accessToken = await vertexClient.getAccessToken();
         const { projectId, location } = vertexClient;
 
@@ -67,47 +94,64 @@ export function registerImageTools(server, vertexClient) {
         const imageData = result.predictions[0].bytesBase64Encoded;
         const mimeType = result.predictions[0].mimeType || "image/png";
 
-        // Save generated image to 00-inbox folder
         const ext = mimeType === "image/jpeg" ? ".jpg" : ".png";
-        const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
         const outFileName = `generated_${timestamp}${ext}`;
-        const inboxDir = join(process.cwd(), "00-inbox");
         const outPath = join(inboxDir, outFileName);
         await writeFile(outPath, Buffer.from(imageData, "base64"));
 
         return {
           content: [
-            {
-              type: "image",
-              data: imageData,
-              mimeType,
-            },
+            { type: "image", data: imageData, mimeType },
             {
               type: "text",
               text: JSON.stringify(
-                {
-                  model: "imagen-3.0-generate-002",
-                  aspect_ratio,
-                  saved_to: outPath,
-                  prompt_length: prompt.length,
-                },
-                null,
-                2
+                { model: usedModel, aspect_ratio, saved_to: outPath, prompt_length: prompt.length },
+                null, 2
               ),
             },
           ],
         };
-      } catch (err) {
-        const message = err?.message || String(err);
-        return {
-          content: [
-            {
-              type: "text",
-              text: `Image generation failed: ${message}`,
-            },
-          ],
-          isError: true,
-        };
+      } catch (imagenErr) {
+        // Fall back to DALL-E 3
+        if (!openaiClient) {
+          return {
+            content: [{ type: "text", text: `Imagen failed: ${imagenErr.message}\nDALL-E fallback unavailable (OpenAI client not configured).` }],
+            isError: true,
+          };
+        }
+
+        try {
+          console.error(`Imagen failed (${imagenErr.message}), falling back to DALL-E 3...`);
+          usedModel = "dall-e-3";
+
+          // Map aspect ratios to DALL-E sizes
+          const sizeMap = { "1:1": "1024x1024", "9:16": "1024x1792", "16:9": "1792x1024", "3:4": "1024x1792", "4:3": "1792x1024" };
+          const size = sizeMap[aspect_ratio] || "1024x1024";
+
+          const result = await generateWithDallE(openaiClient, prompt, size);
+
+          const outFileName = `generated_${timestamp}.png`;
+          const outPath = join(inboxDir, outFileName);
+          await writeFile(outPath, Buffer.from(result.imageData, "base64"));
+
+          return {
+            content: [
+              { type: "image", data: result.imageData, mimeType: result.mimeType },
+              {
+                type: "text",
+                text: JSON.stringify(
+                  { model: usedModel, fallback: true, imagen_error: imagenErr.message, aspect_ratio, saved_to: outPath, prompt_length: prompt.length },
+                  null, 2
+                ),
+              },
+            ],
+          };
+        } catch (dalleErr) {
+          return {
+            content: [{ type: "text", text: `Image generation failed.\nImagen: ${imagenErr.message}\nDALL-E: ${dalleErr.message}` }],
+            isError: true,
+          };
+        }
       }
     }
   );
@@ -340,7 +384,12 @@ export function registerImageTools(server, vertexClient) {
 
       const prompt = `${styleDescriptions[style]} The outfit consists of: ${outfit_description}.${occasionContext}${seasonContext} High-quality, photorealistic, fashion editorial style. No text or labels in the image.`;
 
+      const inboxDir = join(process.cwd(), "00-inbox");
+      const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
+      let usedModel = "imagen-3.0-generate-002";
+
       try {
+        // Try Imagen 3 first
         const accessToken = await vertexClient.getAccessToken();
         const { projectId, location } = vertexClient;
 
@@ -371,48 +420,60 @@ export function registerImageTools(server, vertexClient) {
         const imageData = result.predictions[0].bytesBase64Encoded;
         const mimeType = result.predictions[0].mimeType || "image/png";
 
-        // Save outfit image to 00-inbox folder
         const ext = mimeType === "image/jpeg" ? ".jpg" : ".png";
-        const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
         const outFileName = `outfit_${timestamp}${ext}`;
-        const inboxDir = join(process.cwd(), "00-inbox");
         const outPath = join(inboxDir, outFileName);
         await writeFile(outPath, Buffer.from(imageData, "base64"));
 
         return {
           content: [
-            {
-              type: "image",
-              data: imageData,
-              mimeType,
-            },
+            { type: "image", data: imageData, mimeType },
             {
               type: "text",
               text: JSON.stringify(
-                {
-                  model: "imagen-3.0-generate-002",
-                  style,
-                  occasion: occasion || "general",
-                  season: season || "not specified",
-                  saved_to: outPath,
-                },
-                null,
-                2
+                { model: usedModel, style, occasion: occasion || "general", season: season || "not specified", saved_to: outPath },
+                null, 2
               ),
             },
           ],
         };
-      } catch (err) {
-        const message = err?.message || String(err);
-        return {
-          content: [
-            {
-              type: "text",
-              text: `Image generation failed: ${message}`,
-            },
-          ],
-          isError: true,
-        };
+      } catch (imagenErr) {
+        // Fall back to DALL-E 3
+        if (!openaiClient) {
+          return {
+            content: [{ type: "text", text: `Imagen failed: ${imagenErr.message}\nDALL-E fallback unavailable (OpenAI client not configured).` }],
+            isError: true,
+          };
+        }
+
+        try {
+          console.error(`Imagen failed for outfit (${imagenErr.message}), falling back to DALL-E 3...`);
+          usedModel = "dall-e-3";
+
+          const result = await generateWithDallE(openaiClient, prompt, "1024x1024");
+
+          const outFileName = `outfit_${timestamp}.png`;
+          const outPath = join(inboxDir, outFileName);
+          await writeFile(outPath, Buffer.from(result.imageData, "base64"));
+
+          return {
+            content: [
+              { type: "image", data: result.imageData, mimeType: result.mimeType },
+              {
+                type: "text",
+                text: JSON.stringify(
+                  { model: usedModel, fallback: true, imagen_error: imagenErr.message, style, occasion: occasion || "general", season: season || "not specified", saved_to: outPath },
+                  null, 2
+                ),
+              },
+            ],
+          };
+        } catch (dalleErr) {
+          return {
+            content: [{ type: "text", text: `Outfit image generation failed.\nImagen: ${imagenErr.message}\nDALL-E: ${dalleErr.message}` }],
+            isError: true,
+          };
+        }
       }
     }
   );

@@ -17,6 +17,7 @@ import { registerDriveTools } from "./drive.js";
 import { registerDocsTools } from "./docs.js";
 import { registerKrogerTools } from "./kroger.js";
 import { getVertexAIClient } from "./vertex-auth.js";
+import { getOpenAIClient } from "./openai-auth.js";
 import { registerImageTools } from "./image-generation.js";
 
 async function main() {
@@ -47,11 +48,20 @@ async function main() {
     console.error(`Kroger tools unavailable: ${err.message}`);
   }
 
+  // Get authenticated OpenAI client for DALL-E fallback
+  // This pulls the API key from 1Password
+  let openaiClient = null;
+  try {
+    openaiClient = await getOpenAIClient();
+  } catch (err) {
+    console.error(`OpenAI/DALL-E fallback unavailable: ${err.message}`);
+  }
+
   // Get authenticated Vertex AI client and register image generation tools
   // This pulls the GCP service account key from 1Password
   try {
     const vertexClient = await getVertexAIClient();
-    registerImageTools(server, vertexClient);
+    registerImageTools(server, vertexClient, openaiClient);
   } catch (err) {
     // Don't block the entire server if Vertex AI auth isn't set up yet
     console.error(`Image generation tools unavailable: ${err.message}`);
