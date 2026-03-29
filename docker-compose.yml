@@ -1,10 +1,11 @@
 services:
-  meal-plan:
+  web:
     image: nginx:alpine
-    container_name: meal-plan
+    container_name: journal-web
     ports:
       - "8080:80"
     volumes:
-      - ./web:/usr/share/nginx/html:ro
+      - ./nutrition/meal-plans/web:/var/www/meals:ro
+      - ./style/capsule:/var/www/style:ro
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     restart: unless-stopped
