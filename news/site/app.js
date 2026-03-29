@@ -55,7 +55,7 @@ function renderArticleCard(article, category) {
   const cat = CATEGORIES.find(c => c.id === category) || CATEGORIES[0];
   return `
     <article class="article-card">
-      <img class="card-image" src="${article.image || ''}" alt="${article.title}" loading="lazy" onerror="onImgError(this)">
+      <img class="card-image" src="${article.image || ''}" alt="${article.title}" loading="lazy" referrerpolicy="no-referrer" onerror="onImgError(this)">
       <div class="card-body">
         <span class="category-tag ${cat.tagClass}">${cat.label}</span>
         <h3><a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a></h3>
@@ -70,7 +70,7 @@ function renderArticleRow(article, category) {
   const cat = CATEGORIES.find(c => c.id === category) || CATEGORIES[0];
   return `
     <article class="article-row">
-      <img class="row-image" src="${article.image || ''}" alt="${article.title}" loading="lazy" onerror="onImgError(this)">
+      <img class="row-image" src="${article.image || ''}" alt="${article.title}" loading="lazy" referrerpolicy="no-referrer" onerror="onImgError(this)">
       <div class="row-content">
         <span class="category-tag ${cat.tagClass}">${cat.label}</span>
         <h3><a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a></h3>
@@ -85,7 +85,7 @@ function renderHero(article, category) {
   const cat = CATEGORIES.find(c => c.id === category) || CATEGORIES[0];
   return `
     <div class="hero-card">
-      <img class="hero-image" src="${article.image || ''}" alt="${article.title}" loading="lazy" onerror="onImgError(this)">
+      <img class="hero-image" src="${article.image || ''}" alt="${article.title}" loading="lazy" referrerpolicy="no-referrer" onerror="onImgError(this)">
       <div class="hero-content">
         <span class="category-tag ${cat.tagClass}">${cat.label}</span>
         <h2><a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a></h2>
