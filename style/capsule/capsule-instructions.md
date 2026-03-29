@@ -49,7 +49,35 @@ For each recommendation:
 - Buckle
 
 # Sizing
-- 5'7" 
+- 5'7"
 - 16" torso
 - 33" inseam
 - nutrition/progress/measurements.md
+- Tops: Size Small or 4-6
+- Bottoms: Size 6 or 28 waist
+- Dresses: Size 6 (numeric) or S (alpha)
+- Long inseam preferred (33")
+
+# Scraping Notes (updated 2026-03-29)
+These notes help future runs avoid wasted time on sites that don't cooperate:
+
+## Works well with WebFetch (verified product data):
+- **White House Black Market** — full product details, prices, colors, sizes, stock status, and image URLs all extractable
+
+## Does NOT work with WebFetch (JavaScript-rendered, obfuscated):
+- Nordstrom, Nordstrom Rack, Banana Republic, Ann Taylor, Loft, Dillard's, Saks, Macy's, Sam Edelman, Kate Spade Outlet, Lululemon
+
+## Workaround strategy:
+1. Use **WebSearch** to find specific product URLs and leads from any store
+2. Use **WebFetch** on WHBM product pages for fully verified picks
+3. For non-WHBM stores, use WebSearch cross-references to gather product name, approximate price, color options, and description
+4. Add a "verify before purchasing" note on any item where stock/size couldn't be confirmed via direct page scrape
+5. Use vendor-supplied image URLs for WHBM; use flat-lay generated images as fallback for stores where product images can't be extracted
+
+# Website Structure (reusable)
+- `index.html` — grid of 8 pick cards (vendor images + name + price + tag)
+- `picks/pick[1-8].html` — detail pages (vendor image, description, shop button, flat-lay outfit pairing)
+- `images/` — generated flat-lay outfit images
+- `styles.css` — shared stylesheet
+- `template-detail.html` — reusable HTML template with placeholders
+- On re-runs: update pick content, regenerate images, overwrite HTML files
