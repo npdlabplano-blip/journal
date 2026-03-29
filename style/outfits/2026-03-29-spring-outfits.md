@@ -29,7 +29,7 @@
 - **#106** Black wide-leg trousers with fabric tie belt
 - **#501** Black leather ankle booties (block heel, side zip)
 
-**Image prompt:** Black woven blouse with scattered white and pink cherry blossom floral print and 3/4 sleeves with relaxed feminine drape, wide-leg black trousers with fabric tie belt at waist in smooth woven crepe with flowy drape, black leather ankle booties with side zip and stacked block heel and almond toe
+**Image prompt:** Black woven blouse with scattered tiny white cherry blossom floral print all over (no pink, all white small blossoms) and 3/4 sleeves with relaxed drape, wide-leg black trousers with fabric tie belt at waist in smooth woven crepe with flowy drape, black leather ankle booties with side zip and stacked block heel and almond toe
 
 ---
 
@@ -40,7 +40,7 @@
 - **#214** White denim trucker jacket
 - **#514** Tan cork wedge sandals (crisscross straps, ankle buckle)
 
-**Image prompt:** Teal fit-and-flare dress with Swiss dot texture and pintuck pleating at yoke with V-neck and flowy skirt, white denim trucker jacket with dark metal snaps and structured cropped fit, tan leather strappy wedge sandals with cork platform heel and crisscross straps and ankle buckle
+**Image prompt:** Bright vivid teal-green sleeveless dress (almost St Patrick's Day green) with Swiss dot texture and pintuck pleating at yoke with V-neck, straight skirt falling just above the knee with no flare, white denim trucker jacket with dark metal snaps and structured cropped fit, tan leather strappy wedge sandals with cork platform heel and crisscross straps and ankle buckle
 
 ---
 
@@ -49,7 +49,7 @@
 - **#130** Daniel Rainn blush pink satin pleated midi skirt (covered buttons)
 - **#513** TOMS cream espadrille wedges (bow detail, jute platform)
 
-**Image prompt:** Sleeveless woven blouse with black and white horizontal broken-dash stripes and tie-neck bow detail, pleated midi skirt in soft blush pink satin with decorative covered buttons down center front and elegant drape, cream canvas espadrille wedge sandals with bow detail at toe and braided jute platform and ankle strap
+**Image prompt:** Sleeveless woven blouse in black with very thin subtle white lines giving texture (not bold stripes) and asymmetric tie-neck bow detail, pleated midi skirt in soft blush pink satin with decorative covered buttons down center front and elegant drape, cream canvas espadrille wedge sandals with bow detail at toe and braided jute platform and ankle strap
 
 ---
 
@@ -58,7 +58,7 @@
 - **#215** Pink/cream/coral boucle tweed blazer (Chanel-inspired)
 - **#504** Brown pebbled leather ankle booties (low heel, side zip)
 
-**Image prompt:** Short-sleeve dress in black with burnt orange and tan botanical leaf print with gathered waist and flowy A-line skirt, open-front blazer in pink cream and coral boucle tweed with structured fit and fully lined Chanel-inspired, brown pebbled leather ankle booties with side zip and low stacked heel and rounded toe
+**Image prompt:** Sleeveless black dress with burnt orange floral print (strong fall vibes), ties at the waist but does not flare out with a straight silhouette, open-front blazer in pink cream and coral boucle tweed with structured fit and fully lined Chanel-inspired, brown pebbled leather ankle booties with side zip and low stacked heel and rounded toe
 
 ---
 
