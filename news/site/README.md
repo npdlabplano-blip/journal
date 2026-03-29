@@ -70,7 +70,7 @@ ingress:
   - hostname: news.calconam.com
     service: http://daily-brief:80
     # ↑ If cloudflared runs on the host (not in Docker), use:
-    #   service: http://localhost:8081
+    #   service: http://localhost:8082
     #   and uncomment the ports in docker-compose.yml
 
   # Catch-all (must be last)
@@ -82,9 +82,9 @@ ingress:
 1. Uncomment the `ports` block in `docker-compose.yml`:
    ```yaml
    ports:
-     - "8081:80"
+     - "8082:80"
    ```
-2. Use `http://localhost:8081` in the tunnel config instead of `http://daily-brief:80`.
+2. Use `http://localhost:8082` in the tunnel config instead of `http://daily-brief:80`.
 
 **If cloudflared runs in Docker** on the same compose network, use `http://daily-brief:80` directly.
 
@@ -145,7 +145,7 @@ docker ps | grep daily-brief
 docker logs -f daily-brief
 
 # Health check (from the host)
-curl http://localhost:8081/healthz   # if ports are exposed
+curl http://localhost:8082/healthz   # if ports are exposed
 docker exec daily-brief curl -s http://localhost/healthz
 
 # Tunnel routing

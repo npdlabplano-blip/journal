@@ -18,7 +18,7 @@ services:
     # No ports exposed to host — Cloudflare Tunnel routes to this container
     # If you need local access without the tunnel: uncomment the next two lines
     # ports:
-    #   - "8081:80"
+    #   - "8082:80"
     environment:
       - GIT_REPO_URL=https://github.com/namsler1/journal.git
       - PULL_INTERVAL_SECONDS=3600
