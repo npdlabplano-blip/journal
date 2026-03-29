@@ -29,11 +29,16 @@ build_app() {
 
   cd "$BUILD_DIR"
 
+  # Install ALL deps (including devDependencies needed for build)
   echo "[entrypoint] Installing dependencies..."
-  npm ci
+  NODE_ENV=development npm ci
 
   echo "[entrypoint] Building..."
   npm run build
+
+  # Prune devDependencies after build
+  echo "[entrypoint] Pruning dev dependencies..."
+  npm prune --omit=dev
 
   compute_hash > "$BUILD_HASH_FILE"
   echo "[entrypoint] Build complete."
