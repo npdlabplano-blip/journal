@@ -50,6 +50,7 @@
   --color-accent: #1a3a5c;
   --color-accent-light: #e8eef4;
   --color-tag-world: #1a3a5c;
+  --color-tag-us: #991b1b;
   --color-tag-dfw: #2d6a4f;
   --color-tag-ai: #6b21a8;
   --color-tag-jpmc: #0056a3;
@@ -74,6 +75,7 @@
   --color-accent: #6ba3d6;
   --color-accent-light: #1e2a38;
   --color-tag-world: #6ba3d6;
+  --color-tag-us: #f87171;
   --color-tag-dfw: #52b788;
   --color-tag-ai: #a78bfa;
   --color-tag-jpmc: #60a5fa;
@@ -98,6 +100,7 @@
     --color-accent: #6ba3d6;
     --color-accent-light: #1e2a38;
     --color-tag-world: #6ba3d6;
+    --color-tag-us: #f87171;
     --color-tag-dfw: #52b788;
     --color-tag-ai: #a78bfa;
     --color-tag-jpmc: #60a5fa;
@@ -254,6 +257,7 @@
 }
 
 .category-tag.world { background: var(--color-tag-world); }
+.category-tag.us-politics { background: var(--color-tag-us); }
 .category-tag.dfw-politics { background: var(--color-tag-dfw); }
 .category-tag.ai { background: var(--color-tag-ai); }
 .category-tag.jpmc { background: var(--color-tag-jpmc); }

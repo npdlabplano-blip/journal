@@ -5,6 +5,7 @@
 
 const CATEGORIES = [
   { id: 'world-politics', label: 'World Politics', page: './pages/world-politics.html', tagClass: 'world' },
+  { id: 'us-politics', label: 'US Politics', page: './pages/us-politics.html', tagClass: 'us-politics' },
   { id: 'dfw-politics', label: 'DFW Politics', page: './pages/dfw-politics.html', tagClass: 'dfw-politics' },
   { id: 'ai-news', label: 'AI News', page: './pages/ai-news.html', tagClass: 'ai' },
   { id: 'jpmorgan-chase', label: 'JPMorgan Chase', page: './pages/jpmorgan-chase.html', tagClass: 'jpmc' },

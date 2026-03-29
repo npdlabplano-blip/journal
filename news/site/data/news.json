@@ -1,6 +1,6 @@
 {
   "date": "2026-03-29",
-  "generated_at": "2026-03-29T15:03:00-05:00",
+  "generated_at": "2026-03-29T15:30:00-05:00",
   "categories": {
     "world-politics": [
       {
@@ -34,7 +34,7 @@
       {
         "title": "DHS Shutdown Hits Day 44 as Congress Leaves for Two-Week Recess",
         "url": "https://www.youtube.com/watch?v=bcshFijxeV8",
-        "summary": "The Department of Homeland Security shutdown — now the longest in history — reaches day 44 with over 500 TSA officers quitting. Congress departed for a two-week recess with no deal in sight.",
+        "summary": "The Department of Homeland Security shutdown \u2014 now the longest in history \u2014 reaches day 44 with over 500 TSA officers quitting. Congress departed for a two-week recess with no deal in sight.",
         "image": "https://i.ytimg.com/vi/bcshFijxeV8/maxresdefault.jpg",
         "source": "CBS News"
       },
@@ -44,6 +44,50 @@
         "summary": "Qatar and Ukraine signed a defense cooperation agreement during President Zelenskyy's Gulf tour, shaping new strategic partnerships in the region as the war with Russia continues.",
         "image": "https://static.euronews.com/articles/stories/09/34/82/70/1200x675_cmsv2_a02c10cf-9149-5ee1-bc83-80c92dabb6da-9348270.jpg",
         "source": "Euronews"
+      }
+    ],
+    "us-politics": [
+      {
+        "title": "'No Kings' Protests Draw Over 8 Million Nationwide in Largest Single-Day Demonstration in US History",
+        "url": "https://www.nytimes.com/2026/03/29/us/politics/no-kings-rallies-takeaways.html",
+        "summary": "More than 8 million people turned out across all 50 states for 'No Kings' rallies opposing the Trump administration, with Bruce Springsteen headlining in Minneapolis. The protests, the third in the series, come as Democrats aim to leverage opposition to the Iran war ahead of midterms.",
+        "image": "https://static01.nyt.com/images/2026/03/29/multimedia/29no-kings-takeaways-topart/29no-kings-takeaways-topart-superJumbo.jpg",
+        "source": "The New York Times"
+      },
+      {
+        "title": "DHS Shutdown Hits Day 44 as Congress Leaves for Two-Week Recess Without a Deal",
+        "url": "https://www.pbs.org/newshour/show/whats-next-after-house-republicans-reject-senate-deal-to-end-dhs-shutdown",
+        "summary": "The DHS funding standoff drags on as the Senate passed a partial funding bill that House Speaker Johnson rejected for excluding ICE and Border Patrol. With Congress now on spring recess, the shutdown could become the longest in US history.",
+        "image": "https://d3i6fh83elv35t.cloudfront.net/static/2024/11/2024-11-13T174003Z_1789655178_RC2QGCAC3FRB_RTRMADP_3_USA-CONGRESS-JOHNSON-1024x683.jpg",
+        "source": "PBS NewsHour"
+      },
+      {
+        "title": "Trump Orders TSA Workers Paid Through Executive Action as Airport Lines Hit 4+ Hours",
+        "url": "https://www.cnn.com/2026/03/27/politics/when-tsa-paid-trump-shutdown",
+        "summary": "President Trump signed an executive order directing DHS to use existing funds to pay the 61,000 TSA employees who have gone without full paychecks since February 14. Over 500 officers have resigned and airport security wait times have ballooned to 4 hours at some hubs.",
+        "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2209756277.jpg",
+        "source": "CNN"
+      },
+      {
+        "title": "House Republicans Pass Fourth DHS Funding Bill \u2014 But Senate Says Dead on Arrival",
+        "url": "https://www.politico.com/live-updates/2026/03/26/congress/house-passes-third-dhs-funding-bill-but-it-wont-end-the-shutdown-00846944",
+        "summary": "The House passed its own 60-day full DHS funding bill after rejecting the Senate's version, but Senate Minority Leader Schumer declared it dead on arrival. Both chambers left Washington with no clear path to reopening the department.",
+        "image": "https://cf-images.us-east-1.prod.boltdns.net/v1/static/2657842914001/17ae3408-bbf2-445d-8109-7bdb53f6dd4c/3740df96-45a8-42d5-bd47-e0e7bd0f2dd6/1280x720/match/image.jpg",
+        "source": "POLITICO"
+      },
+      {
+        "title": "Bipartisan Senators Introduce Bill to Ban Prediction Market Trading by Officials",
+        "url": "https://www.politico.com/live-updates/congress",
+        "summary": "Senators Slotkin, Young, Schiff, and Curtis unveiled the Public Integrity in Financial Markets Act to bar lawmakers, the president, and staffers from trading on insider information through prediction markets like Kalshi and Polymarket.",
+        "image": "https://static.politico.com/dims4/default/d48a67b/2147483647/resize/1200x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F0e%2F06%2F3e7a12b74873a57dc948f2001f83%2Felection-2024-senate-michigan-13536.jpg",
+        "source": "POLITICO"
+      },
+      {
+        "title": "LA Clashes Mar 'No Kings' Protests as Rocks Thrown at Federal Officers",
+        "url": "https://abc7.com/post/no-kings-protests-2026-chaos-unfolds-thousands-gather-downtown-los-angeles-arrests-made/18795848/",
+        "summary": "While the vast majority of 'No Kings' protests remained peaceful, tensions erupted in Los Angeles where an unlawful assembly was declared after a small group threw rocks, bottles, and concrete at federal officers. Nine people were arrested.",
+        "image": "https://cdn.abcotvs.com/dip/images/18795926_032926-kabc-no-kings-protest-arrests-vid-cc-2.jpg",
+        "source": "ABC7 Los Angeles"
       }
     ],
     "dfw-politics": [
@@ -78,7 +122,7 @@
       {
         "title": "Texas Primary Sets Record Early Voting as Senate Race Draws National Attention",
         "url": "https://www.fox4news.com/news/texas-primary-2026-live-updates",
-        "summary": "About 2.5 million Texans voted early in the primary, with Dallas County Democrats setting a record of nearly 188,000 early votes — the highest since Obama's 2008 primary.",
+        "summary": "About 2.5 million Texans voted early in the primary, with Dallas County Democrats setting a record of nearly 188,000 early votes \u2014 the highest since Obama's 2008 primary.",
         "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2026/03/1280/720/Texas-primary-election-vote.jpg",
         "source": "FOX 4 News"
       },
@@ -92,7 +136,7 @@
     ],
     "ai-news": [
       {
-        "title": "OpenAI Winds Down Sora to Prioritize 'Spud' — Its Next Major Model",
+        "title": "OpenAI Winds Down Sora to Prioritize 'Spud' \u2014 Its Next Major Model",
         "url": "https://radicaldatascience.wordpress.com/2026/03/26/ai-news-briefs-bulletin-board-for-march-2026/",
         "summary": "OpenAI axed its Sora video generator to free up compute for 'Spud,' a next-gen model Sam Altman says will be ready in weeks and 'can really accelerate the economy.' The move puts a $1B Disney partnership on ice.",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/1200px-OpenAI_Logo.svg.png",
@@ -108,7 +152,7 @@
       {
         "title": "Morgan Stanley Warns a Massive AI Breakthrough Is Coming in 2026",
         "url": "https://fortune.com/2026/03/13/elon-musk-morgan-stanley-ai-leap-2026/",
-        "summary": "Morgan Stanley says most of the world isn't ready for a transformative AI leap driven by unprecedented compute accumulation. OpenAI's GPT-5.4 scored 83% on the GDPVal benchmark — at or above human expert level.",
+        "summary": "Morgan Stanley says most of the world isn't ready for a transformative AI leap driven by unprecedented compute accumulation. OpenAI's GPT-5.4 scored 83% on the GDPVal benchmark \u2014 at or above human expert level.",
         "image": "https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2176498476-e1709323940158.jpg",
         "source": "Fortune"
       },
@@ -122,14 +166,14 @@
       {
         "title": "Yann LeCun's AMI Labs Raises $1.03 Billion to Build World Models",
         "url": "https://radicaldatascience.wordpress.com/2026/03/26/ai-news-briefs-bulletin-board-for-march-2026/",
-        "summary": "Advanced Machine Intelligence (AMI Labs), led by Yann LeCun, completed a $1.03B seed round — one of the largest ever and likely the biggest for a European company — to build world models for AI.",
+        "summary": "Advanced Machine Intelligence (AMI Labs), led by Yann LeCun, completed a $1.03B seed round \u2014 one of the largest ever and likely the biggest for a European company \u2014 to build world models for AI.",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yann_LeCun_-_2018_%28cropped%29.jpg/440px-Yann_LeCun_-_2018_%28cropped%29.jpg",
         "source": "Radical Data Science"
       },
       {
         "title": "Jack Dorsey Cuts 40% of Block's Workforce, Citing AI Transformation",
         "url": "https://www.thehumansintheloop.ai/p/the-top-30-ai-stories-from-march",
-        "summary": "Block CEO Jack Dorsey cut over 4,000 jobs — 40% of staff — saying AI 'fundamentally changes what it means to build a company.' The stock surged 24%. Gross profit per employee expected to hit $2M in 2026.",
+        "summary": "Block CEO Jack Dorsey cut over 4,000 jobs \u2014 40% of staff \u2014 saying AI 'fundamentally changes what it means to build a company.' The stock surged 24%. Gross profit per employee expected to hit $2M in 2026.",
         "image": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feab32ba4-b0de-489d-8b5c-e2e51a2c0f56_1150x647.png",
         "source": "The Humans in the Loop"
       }
@@ -159,7 +203,7 @@
       {
         "title": "JPMorgan Q1 2026 Earnings Preview: Analysts Expect $5.42 EPS",
         "url": "https://finance.yahoo.com/markets/stocks/articles/jpmorgan-chase-earnings-preview-expect-144841270.html",
-        "summary": "Ahead of the Q1 earnings call, analysts forecast JPMorgan to report $5.42 per share — up 6.9% year-over-year. Full-year EPS is expected at $21.73, a 6.8% increase from fiscal 2025.",
+        "summary": "Ahead of the Q1 earnings call, analysts forecast JPMorgan to report $5.42 per share \u2014 up 6.9% year-over-year. Full-year EPS is expected at $21.73, a 6.8% increase from fiscal 2025.",
         "image": "https://s.yimg.com/ny/api/res/1.2/dL22Fv_OBqVd22g_qJFRjw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MA--/https://media.zenfs.com/en/barchart_articles_702/a8eeecb2b01f8efd1d88b25abc8dc3c5",
         "source": "Yahoo Finance"
       },
@@ -182,40 +226,40 @@
       {
         "title": "Cirque du Soleil: ECHO Coming to Lone Star Park",
         "url": "https://yourpropertygeek.com/blog/The-DFW-Local-s-Guide-to-April-2026--Events--Festivals---Things-to-Do-Near-You",
-        "summary": "Cirque du Soleil returns to North Texas under the Big Top at Lone Star Park with ECHO — a story about a young woman exploring the bond between humans and the animal kingdom, featuring jaw-dropping acrobatics.",
+        "summary": "Cirque du Soleil returns to North Texas under the Big Top at Lone Star Park with ECHO \u2014 a story about a young woman exploring the bond between humans and the animal kingdom, featuring jaw-dropping acrobatics.",
         "image": "https://yourpropertygeek.com/api/v1/media/95810?width=1024",
         "source": "DFW Local's Guide"
       },
       {
-        "title": "Main Street Fort Worth Arts Festival — April 16-19",
+        "title": "Main Street Fort Worth Arts Festival \u2014 April 16-19",
         "url": "https://yourpropertygeek.com/blog/The-DFW-Local-s-Guide-to-April-2026--Events--Festivals---Things-to-Do-Near-You",
         "summary": "One of Fort Worth's most anticipated annual events takes over the iconic red brick streets of downtown for four days of incredible art, live music, and great food with hundreds of artists from across the country.",
         "image": "https://yourpropertygeek.com/api/v1/media/95811?width=1024",
         "source": "DFW Local's Guide"
       },
       {
-        "title": "Dallas Art Fair — April 16-19",
+        "title": "Dallas Art Fair \u2014 April 16-19",
         "url": "https://www.visitdallas.com/blog/what-to-do-april/",
         "summary": "The Dallas Art Fair returns with a curated selection of modern and contemporary artworks from leading national and international galleries as part of Dallas Arts Month celebrations throughout April.",
         "image": "https://www.visitdallas.com/imager/files_idss_com/C375/assets/dallas-art-fair-visit-dallas_79f6a804d2236f7cd1f508c87ac7b76e.jpg",
         "source": "Visit Dallas"
       },
       {
-        "title": "Dallas Blooms at the Dallas Arboretum — Through April 12",
+        "title": "Dallas Blooms at the Dallas Arboretum \u2014 Through April 12",
         "url": "https://www.visitdallas.com/blog/what-to-do-april/",
         "summary": "The Southwest's largest outdoor floral festival continues at the Dallas Arboretum on White Rock Lake. Soak in the sun, sights, sounds, and scents of 500,000+ spring blooms through April 12.",
         "image": "https://www.visitdallas.com/imager/files_idss_com/C375/assets/dallas-blooms-arboretum_b1cde6c9c7e49f17e43afb08aec77c84.jpg",
         "source": "Visit Dallas"
       },
       {
-        "title": "Ubbi Dubbi Festival at Panther Island Pavilion — Fort Worth",
+        "title": "Ubbi Dubbi Festival at Panther Island Pavilion \u2014 Fort Worth",
         "url": "https://www.myguidedallas.com/events/april-2026",
         "summary": "The Ubbi Dubbi electronic music festival returns to Panther Island Pavilion in Fort Worth for an 18+ event promising an unforgettable experience at one of DFW's most scenic outdoor venues.",
         "image": "https://www.myguidedallas.com/media/events/ubbi-dubbi-festival-friday-panther-island-pavilion-fort-worth.jpg",
         "source": "My Guide Dallas"
       },
       {
-        "title": "Dallas Reggae Festival — April 11-12",
+        "title": "Dallas Reggae Festival \u2014 April 11-12",
         "url": "https://www.visitdallas.com/blog/what-to-do-april/",
         "summary": "The annual Dallas Reggae Festival welcomes families to enjoy Caribbean-inspired food, arts, crafts, and reggae music. The festival celebrates cultural equality through music over two days.",
         "image": "https://www.visitdallas.com/imager/files_idss_com/C375/assets/dallas-reggae-fest_a2c7f1e19b3ae5c8d7f4a0b2c9e6d3f1.jpg",
