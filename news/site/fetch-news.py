@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
 fetch-news.py — Gathers daily headlines for The Daily Brief.
-Writes data/news.json with 5-6 articles per category.
+Writes data/news.json with 15-20 articles per category.
 
 Categories:
   - world-politics: World/global politics headlines
-  - dfw-politics: Dallas-Fort Worth politics & government
-  - ai-news: AI industry news
+  - us-politics: US domestic politics & federal policy
+  - dfw-politics: Dallas-Fort Worth news
+  - ai-news: AI industry news (models, companies, regulation)
   - jpmorgan-chase: JPMorgan Chase company news
   - dfw-events: Upcoming DFW events & things to do
+  - national-events: Major US national events, festivals, and happenings
 
 Usage: python3 fetch-news.py
   Called by the daily cron job, or manually.
@@ -21,29 +23,58 @@ import os
 import sys
 from datetime import datetime
 
-# The search queries for each category
+# The search queries for each category — multiple queries to broaden coverage
 SEARCH_QUERIES = {
     "world-politics": [
         "world politics news today",
-        "international affairs headlines today"
+        "international affairs headlines today",
+        "global diplomacy developments this week",
+        "geopolitics breaking news"
+    ],
+    "us-politics": [
+        "US politics news today",
+        "Congress White House news today",
+        "federal policy legislation news this week",
+        "Supreme Court news today"
     ],
     "dfw-politics": [
-        "Dallas Fort Worth politics news today",
-        "DFW Texas local government news"
+        "Dallas Fort Worth news today",
+        "DFW Texas local news headlines",
+        "North Texas news crime weather business",
+        "Dallas Fort Worth community news"
     ],
     "ai-news": [
         "artificial intelligence news today",
-        "AI industry latest developments"
+        "AI industry latest developments",
+        "Anthropic Claude AI model news",
+        "OpenAI GPT news releases",
+        "Google DeepMind Gemini AI news",
+        "AI model release announcement this week",
+        "AI regulation policy news",
+        "Meta Llama AI news"
     ],
     "jpmorgan-chase": [
         "JPMorgan Chase news today",
-        "JPMorgan Chase latest developments"
+        "JPMorgan Chase latest developments",
+        "JPMorgan Chase earnings stock analyst",
+        "JPMorgan Chase banking finance news"
     ],
     "dfw-events": [
         "Dallas Fort Worth upcoming events this week",
-        "DFW things to do events concerts festivals"
+        "DFW things to do events concerts festivals",
+        "Dallas events calendar this week",
+        "Fort Worth events entertainment this week"
+    ],
+    "national-events": [
+        "major US events happenings this week",
+        "national events festivals concerts United States",
+        "upcoming US events calendar April 2026",
+        "big events happening in America this week"
     ]
 }
+
+# Target articles per category
+MAX_ARTICLES_PER_CATEGORY = 15
 
 async def search_web(queries):
     """Use the external-tool CLI to search the web."""
@@ -72,7 +103,7 @@ async def search_web(queries):
     return results
 
 
-def parse_search_results(raw_results, max_articles=6):
+def parse_search_results(raw_results, max_articles=15):
     """Parse search API results into article objects."""
     articles = []
     seen_urls = set()
@@ -150,7 +181,7 @@ async def fetch_all_categories():
     for cat_id, queries in SEARCH_QUERIES.items():
         print(f"Fetching {cat_id}...")
         raw = await search_web(queries)
-        articles = parse_search_results(raw, max_articles=6)
+        articles = parse_search_results(raw, max_articles=MAX_ARTICLES_PER_CATEGORY)
         data["categories"][cat_id] = articles
         print(f"  Found {len(articles)} articles")
     

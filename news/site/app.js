@@ -9,7 +9,8 @@ const CATEGORIES = [
   { id: 'dfw-politics', label: 'DFW News', page: './pages/dfw-politics.html', tagClass: 'dfw-politics' },
   { id: 'ai-news', label: 'AI News', page: './pages/ai-news.html', tagClass: 'ai' },
   { id: 'jpmorgan-chase', label: 'JPMorgan Chase', page: './pages/jpmorgan-chase.html', tagClass: 'jpmc' },
-  { id: 'dfw-events', label: 'DFW Events', page: './pages/dfw-events.html', tagClass: 'events' }
+  { id: 'dfw-events', label: 'DFW Events', page: './pages/dfw-events.html', tagClass: 'events' },
+  { id: 'national-events', label: 'National Events', page: './pages/national-events.html', tagClass: 'national' }
 ];
 
 // Resolve data path (works from index and from pages/)
