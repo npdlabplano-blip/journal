@@ -1,6 +1,6 @@
 # Monthly Budget Targets
 
-> Established: 2026-03-26
+> Established: 2026-03-26 | Updated: 2026-03-31
 > Based on: Q1 2026 actuals + planned changes
 > Estimated net income: ~$16,000/mo (JPMorgan Chase, 2 paychecks)
 
@@ -79,11 +79,15 @@ One number to track. Covers everything discretionary:
 | **Total Spending** | $12,756 |
 | **Monthly Surplus** | $3,244 |
 
+> **Note:** Savings target is $3,500/mo but actual surplus is $3,244 — a ~$256/mo gap.
+> Real savings rate is closer to $3,244/mo. This is close enough to run as-is;
+> the gap absorbs naturally through months with lower variable spending.
+
 ## Savings Goal
 
-| Goal | Target | Monthly Contribution | Timeline |
+| Goal | Target | Realistic Monthly | Timeline |
 |---|---:|---:|---|
-| Cash Reserve | $90,000 | $3,500 | ~26 months (mid-2028) |
+| Cash Reserve | $90,000 | ~$3,244 | ~28 months (late 2028) |
 
 ### Savings Transfer Schedule
 

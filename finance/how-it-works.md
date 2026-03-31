@@ -1,7 +1,7 @@
 # How My Money Works
 
 > Nicole's personal finance playbook. Reference this when you forget the system.
-> Last updated: 2026-03-26
+> Last updated: 2026-03-31
 
 ---
 
@@ -27,28 +27,42 @@ If you're about to tap the card, ask: *"Am I still under $400 this week?"*
 Paid on the **15th** and **last day of the month** (~$8,000 each).
 
 ### End-of-Month Paycheck (covers 1st–14th)
-This is the heavy check — it carries the **mortgage**.
+This is the heavy check — it carries the **mortgage** and the first tithe.
 
 | What | Amount |
 |---|---:|
 | Mortgage (manual, pay by 15th) | $3,122 |
 | BMW car payment (~5th) | $1,141 |
-| Other bills | ~$976 |
+| Tithe — Coppell Bible Church (1 of 2) | $1,050 |
+| Other bills (electric, life ins, Netflix, pest ctrl, Schwab) | ~$530 |
 | Essential variable (groceries, gas, etc.) | ~$788 |
 | Fun money (2 weeks) | $800 |
 | Travel set-aside | $150 |
 | **Savings transfer #1** | **$500** |
+| **Total** | **~$8,081** |
+
+> ⚠️ This check runs ~$81 over $8,000. The small overage is absorbed by the surplus from the 15th check or prior balance.
 
 ### 15th Paycheck (covers 15th–31st)
 This is the lighter check — no mortgage. Big savings transfer happens here.
 
 | What | Amount |
 |---|---:|
-| Bills (insurance, utilities, phones, etc.) | ~$3,057 |
+| Tithe — Coppell Bible Church (2 of 2) | $1,050 |
+| Insurance (USAA auto + AmGen life) | $466 |
+| Utilities (water, gas, internet) | ~$380 |
+| Phones (AT&T + T-Mobile) | $200 |
+| Subscriptions (Headspace, Google, Apple, Amazon) | ~$83 |
+| Kids (Greenlight, CISD, Rec Center, Trumpet) | $592 |
+| Household (cleaning, lawn, dry cleaning) | $620 |
+| Schwab transfer (2nd) | $215 |
 | Essential variable (groceries, gas, etc.) | ~$788 |
 | Fun money (2 weeks) | $800 |
 | Travel set-aside | $150 |
 | **Savings transfer #2** | **$3,000** |
+| **Total** | **~$8,344** |
+
+> ⚠️ This check runs ~$344 over $8,000. Combined with the 1st-half overage, the total monthly gap is ~$256. This comes out of the savings transfer — real savings lands closer to $3,244/mo.
 
 ---
 
@@ -87,7 +101,9 @@ This is the lighter check — no mortgage. Big savings transfer happens here.
 | **Fun Money** | $1,600 |
 | **Travel Set-Aside** | $300 |
 | **Total Spending** | $12,756 |
-| **Savings** | $3,500 |
+| **Savings (target)** | $3,500 |
+| **Actual surplus** | $3,244 |
+| **Gap** | -$256 |
 
 ### What's "Essential Variable"?
 Stuff you have to buy but the amount varies:
