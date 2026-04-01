@@ -1,227 +1,213 @@
 {
-  "date": "2026-03-31",
-  "generated_at": "2026-03-31T11:04:29Z",
+  "date": "2026-04-01",
+  "generated_at": "2026-04-01T11:03:01.952020Z",
   "categories": {
     "world-politics": [
       {
-        "title": "Live updates: Trump suggests US could take Iran's Kharg Island",
-        "url": "https://apnews.com/live/iran-war-israel-trump-03-30-2026",
-        "summary": "Live coverage of the Iran-Israel conflict as President Donald Trump raises the idea of US forces seizing Iran’s Kharg Island, a key oil terminal in the Persian Gulf.",
-        "image": "https://dims.apnews.com/dims4/default/b4399a0/2147483647/strip/true/crop/8640x5757+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fc2%2F2d5faf90a504903fe5c83a6be098%2F57bcda7095364e28befec97639458491",
-        "source": "Associated Press"
+        "title": "https://www.reuters.com/world/china/world-does-not-need-crisis-over-taiwan-opposition-leader-says-ahead-china-trip-2026-04-01/",
+        "url": "https://www.reuters.com/world/china/world-does-not-need-crisis-over-taiwan-opposition-leader-says-ahead-china-trip-2026-04-01/",
+        "summary": "Unable to fetch metadata (HTTPError).",
+        "image": null,
+        "source": "reuters.com"
       },
       {
-        "title": "Iran-backed Houthis enter the monthlong war and could further threaten global shipping (AP Explains)",
-        "url": "https://apnews.com/video/iran-backed-houthis-enter-the-monthlong-war-and-could-further-threaten-global-shipping-ap-explains-91dcdbf721404532a0c09bdfd0a60c05",
-        "summary": "AP Explains examines the Houthis’ entry into the monthlong Middle East war and how renewed missile launches could raise risks for global trade routes near the Red Sea.",
-        "image": "https://dims.apnews.com/dims4/default/172b63d/2147483647/strip/true/crop/1081x720+100+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F76%2F86%2F32e5b8edb5a21cbce226316a6822%2Fegy-iran-houthis-explainer-20260329cr-1920x1080.jpg",
-        "source": "Associated Press"
+        "title": "Russian strikes on Ukraine kill 4 as deal to end war dims",
+        "url": "https://www.aljazeera.com/news/2026/3/28/russian-strikes-on-ukraine-cities-kill-4-as-deal-to-end-war-dims",
+        "summary": "US Secretary of State Marco Rubio voices openness to diverting weapons to Kyiv to support the US attack on Iran.",
+        "image": "https://www.aljazeera.com/wp-content/uploads/2026/03/2026-03-28T070701Z_1896166795_RC2IDKATIPHK_RTRMADP_3_UKRAINE-CRISIS-ATTACK-ODESA-1774682875.jpg?resize=1200%2C630",
+        "source": "Al Jazeera"
       },
       {
-        "title": "Rubio: US wants a global plan to keep Strait of Hormuz open after war ends",
-        "url": "https://apnews.com/video/rubio-us-wants-a-global-plan-to-keep-strait-of-hormuz-open-after-war-ends-488c94ce1ffd43e891dd7eb5537eb3fc",
-        "summary": "A report on Secretary Rubio’s push for an international strategy to keep the Strait of Hormuz open once the current conflict concludes.",
-        "image": "https://dims.apnews.com/dims4/default/f3fdd4d/2147483647/strip/true/crop/1621x1080+150+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F4d%2F7c%2F1622ef00af048647e2396ee43c23%2Ffra-g7-us-rubio-departure-iran-strait-of-hormuz-20260327cr-1920x1080.jpg",
-        "source": "Associated Press"
-      },
-      {
-        "title": "Ground forces from US arrive in Middle East as waves of airstrikes continue (AP video)",
-        "url": "https://www.youtube.com/watch?v=zX0RKT_iQF8",
-        "summary": "Video report says a US Marine expeditionary unit arrived in the Middle East as airstrikes continue and Pakistan says it will host talks between the US and Iran.",
-        "image": "https://i.ytimg.com/vi/zX0RKT_iQF8/hqdefault.jpg",
-        "source": "YouTube / AP"
-      },
-      {
-        "title": "Trump says Iran has undergone 'regime change' (CNN video)",
-        "url": "https://www.cnn.com/2026/03/30/us/video/trump-says-iran-has-undergone-regime-change-digvid",
-        "summary": "CNN video clip featuring President Trump saying Iran has undergone “regime change,” amid continued fallout from the conflict.",
-        "image": "https://media.cnn.com/api/v1/images/stellar/prod/22496022-clean-trumpgaggleiran-d-00-00-38-18-still001.jpg?c=16x9&q=w_800,c_fill",
-        "source": "CNN"
+        "title": "Ukraine war live: Russia threatens to attack Europe for allowing Kyiv to use airspace",
+        "url": "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-ceasefire-b2945082.html",
+        "summary": "Kremlin says Moscow will respond to nations allowing Kyiv to use airspace for attacks on Baltic ports",
+        "image": "https://static.independent.co.uk/2025/09/23/5/06/SWEDEN-ESTONIA-RUSSIA-NATO-teqvx0xw.jpeg?trim=497,796,636,902&width=1200&height=800&crop=1200:800",
+        "source": "The Independent"
       }
     ],
     "us-politics": [
       {
-        "title": "March 27, 2026 — Trump administration and DHS shutdown news",
-        "url": "https://www.cnn.com/2026/03/27/politics/live-news/trump-administration-news",
-        "summary": "CNN live updates covering ongoing Department of Homeland Security funding lapse negotiations and the political fight between House Republicans and Senate Democrats.",
-        "image": "https://media.cnn.com/api/v1/images/stellar/prod/2026-03-23t095338z-1684697207-rc28akazthtz-rtrmadp-3-usa-trump-airports-20260326202518366.jpg?c=16x9&q=w_800,c_fill",
+        "title": "The Major Supreme Court Decisions in 2026",
+        "url": "https://www.nytimes.com/interactive/2026/02/20/us/supreme-court-major-cases-2026.html",
+        "summary": "The Supreme Court is deciding a series of cases central to President Trump’s second-term agenda.",
+        "image": "https://static01.nyt.com/images/2026/02/19/multimedia/2026-02-18-scotus-key-cases-index/2026-02-18-scotus-key-cases-index-facebookJumbo.jpg",
+        "source": "nytimes.com"
+      },
+      {
+        "title": "Fact Sheet: President Donald J. Trump Takes Action on Certain Advanced Computing Chips to Protect America’s Economic and National Security",
+        "url": "https://www.whitehouse.gov/fact-sheets/2026/01/fact-sheet-president-donald-j-trump-takes-action-on-certain-advanced-computing-chips-to-protect-americas-economic-and-national-security/",
+        "summary": "SUPPORTING AMERICA’S SEMICONDUCTOR INDUSTRY: Today, President Donald J. Trump signed a Proclamation invoking Section 232 of the Trade Expansion Act of",
+        "image": "https://www.whitehouse.gov/wp-content/uploads/2025/03/WH47-Social-Share-Card.jpg",
+        "source": "The White House"
+      },
+      {
+        "title": "White House initiates shutdown process as Congress hopes to keep duration minimal",
+        "url": "https://www.govexec.com/management/2026/01/white-house-initiate-shutdown-process-congress-hopes-keep-duration-minimal/411100/",
+        "summary": "Impacted employees will soon receive furlough notices, though they could still avoid missing any time.",
+        "image": "https://cdn.govexec.com/media/img/cd/2026/01/30/013026_Getty_GovExec_ShutdownPrep/open-graph.jpg",
+        "source": "Government Executive"
+      },
+      {
+        "title": "The 2026 Midterms: Key Dates and Events • Bipartisan Policy Center",
+        "url": "https://bipartisanpolicy.org/article/the-2026-midterms-key-dates-and-events/",
+        "summary": "A guide to the 2026 midterm elections outlining key dates, primary timelines, Election Day details, post-election processes, and the start of the 120th Congress.",
+        "image": "https://bipartisanpolicy.org/wp-content/uploads/2024/10/shutterstock_2487358659_voting_elections_democrat_republican-scaled.jpg",
+        "source": "Bipartisan Policy Center"
+      },
+      {
+        "title": "CNN’s guide to the most important elections of 2026 | CNN Politics",
+        "url": "https://www.cnn.com/2026/01/09/politics/2026-election-calendar",
+        "summary": "This year’s midterms will serve as a referendum on the first two years of President Donald Trump’s second term and will shape his final two years in office.",
+        "image": "https://media.cnn.com/api/v1/images/stellar/prod/primary-calendar-hp-art-largetease.png?c=16x9&q=w_800,c_fill",
         "source": "CNN"
-      },
-      {
-        "title": "Pressure builds on Congress as DHS shutdown threatens travel and TSA staffing",
-        "url": "https://www.politico.com/news/2026/03/23/dhs-shutdown-deal-pressure-00839528",
-        "summary": "Politico reports that negotiations to end the DHS shutdown are straining as disruptions hit TSA and airport operations, increasing pressure on lawmakers.",
-        "image": "https://static.politico.com/",
-        "source": "POLITICO"
-      },
-      {
-        "title": "Trump releases AI policy for Congress to pre-empt state rules",
-        "url": "https://www.reuters.com/world/us/white-house-releases-national-ai-framework-2026-03-20/",
-        "summary": "Reuters reports the White House released a national AI framework urging Congress to establish a single federal approach and limit fragmented state regulation.",
-        "image": "https://www.reuters.com/resizer/",
-        "source": "Reuters"
-      },
-      {
-        "title": "The elusive AI bill that the White House wants to land",
-        "url": "https://www.reuters.com/technology/artificial-intelligence/artificial-intelligencer-white-house-pushes-first-big-federal-ai-law-this-year-2026-03-25/",
-        "summary": "Reuters’ Artificial Intelligencer looks at the White House effort to move major federal AI legislation, including child safety and data-center-related concerns.",
-        "image": "https://www.reuters.com/resizer/",
-        "source": "Reuters"
-      },
-      {
-        "title": "SCOTUStoday for Tuesday, March 3",
-        "url": "https://www.scotusblog.com/2026/03/scotustoday-for-tuesday-march-3/",
-        "summary": "SCOTUSblog roundup of Supreme Court actions and developments, including emergency docket items affecting election maps and other high-profile disputes.",
-        "image": "https://www.scotusblog.com/wp-content/uploads/2025/06/supremecourt-10-scaled-1.webp",
-        "source": "SCOTUSblog"
       }
     ],
     "dfw-politics": [
       {
-        "title": "Protestors clash at Dallas 'No Kings' march",
-        "url": "https://www.fox4news.com/video/fmc-n4at46mezm10yb5r",
-        "summary": "FOX 4 video reports on clashes between protesters and counter-protesters during the Dallas “No Kings” march, with police separating groups.",
-        "image": "https://images.foxtv.com/static-media.fox.com/fmcv3/prod/fts/ev13htxvntbkj1pu/1200/630/yco3aina4pt0rtn9.jpg?ve=1&tl=1",
-        "source": "FOX 4 News Dallas-Fort Worth"
+        "title": "Dallas City Council Approves New DART Governance Structure – Dallas City News Hub",
+        "url": "https://www.dallascitynews.net/dallas-city-council-approves-new-dart-governance-structure",
+        "summary": "Dallas City Council Approves New DART Governance Structure – Dallas City News Hub.",
+        "image": null,
+        "source": "dallascitynews.net"
       },
       {
-        "title": "Tracking protests across North Texas on March 28, 2026 (WFAA)",
-        "url": "https://www.youtube.com/watch?v=tXA8M9hZG1U",
-        "summary": "WFAA stream tracking multiple protest actions across North Texas and related public-safety updates.",
-        "image": "https://i.ytimg.com/vi/tXA8M9hZG1U/hqdefault.jpg",
-        "source": "YouTube / WFAA"
+        "title": "DART Announces Regional Fare Adjustments Effective March 1, 2026",
+        "url": "https://www.dart.org/about/news-and-events/newsreleases/newsrelease-detail/dart-announces-regional-fare-adjustments-effective-march-1--2026",
+        "summary": "DART will implement updated fare pricing effective March 1, 2026.",
+        "image": null,
+        "source": "dart.org"
       },
       {
-        "title": "Fort Worth Business Press: GSBS Architects earns global design award for Mesa Temple restoration (press release)",
-        "url": "https://fortworthbusiness.com/",
-        "summary": "Fort Worth Business Press front-page update highlighting a new press release on a global design award and other local business announcements.",
-        "image": "https://fortworthbusiness.com/media/2020/02/FWBP-square-logo.png",
-        "source": "Fort Worth Business Press"
+        "title": "After 15 Hours, Dallas Moves Closer To Determining the Fate of City Hall",
+        "url": "https://www.dallasobserver.com/news/dallas-city-hall-resolution-40650405/",
+        "summary": "The council agreed to pump the brakes, but they aren’t quite emptying out the gas, either.",
+        "image": "https://www.dallasobserver.com/wp-content/uploads/sites/3/ww-media/mediaserver/dal/2024-45/dallas_city_hall__flags_nathan_hunsinger.webp",
+        "source": "Dallas Observer"
       },
       {
-        "title": "Fort Worth Economic Development Partnership: Mercedes-Benz Financial Services USA grows workforce at Fort Worth HQ",
-        "url": "https://fortworthedp.com/news/",
-        "summary": "FWEDP news post highlighting a workforce expansion announcement tied to Mercedes-Benz Financial Services USA’s Fort Worth headquarters.",
-        "image": "https://fortworthedp.com/wp-content/uploads/2024/10/DSC7931-scaled.jpg",
-        "source": "Fort Worth Economic Development Partnership"
+        "title": "1 dead in Fort Worth officer-involved shooting",
+        "url": "https://www.yahoo.com/news/articles/1-dead-fort-worth-officer-224637266.html",
+        "summary": "An officer-involved shooting involving Fort Worth police left one person dead and caused shutdowns on Highway 287.",
+        "image": "https://s.yimg.com/ny/api/res/1.2/pyOAPc9mPCZCjh.rnHmr3w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU7Y2Y9d2VicA--/https://media.zenfs.com/en/kdfw_fox_local_articles_173/288bed17cfb12600af3337ac1080c086",
+        "source": "Yahoo News"
       },
       {
-        "title": "Dallas March weather outlook (AccuWeather monthly)",
-        "url": "https://www.accuweather.com/en/us/dallas/75202/march-weather/351194",
-        "summary": "AccuWeather’s monthly Dallas weather page showing late-March temperature ranges and daily forecasts useful for planning the week.",
-        "image": "https://www.accuweather.com/images/logos/aw-logo-og-meta.png",
-        "source": "AccuWeather"
+        "title": "TDHCA celebrates grand openings in Fort Worth and Dallas | Texas Department of Housing and Community Affairs",
+        "url": "https://www.tdhca.texas.gov/news/tdhca-celebrates-grand-openings-fort-worth-and-dallas",
+        "summary": "The Texas Department of Housing and Community Affairs celebrates the start of 2026 with the grand opening of two affordable housing properties! Thrive on Crawford, a 67-unit property in Fort Worth, is working directly with JPS Health Network to provide direct access to healthcare services for residents, and in Dallas, ",
+        "image": null,
+        "source": "tdhca.texas.gov"
       }
     ],
     "ai-news": [
       {
-        "title": "The elusive AI bill that the White House wants to land",
-        "url": "https://www.reuters.com/technology/artificial-intelligence/artificial-intelligencer-white-house-pushes-first-big-federal-ai-law-this-year-2026-03-25/",
-        "summary": "Reuters reports on the administration’s push for a first major federal AI law, including consumer protections and policy preemption of state rules.",
-        "image": "https://www.reuters.com/resizer/",
-        "source": "Reuters"
+        "title": "India kicks off AI Impact Summit amid rising safety concerns",
+        "url": "https://www.dw.com/en/india-kicks-off-ai-impact-summit-amid-rising-safety-concerns/a-75983575",
+        "summary": "Prime Minister Narendra Modi is inaugurating the event, with world leaders and tech CEOs in attendance.",
+        "image": "https://static.dw.com/image/75983625_6.jpg",
+        "source": "dw.com"
       },
       {
-        "title": "National Policy Framework for Artificial Intelligence (Legislative Recommendations) [PDF]",
-        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/03/03.20.26-National-Policy-Framework-for-Artificial-Intelligence-Legislative-Recommendations.pdf",
-        "summary": "The White House published a national AI policy framework PDF outlining legislative recommendations and arguing for a unified federal approach.",
-        "image": "https://www.whitehouse.gov/wp-content/themes/",
-        "source": "The White House"
+        "title": "NVIDIA Extends AI Factories Vision With GTC 2026 Agentic And Physical AI",
+        "url": "https://finance.yahoo.com/news/nvidia-extends-ai-factories-vision-201002586.html",
+        "summary": "NVIDIA (NasdaqGS:NVDA) used GTC 2026 to launch a broad agentic AI and physical AI platform spanning data center to edge. The company introduced the Vera CPU, Rubin GPU, DSX architecture, and the NVIDIA Vera Rubin platform aimed at large scale AI factories.",
+        "image": "https://s.yimg.com/os/en/simply_wall_st__316/ce92e7ae6d602b61807a836f4291633e",
+        "source": "Yahoo Finance"
       },
       {
-        "title": "Big Tech to invest about $650 billion in AI in 2026, Bridgewater says",
-        "url": "https://www.reuters.com/business/big-tech-invest-about-650-billion-ai-2026-bridgewater-says-2026-02-23/",
-        "summary": "Reuters reports Bridgewater expects Alphabet, Amazon, Meta, and Microsoft to collectively invest about $650B in AI in 2026 as infrastructure spending ramps.",
-        "image": "https://www.reuters.com/resizer/",
-        "source": "Reuters"
+        "title": "Nvidia Plans $26B Push For Proprietary AI Models In Direct Fight With OpenAI, Google",
+        "url": "https://stocktwits.com/news-articles/markets/equity/nvidia-confirms-building-ai-models-that-compete-with-its-own-customers/cZdMte4RIBu",
+        "summary": "Nvidia has been developing its own AI models since 2023; unlike consumer chatbots, these models are designed to help enterprises build AI applications that run on Nvidia chips.",
+        "image": "https://news.stocktwits-cdn.com/large_Getty_Images_2194622714_jpg_c18475d557.webp",
+        "source": "Stocktwits"
       },
       {
-        "title": "Ramp AI Index March 2026 update",
-        "url": "https://ramp.com/velocity/ai-index-march-2026",
-        "summary": "Ramp’s AI Index update summarizes business adoption trends, including changes in usage for major AI model providers.",
-        "image": "https://cdn.sanity.io/images/6jz6vxxd/production/dead113c4d7b4d174b8022949e28b018b6dd6da2-2400x1260.png?rect=0,3,2400,1254&w=1200&h=627&fit=crop",
-        "source": "Ramp"
+        "title": "Worried about AI taking your job? New Anthropic research shows it’s not that simple | Fortune",
+        "url": "https://fortune.com/2026/01/15/worried-about-ai-taking-your-job-new-anthropic-research-shows-its-not-that-simple/",
+        "summary": "Anthropic’s latest data suggests AI won’t wipe out work overnight—but it will redraw the map of who wins, who struggles, and how jobs actually change.",
+        "image": "https://fortune.com/img-assets/wp-content/uploads/2024/06/Siblings-recent-photo-2.jpeg?resize=1200,600",
+        "source": "Fortune"
       },
       {
-        "title": "Trump Administration Takes Major Steps Toward Comprehensive Federal AI Regulation",
-        "url": "https://www.lw.com/en/insights/trump-administration-takes-major-steps-toward-comprehensive-federal-ai-regulation",
-        "summary": "Latham & Watkins analysis reviews the White House AI framework and related proposals, focusing on preemption and a light-touch regulatory approach.",
-        "image": "https://contenthub.lw.com/api/public/content/a8f1de42a61c4d388f64ee1c8de97e40?v=71fad850&t=800x400",
-        "source": "Latham & Watkins"
+        "title": "2026 AI Laws Update: Key Regulations and Practical Guidance",
+        "url": "https://www.gunder.com/en/news-insights/insights/2026-ai-laws-update-key-regulations-and-practical-guidance",
+        "summary": "AI compliance in 2026: Trump’s Dec 2025 EO, Colorado & California frameworks, EU AI Act. What startups, VCs, and enterprises must do now.",
+        "image": "https://www.gunder.com/a/web/qHRaKXwLWCJ1MnhLWvZese/bhpecY/clientinsight-2026ailawsupdatekeyregulationsandpracticalguidance-gundersondettmer.jpg",
+        "source": "Gunderson Dettmer - 2026 AI Laws Update: Key Regulations and Practical Guidance"
       }
     ],
     "jpmorgan-chase": [
       {
-        "title": "JPMorgan files for private credit fund that allows 7.5% redemptions",
-        "url": "https://www.reuters.com/business/finance/jpmorgan-files-private-credit-fund-that-allows-75-redemptions-2026-03-26/",
-        "summary": "Reuters reports JPMorgan filed for a private credit fund structure that would allow periodic redemptions up to 7.5%.",
-        "image": "https://www.reuters.com/resizer/",
-        "source": "Reuters"
+        "title": "Chase to Open More Than 160 Branches in Over 30 States in 2026",
+        "url": "https://media.chase.com/news/chase-to-open-more-than-160-branches-in-over-30-states-in-2026",
+        "summary": "Chase to Open More Than 160 Branches in Over 30 States in 2026.",
+        "image": null,
+        "source": "media.chase.com"
       },
       {
-        "title": "JPMorganChase announces 2.8 million euros in support for French small businesses",
-        "url": "https://www.reuters.com/business/finance/jpmorganchase-announces-28-million-euros-support-french-small-businesses-2026-03-24/",
-        "summary": "Reuters reports JPMorganChase announced 2.8 million euros of support aimed at French small businesses.",
-        "image": "https://www.reuters.com/resizer/",
-        "source": "Reuters"
+        "title": "https://www.reuters.com/business/finance/jpmorgan-aims-open-over-160-branches-2026-ft-reports-2026-02-18/",
+        "url": "https://www.reuters.com/business/finance/jpmorgan-aims-open-over-160-branches-2026-ft-reports-2026-02-18/",
+        "summary": "Unable to fetch metadata (HTTPError).",
+        "image": null,
+        "source": "reuters.com"
       },
       {
-        "title": "JPMorgan's markdowns to restrict lending to private credit firms, report says",
-        "url": "https://www.reuters.com/business/finance/jpmorgan-restricts-private-credit-lending-after-markdowns-bloomberg-news-reports-2026-03-12/",
-        "summary": "Reuters reports a move to mark down certain loans may lead JPMorgan to reduce lending to private credit funds.",
-        "image": "https://www.reuters.com/resizer/",
-        "source": "Reuters"
+        "title": "https://www.bloomberg.com/news/articles/2026-03-26/jpmorgan-plans-private-credit-fund-that-allows-7-5-redemptions",
+        "url": "https://www.bloomberg.com/news/articles/2026-03-26/jpmorgan-plans-private-credit-fund-that-allows-7-5-redemptions",
+        "summary": "Unable to fetch metadata (HTTPError).",
+        "image": null,
+        "source": "bloomberg.com"
       },
       {
-        "title": "JPMorganChase Company Update 2026 (Investor Relations)",
-        "url": "https://www.jpmorganchase.com/ir/news/2026/jpmc-company-update-2026",
-        "summary": "JPMorganChase investor relations page announcing its 2026 Company Update event in New York City.",
-        "image": "/content/dam/jpmorganchase/images/logos/jpmc-logo.svg",
-        "source": "JPMorganChase"
+        "title": "JPMorganChase to Host First-Quarter 2026 Earnings Call",
+        "url": "https://investingnews.com/jpmorganchase-to-host-first-quarter-2026-earnings-call/",
+        "summary": "As previously announced, JPMorgan Chase & Co. (NYSE: JPM) (\"JPMorganChase\" or the \"Firm\") will host a conference call to review first-quarter 2026 financial results on Tuesday, April 14, 2026 at 8:30 a.m.",
+        "image": "https://investingnews.com/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTg1ODg1NS9vcmlnaW4ucG5nIiwiZXhwaXJlc19hdCI6MTgzNDgyNTIxOX0.cBVUy2sasvxLR5NTr0bPLuWJNxfsXjBDtCUD28kRSJM/image.png?width=210",
+        "source": "Investing News Network (INN)"
       },
       {
-        "title": "First on CNBC transcript: JPMorgan Chase CEO Jamie Dimon on The Exchange",
-        "url": "https://www.cnbc.com/2026/03/02/first-on-cnbc-transcript-jpmorgan-chase-chairman-ceo-jamie-dimon-speaks-with-cnbcs-leslie-picker-on-the-exchange-today.html",
-        "summary": "CNBC transcript of Jamie Dimon’s interview covering geopolitics, inflation risks, and the bank’s approach to account closures and compliance.",
-        "image": "https://fm.cnbc.com/applications/cnbc.com/staticcontent/img/versant/cnbc_share_versant.png?v=1524171804&w=1920&h=1080",
-        "source": "CNBC"
+        "title": "JPMorgan settles Sebi case, pays Rs 34 lakh",
+        "url": "https://economictimes.com/markets/stocks/news/jpmorgan-settles-sebi-case-pays-rs-34-lakh/articleshow/129712869.cms",
+        "summary": "JP Morgan Chase Bank has agreed to pay 34 lakh rupees to Sebi following violations related to foreign portfolio investor laws. Their missteps include issuing FPI licenses to firms lacking proper UK registration and not accurately verifying the status of certain entities.",
+        "image": "https://img.etimg.com/thumb/msid-129712869,width-1200,height-630,imgsize-114544,overlay-etmarkets/articleshow.jpg",
+        "source": "The Economic Times"
       }
     ],
     "dfw-events": [
       {
-        "title": "Downtown Dallas Arts & Music Festival (DDAMF 2026)",
-        "url": "https://www.visitdallas.com/events/downtown-dallas-arts-music-festival-2/",
-        "summary": "Visit Dallas lists the Downtown Dallas Arts & Music Festival with multiple days of free outdoor art and live music at Main Street Garden.",
-        "image": "https://visit-dallas.imgix.net/images/FGIII_-2026-DDAMF-Promo.png?auto=compress%252Cformat&crop=focalpoint&fit=min&fp-x=0.5&fp-y=0.5&h=630&q=80&w=1200&s=52fbfad6847f472290087be561276ae9",
-        "source": "Visit Dallas"
+        "title": "Breakaway Music Festival Dallas 2026  | Fair Park",
+        "url": "https://www.fairparkdallas.com/events/detail/breakaway-music-festival-dallas-2026",
+        "summary": "Breakaway Music Festival Dallas 2026  | Fair Park.",
+        "image": "https://www.fairparkdallas.com/assets/img/B-Dallas26-SingleDay-1920-x-1080-1-141d6b7b2e.png",
+        "source": "fairparkdallas.com"
       },
       {
-        "title": "FoodieLand Food Festival - Dallas | April 17-19, 2026 (Fair Park)",
-        "url": "https://www.eventbrite.com/e/foodieland-food-festival-dallas-april-17-19-2026-tickets-1977100811750",
-        "summary": "Eventbrite listing for FoodieLand at Fair Park, with multiple days of food vendors, shopping, games, and live entertainment.",
-        "image": "/e/_next/image?url=https%3A%2F%2Fimg.evbuc.com%2Fhttps%253A%252F%252Fcdn.evbuc.com%252Fimages%252F1172786216%252F2526720971111%252F1%252Foriginal.20251211-184011%3Fw%3D480%26auto%3Dformat%252Ccompress%26q%3D75%26sharp%3D10%26s%3D89158be5ccc2f20ef7472774494302cf&w=940&q=75",
-        "source": "Eventbrite"
+        "title": "https://www.deepellumfair.com",
+        "url": "https://www.deepellumfair.com",
+        "summary": "https://www.deepellumfair.com.",
+        "image": null,
+        "source": "deepellumfair.com"
       },
       {
-        "title": "Fort Worth Events & Annual Festivals",
-        "url": "https://www.fortworth.com/events/",
-        "summary": "FortWorth.com’s events page highlights seasonal attractions and festivals across the city, including spring exhibits and family activities.",
-        "image": "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/fortworth/events-street-fair1_50cda1ed-f0ae-5102-046b624939412213.jpg",
-        "source": "FortWorth.com"
+        "title": "MAIN ST. Fort Worth Arts Festival - Trinity Railway Express",
+        "url": "https://trinityrailwayexpress.org/msfwaf/",
+        "summary": "MAIN ST. Fort Worth Arts Festival - Get ready to rock the red bricks of Downtown Fort Worth!",
+        "image": "https://trinityrailwayexpress.org/wp-content/uploads/2026/03/tm-web-banner-fw-art-fest-2026.png",
+        "source": "Trinity Railway Express"
       },
       {
-        "title": "Events for March 2026 – What's Up Fort Worth?",
-        "url": "https://whatsupfortworth.com/events/month/?shortcode=668f198f",
-        "summary": "Monthly event calendar for Fort Worth and nearby cities featuring exhibits, festivals, and recurring attractions through late March.",
-        "image": "https://whatsupfortworth.com/wp-content/uploads/2024/01/featured-image.jpg",
-        "source": "What's Up Fort Worth?"
+        "title": "Blooms & Beats: March | Fort Worth Botanic Garden",
+        "url": "https://fwbg.org/full-calendar/blooms-beats-april-2026/",
+        "summary": "Enjoy spring in the Garden while listening to live music performances by talented local artists. Satisfy your taste buds with offerings from some of Fort Worth's favorite food trucks, play fun yard games, and relax with a selection of adult beverages under the stars.",
+        "image": "https://fwbg.org/wp-content/uploads/2026/02/fcb1cd00-fb10-2aa7-51b9-9d026b65800b-scaled.jpg",
+        "source": "fwbg.org"
       },
       {
-        "title": "The Great Indian Spring Festival 2026 (Grandscape)",
-        "url": "https://www.grandscape.com/event/the-great-indian-spring-festival-2/2026-04-26/",
-        "summary": "Grandscape event listing for The Great Indian Spring Festival with cultural celebrations and spring activities.",
-        "image": "https://www.grandscape.com/wp-content/uploads/2026/01/GetAttachmentThumbnail.png",
-        "source": "Grandscape"
+        "title": "2026.04.02 Bailey Zimmerman - Dickies Arena",
+        "url": "https://dickiesarena.com/event/2026-04-02-bailey-zimmerman/",
+        "summary": "2026.04.02 Bailey Zimmerman - Dickies Arena.",
+        "image": "https://dickiesarena.com/wp-content/uploads/2025/09/Static_Digital-Dickies-Website_1200x700_BaileyZimmerman_2026_Regional_DICKIES-ARENA_0402_v2.jpg",
+        "source": "Dickies Arena"
       }
     ]
   }
