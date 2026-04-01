@@ -1,14 +1,14 @@
 {
   "date": "2026-04-01",
-  "generated_at": "2026-04-01T11:03:01.952020Z",
+  "generated_at": "2026-04-01T11:25:22.350925Z",
   "categories": {
     "world-politics": [
       {
-        "title": "https://www.reuters.com/world/china/world-does-not-need-crisis-over-taiwan-opposition-leader-says-ahead-china-trip-2026-04-01/",
+        "title": "World does not need a crisis over Taiwan, opposition leader says ahead of China trip",
         "url": "https://www.reuters.com/world/china/world-does-not-need-crisis-over-taiwan-opposition-leader-says-ahead-china-trip-2026-04-01/",
-        "summary": "Unable to fetch metadata (HTTPError).",
+        "summary": "Taiwan’s opposition leader says tensions over Taiwan do not need to escalate, ahead of a planned China visit.",
         "image": null,
-        "source": "reuters.com"
+        "source": "Reuters"
       },
       {
         "title": "Russian strikes on Ukraine kill 4 as deal to end war dims",
@@ -18,10 +18,10 @@
         "source": "Al Jazeera"
       },
       {
-        "title": "Ukraine war live: Russia threatens to attack Europe for allowing Kyiv to use airspace",
+        "title": "Ukraine war latest: Zelensky to meet with US negotiators after huge Russian attack",
         "url": "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-trump-ceasefire-b2945082.html",
-        "summary": "Kremlin says Moscow will respond to nations allowing Kyiv to use airspace for attacks on Baltic ports",
-        "image": "https://static.independent.co.uk/2025/09/23/5/06/SWEDEN-ESTONIA-RUSSIA-NATO-teqvx0xw.jpeg?trim=497,796,636,902&width=1200&height=800&crop=1200:800",
+        "summary": "Zelensky said he expected Wednesday to be a ‘pretty busy diplomatic day’ with the US and Nato",
+        "image": "https://static.independent.co.uk/2026/01/23/11/44/putin-zelensky-split.jpeg?trim=0,0,0,0&width=1200&height=800&crop=1200:800",
         "source": "The Independent"
       }
     ],
@@ -145,18 +145,18 @@
         "source": "media.chase.com"
       },
       {
-        "title": "https://www.reuters.com/business/finance/jpmorgan-aims-open-over-160-branches-2026-ft-reports-2026-02-18/",
+        "title": "JPMorgan aims to open over 160 branches in 2026",
         "url": "https://www.reuters.com/business/finance/jpmorgan-aims-open-over-160-branches-2026-ft-reports-2026-02-18/",
-        "summary": "Unable to fetch metadata (HTTPError).",
+        "summary": "JPMorgan’s Chase unit plans to open more than 160 branches across 30+ states in 2026 as it expands its retail footprint.",
         "image": null,
-        "source": "reuters.com"
+        "source": "Reuters"
       },
       {
-        "title": "https://www.bloomberg.com/news/articles/2026-03-26/jpmorgan-plans-private-credit-fund-that-allows-7-5-redemptions",
+        "title": "JPMorgan plans private credit fund that allows 7.5% redemptions",
         "url": "https://www.bloomberg.com/news/articles/2026-03-26/jpmorgan-plans-private-credit-fund-that-allows-7-5-redemptions",
-        "summary": "Unable to fetch metadata (HTTPError).",
+        "summary": "JPMorgan is planning a new private credit fund with quarterly redemption limits as the private credit market faces liquidity pressure.",
         "image": null,
-        "source": "bloomberg.com"
+        "source": "Bloomberg"
       },
       {
         "title": "JPMorganChase to Host First-Quarter 2026 Earnings Call",
