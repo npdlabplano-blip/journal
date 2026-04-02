@@ -51,7 +51,7 @@ If you ever lose your server, these steps get everything back up:
 
 ```bash
 cd ~
-git clone https://github.com/namsler1/journal.git
+git clone https://github.com/npdlabplano-blip/journal.git
 cd journal
 ```
 

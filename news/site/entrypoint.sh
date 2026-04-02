@@ -8,7 +8,7 @@
 # 4. Background loop re-pulls on a configurable interval
 # ============================================================
 
-REPO_URL="${GIT_REPO_URL:-https://github.com/namsler1/journal.git}"
+REPO_URL="${GIT_REPO_URL:-https://github.com/npdlabplano-blip/journal.git}"
 PULL_INTERVAL="${PULL_INTERVAL_SECONDS:-3600}"
 SITE_DIR="/var/www/news"
 REPO_DIR="/tmp/journal-repo"

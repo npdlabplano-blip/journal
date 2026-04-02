@@ -8,7 +8,7 @@ A daily news journal served from Docker on your Ubuntu box, fronted by Cloudflar
 Perplexity cron (6 AM CDT daily)
   │  searches web → writes news.json → git push
   ▼
-GitHub  (namsler1/journal)
+GitHub  (npdlabplano-blip/journal)
   │
   │  git pull (every 5 min via host cron)
   ▼

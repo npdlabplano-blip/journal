@@ -2,7 +2,7 @@
 
 **Generated:** March 29, 2026  
 **Profile:** Nicole | Executive Director, Global Bank | Coppell, TX  
-**GitHub:** `namsler1/journal` → `style/capsule/`
+**GitHub:** `npdlabplano-blip/journal` → `style/capsule/`
 
 ---
 
