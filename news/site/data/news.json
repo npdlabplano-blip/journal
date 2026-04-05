@@ -1,234 +1,269 @@
 {
-  "date": "2026-04-04",
-  "generated_at": "2026-04-04T11:01:00Z",
+  "date": "2026-04-05",
+  "generated_at": "2026-04-05T11:13:57.203762+00:00",
   "categories": {
     "world-politics": [
       {
-        "title": "Iran War Live Updates: U.S. Forces Search for Missing Airman After Iran Downs Jet",
-        "url": "https://www.nytimes.com/section/world",
-        "summary": "U.S. forces continue search-and-rescue efforts after Iran shot down a U.S. fighter jet, with one crew member still missing. The incident raises risks of escalation and potential prisoner issues as strikes and retaliation continue.",
-        "image": "https://static01.nyt.com/images/2026/04/03/world/03iran-airman/03iran-airman-facebookJumbo.jpg",
+        "title": "Iran war: What is happening on day 37 of US-Israeli attacks?",
+        "url": "https://www.aljazeera.com/news/2026/4/5/iran-war-what-is-happening-on-day-37-of-us-israeli-attacks",
+        "summary": "A U.S. Air Force colonel whose F-15E was shot down over Iran has been rescued by Navy SEAL Team 6 in a large-scale operation involving hundreds of special forces. Iran claims it downed additional U.S. aircraft \u2014 a C-130 and two Black Hawks \u2014 during the rescue mission.",
+        "image": "",
+        "source": "Al Jazeera"
+      },
+      {
+        "title": "Iran War Live Updates: U.S. Rescues Officer From Downed Fighter Jet in Iran, Trump Says",
+        "url": "https://www.nytimes.com/live/2026/04/05/world/iran-war-trump-news",
+        "summary": "President Trump announced early Sunday that a missing U.S. Air Force weapons system officer downed in Iran was rescued by special operations forces in one of the most complex missions in U.S. special operations history. The airman evaded Iranian forces for over 24 hours in the mountains before extraction.",
+        "image": "",
         "source": "The New York Times"
       },
       {
-        "title": "Guterres warns of ‘wider war’ as Middle East conflict enters second month",
-        "url": "https://news.un.org/en/story/2026/04/1167244",
-        "summary": "UN Secretary-General António Guterres warned the world is on the edge of a wider war as the US and Israel continue strikes on Iran and Iran retaliates against Gulf states and shipping. He called for diplomacy and adherence to international law to stop the spiral of escalation.",
-        "image": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/02-04-2026_Guterres-Middle-East.jpg/image1170x530cropped.jpg",
-        "source": "UN News"
+        "title": "US aviator missing after Iran shot down fighter jet has been rescued",
+        "url": "https://apnews.com/article/iran-us-israel-trump-lebanon-april-5-2026-pilot-cf4a792196259d6e9c066d0be1c57962",
+        "summary": "A U.S. military member who had been unaccounted for since Iran downed an F-15E Strike Eagle was successfully rescued, Trump confirmed on social media. The pilot, who sustained injuries, took shelter in the mountains of Iran while Iranian forces searched for him with a bounty on his head.",
+        "image": "",
+        "source": "AP News"
       },
       {
-        "title": "Trump Pledged a Quick End to the Iran War, but He Hasn't Explained How",
-        "url": "https://www.nytimes.com/section/world",
-        "summary": "The conflict with Iran is dragging on beyond early expectations, while the administration has offered limited detail on conditions for ending operations. Analysts say the lack of an exit plan complicates diplomatic off-ramps and risks entrenching a prolonged campaign.",
-        "image": "https://static01.nyt.com/images/2026/04/04/world/04iran-trump/04iran-trump-facebookJumbo.jpg",
-        "source": "The New York Times"
+        "title": "Iran rejects Trump's 48-hour Hormuz ultimatum; fire erupts at Kuwait oil complex",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/4/5/iran-war-live-tehran-rejects-trumps-ultimatum-fire-at-kuwait-oil-complex",
+        "summary": "Iran has officially rejected President Trump's 48-hour ultimatum to reopen the Strait of Hormuz, with a senior military official calling it 'a helpless, nervous, unbalanced and stupid action.' The closure of the strait, responsible for 20% of global oil and gas transit, continues to send energy prices soaring.",
+        "image": "",
+        "source": "Al Jazeera"
       },
       {
-        "title": "Europe's Options in the Strait of Hormuz: Few, and Risky",
-        "url": "https://www.nytimes.com/section/world",
-        "summary": "European governments are weighing ways to restore shipping through the Strait of Hormuz after the Iran war, but each option carries significant security and political risk. Officials are assessing naval escorts, diplomacy, and coordination mechanisms as energy and food prices react.",
-        "image": "https://static01.nyt.com/images/2026/04/04/world/04hormuz-europe/04hormuz-europe-facebookJumbo.jpg",
-        "source": "The New York Times"
+        "title": "Regional ceasefire mediation between US and Iran hits dead end",
+        "url": "https://www.golocalprov.com/news/5-big-news-stories-overnight-saturday-april-4-2026",
+        "summary": "Regional ceasefire efforts led by Pakistan, Turkey, and Egypt to broker a deal between the U.S. and Iran have reportedly reached a dead end, with Iran refusing to meet U.S. officials in Islamabad and declaring American demands unacceptable. Qatar has also resisted serving as the key mediator.",
+        "image": "",
+        "source": "GoLocal Providence"
       },
       {
-        "title": "Russia Claims Complete Control of Ukraine’s Luhansk Region",
-        "url": "https://www.democracynow.org/2026/4/2/headlines",
-        "summary": "Russian officials claimed full control of Ukraine’s Luhansk region, one of the territories Russia annexed in 2022. Ukraine said Russia rejected a proposed Orthodox Easter truce while continuing drone attacks on civilian infrastructure.",
-        "image": "https://www.democracynow.org/assets/DN-logos/democracynow_logo_social.png",
-        "source": "Democracy Now!"
+        "title": "Thousands rally in Iraq against 'senseless' US-Israel war on Iran",
+        "url": "https://www.aljazeera.com",
+        "summary": "Thousands of protesters took to the streets in Iraq chanting against the United States and Israel, urging the global community to confront their military actions in the Middle East. The protests reflect growing regional opposition to the six-week-old conflict that began on February 28.",
+        "image": "",
+        "source": "Al Jazeera"
       }
     ],
     "us-politics": [
       {
-        "title": "Trump Fires Attorney General Pam Bondi, Names His Former Criminal Defense Lawyer as Replacement",
-        "url": "https://www.democracynow.org/2026/4/3/headlines",
-        "summary": "President Trump fired Attorney General Pam Bondi and named Deputy Attorney General Todd Blanche as acting attorney general. The shakeup follows reports of internal frustration and adds to broader turbulence inside the Justice Department.",
-        "image": "https://www.democracynow.org/assets/DN-logos/democracynow_logo_social.png",
-        "source": "Democracy Now!"
+        "title": "Trump fires Attorney General Pam Bondi over Epstein files debacle",
+        "url": "https://www.nbcnews.com/politics/justice-department/bondi-fired-attorney-general-trump-rcna266378",
+        "summary": "President Trump fired Attorney General Pam Bondi, citing frustration over her management of the Epstein files, her failure to pursue his political opponents, and her overall handling of the Justice Department. Deputy AG Todd Blanche has been named acting attorney general, making Bondi the second Cabinet member fired this term.",
+        "image": "",
+        "source": "NBC News"
       },
       {
-        "title": "White House to Ask Congress for Record-Shattering $1.5 Trillion Pentagon Budget",
-        "url": "https://www.democracynow.org/2026/4/3/headlines",
-        "summary": "The White House is preparing to request a $1.5 trillion Pentagon budget, the largest year-over-year jump in modern history. The plan includes funding for major weapons systems and missile defense while sparking debate over tradeoffs with domestic programs.",
-        "image": "https://www.democracynow.org/assets/DN-logos/democracynow_logo_social.png",
-        "source": "Democracy Now!"
+        "title": "Supreme Court previously struck down IEEPA tariffs; Trump turns to Section 301 for new trade policy",
+        "url": "https://www.jdsupra.com/legalnews/hot-topics-in-international-trade-april-4733074/",
+        "summary": "Following the Supreme Court's February 2026 ruling that IEEPA does not authorize the president to impose tariffs, the Office of the U.S. Trade Representative has launched new Section 301 investigations targeting structural overcapacity across 16 major economies. New tariffs could take effect as early as mid-2026.",
+        "image": "",
+        "source": "JD Supra"
       },
       {
-        "title": "Presidential Actions: ‘Liberating the Department of Homeland Security From the Democrat-Caused Shutdown’",
-        "url": "https://www.whitehouse.gov/presidential-actions/",
-        "summary": "The White House posted a new presidential memorandum on the ongoing DHS partial shutdown. The action frames the shutdown as driven by political conflict and outlines the administration’s stance on funding and operations.",
-        "image": "https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/wh_social-share.png",
+        "title": "A year after 'Liberation Day,' Trump sets new drug tariffs and adjusts metals duties",
+        "url": "https://www.reuters.com/world/us/year-after-liberation-day-trump-sets-new-drug-tariffs-adjusts-metals-duties-2026-04-02/",
+        "summary": "One year after announcing sweeping global tariffs, President Trump ordered 100% tariffs on certain branded pharmaceutical imports and overhauled steel, aluminum, and copper duties after the Supreme Court invalidated his IEEPA-based tariff regime. The federal government is now preparing to refund roughly $166 billion in previously collected tariffs.",
+        "image": "",
+        "source": "Reuters"
+      },
+      {
+        "title": "IRS tax refund April 2026: Tariff dividend proposals, stimulus rumors fact-checked",
+        "url": "https://www.fox5dc.com/news/irs-tax-refund-april-2026-stimulus-payment-direct-deposit-relief-tariff-dividend-fact-check",
+        "summary": "The IRS reports tax refunds running higher this year while warning about misleading payment claims circulating online. The government is preparing details on refunding roughly $166 billion in tariffs struck down by the Supreme Court, with announcements expected by mid-April.",
+        "image": "",
+        "source": "FOX 5 DC"
+      },
+      {
+        "title": "Trump asks Congress for $1.5 trillion defense spending boost as Iran war enters week six",
+        "url": "https://www.fox13news.com/news/iran-war-latest-april-4-2026",
+        "summary": "President Trump has requested Congress approve a $1.5 trillion defense spending package \u2014 the largest such request in decades \u2014 as the U.S.-Iran war enters its sixth week. More than 13 U.S. service members have been killed since the conflict began, with over 1,900 deaths reported in Iran.",
+        "image": "",
+        "source": "FOX 13 Tampa Bay"
+      },
+      {
+        "title": "Operation Epic Fury: White House touts military objectives against Iran",
+        "url": "https://www.whitehouse.gov/releases/2026/04/president-trumps-clear-and-unchanging-objectives-drive-decisive-success-against-iranian-regime/",
+        "summary": "The White House released a statement on Operation Epic Fury, calling it a decisive campaign systematically dismantling Iran's ballistic missile arsenal, navy, and proxy networks. President Trump addressed the nation on the operation's progress, vowing to prevent Iran from ever acquiring a nuclear weapon.",
+        "image": "",
         "source": "The White House"
-      },
-      {
-        "title": "Presidential Actions: ‘Urgent National Action to Save College Sports’",
-        "url": "https://www.whitehouse.gov/presidential-actions/",
-        "summary": "A new executive order aims to address governance and enforcement issues in college athletics. The move signals greater federal engagement in NIL, eligibility, and related disputes.",
-        "image": "https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/wh_social-share.png",
-        "source": "The White House"
-      },
-      {
-        "title": "PBS NewsHour: Trump fires Attorney General Pam Bondi following turbulent tenure",
-        "url": "https://www.pbs.org/newshour/show/april-2-2026-pbs-news-hour-full-episode",
-        "summary": "PBS NewsHour reported on the dismissal of Attorney General Pam Bondi and the political fallout in Washington. The episode also covered the DHS funding standoff and developments related to the Ukraine war.",
-        "image": "https://www.pbs.org/newshour/app/uploads/2017/04/pbs-newshour-logo-1024x768.png",
-        "source": "PBS NewsHour"
       }
     ],
     "dfw-politics": [
       {
-        "title": "Fort Worth violent crime reduction initiative expands ahead of World Cup",
-        "url": "https://www.fox4news.com/news/fort-worth-violent-crime-reduction-initiative-expands-ahead-world-cup",
-        "summary": "Fort Worth law enforcement is expanding Project Safe Neighborhoods to target violent crime, gangs, and drug trafficking along the I-35W corridor. The initiative is framed as a public safety push ahead of North Texas World Cup events later this year.",
-        "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2024/01/932/524/FOX4-DFW-STACKED-LOGO.png?ve=1&tl=1",
-        "source": "FOX 4 Dallas-Fort Worth"
+        "title": "Rapper Pooh Shiesty, eight others indicted in Dallas armed robbery and kidnapping case",
+        "url": "https://foxsanantonio.com/news/local/federal-prosecutors-indict-rapper-pooh-shiesty-eight-others-in-dallas-kidnapping-case-gucci-mane-record-label-texas-radric-delantic-davis-lontrell-williams-jr",
+        "summary": "Federal prosecutors indicted rapper Pooh Shiesty and eight others for an armed robbery and kidnapping at a Dallas recording studio in January 2026. Authorities say the motive was to force Williams out of his contract with Gucci Mane's New 1017 Records label.",
+        "image": "",
+        "source": "Fox San Antonio / KABB"
       },
       {
-        "title": "FULL: Rapper Pooh Shiesty arrested in Dallas kidnapping",
-        "url": "https://www.fox4news.com/video/fmc-r0yux2p7vmbta4ll",
-        "summary": "Federal authorities announced arrests tied to a robbery and kidnapping at a Dallas music studio, including the arrest of rapper Pooh Shiesty. Prosecutors allege the kidnapping was intended to pressure a contract dispute.",
-        "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2024/01/932/524/FOX4-DFW-STACKED-LOGO.png?ve=1&tl=1",
-        "source": "FOX 4 Dallas-Fort Worth"
+        "title": "Storms roll through North Texas Saturday ahead of a dry, cooler Easter Sunday",
+        "url": "https://www.cbsnews.com/texas/news/dallas-fort-worth-texas-weather-forecast-saturday-april-4-2026/",
+        "summary": "North Texas woke up Saturday to lightning, thunder, heavy rain, and gusty winds from an overnight cold front, prompting a First Alert Weather Day. Easter Sunday is expected to be dry and cooler with temperatures in the low 70s \u2014 good news for outdoor events.",
+        "image": "",
+        "source": "CBS News Texas"
       },
       {
-        "title": "Hit-and-run leaves Johnson County man dead",
-        "url": "https://www.youtube.com/watch?v=PvtLk0JXNT8",
-        "summary": "FOX 4 reported on a fatal hit-and-run in Johnson County, as family members mourn the victim. Authorities are asking for information to identify the driver.",
-        "image": "https://i.ytimg.com/vi/PvtLk0JXNT8/hqdefault.jpg",
-        "source": "YouTube / FOX 4 News"
+        "title": "Organizers unveil 2026 FIFA World Cup transportation plan for North Texas",
+        "url": "https://www.cbsnews.com/texas/news/2026-fifa-world-cup-north-texas-transportation-plan/",
+        "summary": "With 70 days until the FIFA World Cup arrives in North Texas, organizers detailed a multimodal transit strategy coordinating DART, Trinity Metro, TRE, and charter buses to move fans to Dallas Stadium in Arlington. Construction quiet periods and road closures will be enforced during the June-July tournament.",
+        "image": "",
+        "source": "CBS News Texas"
       },
       {
-        "title": "1 dead in Fort Worth officer-involved shooting",
-        "url": "https://www.yahoo.com/news/articles/1-dead-fort-worth-officer-224637266.html",
-        "summary": "An officer-involved shooting in Fort Worth left one person dead and temporarily shut down Highway 287. The roadway reopened later that evening as investigators worked the scene.",
-        "image": "https://s.yimg.com/ny/api/res/1.2/0tJYl9q7ZpY7Z0Z4zY9x3w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MzA-/https://media.zenfs.com/en/fox4news_281/6a6f9f3a6e9f25a7b13b3b2aee2c50f2",
-        "source": "Yahoo News (FOX 4 Dallas-Fort Worth)"
+        "title": "Fort Worth ISD state takeover enters new phase with state-appointed board and superintendent",
+        "url": "https://www.texasaft.org/government/tea/fort-worth-isd-takeover-moves-into-a-new-phase-with-state-appointed-board-superintendent/",
+        "summary": "The Texas Education Agency named Dr. Peter B. Licata as Fort Worth ISD's new superintendent and appointed a nine-member Board of Managers to replace the elected school board following a state takeover announced in October 2025. The district, which has 11 failing campuses, is now under full state control.",
+        "image": "",
+        "source": "Texas AFT"
       },
       {
-        "title": "Dallas-Fort Worth weather: rain, periodically heavy",
-        "url": "https://www.fox4news.com",
-        "summary": "The Dallas-Fort Worth area is seeing rain that is periodically heavy today, with temperatures around the upper 60s. Drivers should expect reduced visibility and slower travel in downpours.",
-        "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2024/01/932/524/FOX4-DFW-STACKED-LOGO.png?ve=1&tl=1",
-        "source": "FOX 4 Dallas-Fort Worth"
+        "title": "Dallas violent crime down 13.4% in 2026, but police still miss response-time targets",
+        "url": "https://www.facebook.com/TheDallasExpress/posts/dallas-violent-crime-down-134-in-2026but-police-still-miss-response-time-targets/1385358183603890/",
+        "summary": "Dallas reported a 13.4% drop in violent crime in 2026, a significant improvement attributed to expanded law enforcement initiatives including Project Safe Neighborhoods. However, police departments continue to miss Priority 1 emergency call response-time targets in most divisions.",
+        "image": "",
+        "source": "The Dallas Express"
+      },
+      {
+        "title": "Major violent crime crackdown expands across North Texas with Project Safe Neighborhoods",
+        "url": "https://www.youtube.com/watch?v=kpbdxTmJI9Y",
+        "summary": "Federal, state, and local law enforcement are ramping up Project Safe Neighborhoods across Fort Worth, Northwest and Northeast Dallas, Amarillo, and Lubbock, targeting repeat offenders, drug trafficking, and illegal weapons. The expansion follows a deadly shooting at Fort Worth's historic Stop 6 Park.",
+        "image": "",
+        "source": "WFAA"
       }
     ],
     "ai-news": [
       {
-        "title": "National Policy Framework turns AI preemption into a 2026 political fight",
-        "url": "https://uk.news.yahoo.com/national-policy-framework-turns-ai-185008275.html",
-        "summary": "A new White House AI policy framework is fueling debate over whether federal standards should override state AI laws. The policy battle is shaping up around accountability, infrastructure, and limits on government influence over speech.",
-        "image": "https://s.yimg.com/ny/api/res/1.2/2k_U5dB3cS6M1KcJ7c0m4Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MzA-/https://media.zenfs.com/en/forbes_557/9c8e8f1b6b4e3e4f5bdbb7b4bb0a38c1",
-        "source": "Forbes (via Yahoo News)"
+        "title": "OpenAI confirms $852 billion valuation and unveils ChatGPT super app strategy",
+        "url": "https://www.marketingprofs.com/opinions/2026/54505/ai-update-april-3-2026-ai-news-and-views-from-the-past-week",
+        "summary": "OpenAI secured a $122 billion funding round valuing the company at $852 billion and launched a ChatGPT super app combining chat, coding, search, and agent capabilities into a single unified interface. With 900 million weekly users, the company is doubling down on enterprise tools and infrastructure.",
+        "image": "",
+        "source": "MarketingProfs"
       },
       {
-        "title": "AI Legislative Update: April 3, 2026",
-        "url": "https://www.transparencycoalition.ai/news/ai-legislative-update-april3-2026",
-        "summary": "A weekly roundup tracks state-level AI bills, including chatbot disclosure and child safety proposals and restrictions on AI posing as mental health professionals. The update highlights rapid legislative movement ahead of session deadlines.",
-        "image": "https://www.transparencycoalition.ai/wp-content/uploads/2024/09/tcai-logo-dark.png",
-        "source": "Transparency Coalition"
+        "title": "Anthropic releases Claude Mythos 5, world's first 10-trillion-parameter AI model",
+        "url": "https://www.devflokers.com/blog/ai-news-last-24-hours-april-2026-model-releases-breakthroughs",
+        "summary": "Anthropic unveiled Claude Mythos 5, the first widely recognized 10-trillion-parameter AI model, engineered for high-stakes environments including cybersecurity, academic research, and complex coding. Simultaneously, SpaceX acquired xAI for $250 billion, creating a $1.25 trillion AI powerhouse with Starlink distribution.",
+        "image": "",
+        "source": "Devflokers"
       },
       {
-        "title": "AI News Briefs Bulletin Board for April 2026",
+        "title": "OpenAI releases GPT-5.4 with native computer-use and OS-level agentic capabilities",
+        "url": "https://amiko.consulting/en/summary-of-major-ai-news-for-the-week-of-march-29-april-4-2026/",
+        "summary": "OpenAI's GPT-5.4 introduces native computer-use capabilities, allowing the model to navigate files, browsers, and terminal interfaces autonomously \u2014 surpassing human performance on OS-level benchmarks. The model scored 75% on OSWorld-Verified, a 27.7 percentage point improvement over GPT-5.2.",
+        "image": "",
+        "source": "Amiko Consulting"
+      },
+      {
+        "title": "Google launches Gemma 4, its most capable open-weight AI models to date",
         "url": "https://radicaldatascience.wordpress.com/2026/04/02/ai-news-briefs-bulletin-board-for-april-2026/",
-        "summary": "A curated bulletin highlights April AI developments including MLPerf Inference v6.0 results, open web-agent tools, and research on model internal representations. It also points to new model and benchmarking activity across industry and academia.",
-        "image": "https://radicaldatascience.wordpress.com/wp-content/uploads/2020/05/cropped-rds-logo-2.png",
+        "summary": "Google released Gemma 4 under the Apache 2.0 license, with models spanning edge devices to data centers, supporting advanced reasoning, multimodal capabilities, and over 140 languages. The 26B Mixture-of-Experts model runs on a single 80GB H100 GPU, making frontier AI accessible on-premise.",
+        "image": "",
         "source": "Radical Data Science"
       },
       {
-        "title": "Crisis contractor for OpenAI, Anthropic eyes a move to combat extremism",
-        "url": "https://economictimes.indiatimes.com/topic/openai-anthropic-google-deepmind-new-ai-release-april-1-2026",
-        "summary": "The Economic Times reports on efforts to build tools that route users showing violent extremist tendencies toward deradicalization support. The initiative reflects growing legal and safety pressure on AI platforms.",
-        "image": "https://img.etimg.com/photo/msid-74451948,quality-100/et-logo.jpg",
-        "source": "The Economic Times"
+        "title": "Microsoft expands Copilot with multi-model workflows and launches Cowork agent",
+        "url": "https://www.marketingprofs.com/opinions/2026/54505/ai-update-april-3-2026-ai-news-and-views-from-the-past-week",
+        "summary": "Microsoft upgraded its Copilot platform to allow multiple AI models \u2014 including OpenAI's GPT and Anthropic's Claude \u2014 to collaborate within a single workflow, with a new Critique feature having one model review another's outputs. The company also expanded Copilot Cowork, an agentic tool that automates multi-step tasks across Office 365.",
+        "image": "",
+        "source": "MarketingProfs"
       },
       {
-        "title": "White House Releases a National Policy Framework for Artificial Intelligence",
-        "url": "https://www.mondaq.com/unitedstates/new-technology/1767364/white-house-releases-a-national-policy-framework-for-artificial-intelligence",
-        "summary": "Legal analysis summarizes the White House’s AI framework and potential impacts on regulation and compliance. The writeup focuses on how the framework could shape federal legislation and enforcement priorities.",
-        "image": "https://www.mondaq.com/Content/images/social/mondaq-social.png",
-        "source": "Mondaq"
+        "title": "MIT study: AI reshaping tasks gradually rather than causing mass job loss",
+        "url": "https://www.marketingprofs.com/opinions/2026/54505/ai-update-april-3-2026-ai-news-and-views-from-the-past-week",
+        "summary": "An MIT CSAIL study of 11,500 tasks found AI can currently complete about 65% of text-based work at a minimally acceptable level, potentially reaching 95% by 2029. However, reliability limitations and the continued need for human oversight are slowing widespread adoption in real-world workflows.",
+        "image": "",
+        "source": "MarketingProfs"
       }
     ],
     "jpmorgan-chase": [
       {
-        "title": "Jamie Dimon on Trump, running for office and Epstein (The Axios Show)",
-        "url": "https://www.axios.com/2026/04/01/jamie-dimon-axios-show-iran-politics",
-        "summary": "In an Axios interview, JPMorgan CEO Jamie Dimon discussed the Iran conflict, dismissed the idea of running for office, and addressed broader political uncertainty. He also touched on leadership succession and how he’s thinking about the future.",
-        "image": "https://images.axios.com/4n2YcF1A4D1M0d2l9vQX9r3z1Q8=/0x0:1920x1080/1366x768/2026/04/01/1711990000000.jpg",
-        "source": "Axios"
+        "title": "Jamie Dimon says American Dream is 'slipping out of reach,' launches $80 billion initiative",
+        "url": "https://fortune.com/2026/03/31/jamie-dimon-american-dream-slipping-out-of-reach-80-billion-initiative/",
+        "summary": "JPMorgan Chase CEO Jamie Dimon unveiled the American Dream Initiative, pledging nearly $80 billion in small-business lending over the next decade and committing to grow the bank's small-business clients from 7 million to 10 million. The program spans affordable housing, financial health, career skills, healthcare access, and local institution support.",
+        "image": "",
+        "source": "Fortune"
       },
       {
-        "title": "Jamie Dimon’s warning: more geopolitical risk for America than since WWII",
-        "url": "https://www.axios.com/2026/04/02/jamie-dimon-ai-geopolitical-risk-axios-show",
-        "summary": "Dimon warned that the U.S. faces unusually high simultaneous risks and urged business leaders to speak more candidly. He said AI could add employment disruption on top of existing geopolitical and cyber threats.",
-        "image": "https://images.axios.com/4n2YcF1A4D1M0d2l9vQX9r3z1Q8=/0x0:1920x1080/1366x768/2026/04/02/1712076400000.jpg",
-        "source": "Axios"
+        "title": "JPMorgan Chase braces for Q1 2026 earnings on April 14 with EPS expected at $5.42",
+        "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-4-3-the-goldilocks-era-jpmorgan-chase-braces-for-q1-2026-earnings-as-spread-model-returns-to-center-stage",
+        "summary": "JPMorgan Chase is set to report Q1 2026 earnings on April 14, with analysts projecting EPS of $5.32\u2013$5.50 and annual net interest income of approximately $95 billion. The bank is positioned as a primary beneficiary of stabilized interest rates at 3.5\u20133.75% and a 17% surge in Markets revenue.",
+        "image": "",
+        "source": "FinancialContent / MarketMinute"
       },
       {
-        "title": "JPMorganChase to Host First-Quarter 2026 Earnings Call",
-        "url": "https://lasvegassun.com/news/2026/mar/17/jpmorganchase-to-host-first-quarter-2026-earnings-/",
-        "summary": "JPMorgan announced it will report first-quarter 2026 results on April 14 with an earnings call at 8:30 a.m. ET. The release timing sets up a key read on bank credit trends and trading activity.",
-        "image": "https://media.lasvegassun.com/media/img/logos/lasvegassun_512.png",
-        "source": "Las Vegas Sun"
+        "title": "JPMorgan Chase asserts market dominance amid global energy crisis driven by Iran war",
+        "url": "https://stocks.observer-reporter.com/observerreporter/article/marketminute-2026-4-1-fortress-on-the-frontline-jpmorgan-chase-asserts-market-dominance-amid-global-energy-crisis",
+        "summary": "Trading at ~$294, JPMorgan has shown 'fortress' resilience as competitors reeled from a 12.4% first-quarter downturn, leveraging its diversified revenue streams and pivot to Physical AI infrastructure. The Strait of Hormuz closure pushing Brent crude past $100/barrel poses the bank's key inflation headwind for 2026.",
+        "image": "",
+        "source": "Observer-Reporter / MarketMinute"
       },
       {
-        "title": "2026 Company Update Transcript (Investor Relations)",
-        "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/2026-company-updates/company-update-full-event-transcript.pdf",
-        "summary": "A transcript from JPMorgan’s 2026 company update outlines outlook assumptions, including net interest income expectations and expense guidance. Executives also discussed client growth, AI-related spending, and efficiency initiatives.",
-        "image": "https://www.jpmorganchase.com/content/dam/jpmorganchase/en/newsroom/social-share/jpmc-social-share.png",
-        "source": "JPMorganChase"
+        "title": "JPMorgan to host Q1 2026 earnings call April 14 at 8:30 a.m. ET",
+        "url": "https://www.stocktitan.net/news/JPM/jp-morgan-chase-to-host-first-quarter-2026-earnings-ffhyjkf32dtj.html",
+        "summary": "JPMorgan Chase announced it will host its first-quarter 2026 earnings call on April 14 at 8:30 a.m. ET, with results scheduled for release at 7:00 a.m. ET. The firm held $4.4 trillion in assets and $362 billion in stockholders' equity as of December 31, 2025.",
+        "image": "",
+        "source": "Stock Titan"
       },
       {
-        "title": "Extended interview: Jamie Dimon on AI, Iran and more (CBS Evening News)",
-        "url": "https://www.youtube.com/watch?v=FRcl5dv9on8",
-        "summary": "CBS aired an extended interview in which Dimon discussed AI adoption, the Iran war’s economic effects, and how large employers are approaching flexibility and productivity. The segment also covered workforce change driven by technology.",
-        "image": "https://i.ytimg.com/vi/FRcl5dv9on8/hqdefault.jpg",
-        "source": "YouTube / CBS Evening News"
+        "title": "J.P. Morgan Global Research: US effective tariff rate now at 15.8% after IEEPA ruling",
+        "url": "https://www.jpmorgan.com/insights/global-research/current-events/us-tariffs",
+        "summary": "J.P. Morgan Global Research updated its U.S. tariff rate estimate to 15.8% following the Supreme Court's invalidation of IEEPA tariffs, still elevated from the 2.3% rate at end-2024 but below the prior 18\u201320% forecast. The bank anticipates pharmaceutical and semiconductor tariffs will push the effective rate higher by mid-to-late 2026.",
+        "image": "",
+        "source": "J.P. Morgan"
+      },
+      {
+        "title": "JPMorgan predicts 2026 job market dip as Trump-era tariffs and immigration policies weigh on hiring",
+        "url": "https://www.interactivebrokers.com/campus/traders-insight/securities/macro/jpmorgan-predicts-2026-job-market-dip-as-trump-era-tariffs-strict-immigration-policies-weigh-on-hiring/",
+        "summary": "JPMorgan economists forecast sluggish early-2026 job growth stemming from trade policy uncertainty, strict immigration enforcement, and cautious corporate AI investment, with monthly job gains needed to hold unemployment steady dropping to just 15,000. A rebound is expected later in the year as policy clarity improves.",
+        "image": "",
+        "source": "Interactive Brokers"
       }
     ],
     "dfw-events": [
       {
-        "title": "Deep Ellum Arts Festival (April 3–5, 2026)",
-        "url": "https://dfwhappens.com/april-2026-in-dallas-fort-worth-events-calendar/",
-        "summary": "Deep Ellum’s annual arts and music festival runs April 3–5 with multiple stages, food vendors, and visual artists throughout the neighborhood. It’s one of the metroplex’s biggest spring outdoor events.",
-        "image": "https://dfwhappens.com/wp-content/uploads/2025/01/DFW-Happens-Logo.png",
-        "source": "DFW Happens"
+        "title": "Texas Rangers vs. Cincinnati Reds \u2014 Easter Sunday at Globe Life Field",
+        "url": "https://fortworth.events/april/",
+        "summary": "The Texas Rangers host the Cincinnati Reds on Easter Sunday, April 5, at 1:35 p.m. at Globe Life Field in Arlington. This is part of the home opener weekend series, with weather expected to clear to the low 70s by game time after Saturday's storms.",
+        "image": "",
+        "source": "Fort Worth Events"
       },
       {
-        "title": "Fort Worth Main Street Arts Festival (April 16–19, 2026)",
-        "url": "https://dfwhappens.com/april-2026-in-dallas-fort-worth-events-calendar/",
-        "summary": "The Main Street Arts Festival takes over downtown Fort Worth April 16–19 with a large juried art show, live music, and family programming. Expect street closures and big crowds in Sundance Square and nearby blocks.",
-        "image": "https://dfwhappens.com/wp-content/uploads/2025/01/DFW-Happens-Logo.png",
-        "source": "DFW Happens"
+        "title": "Deep Ellum Community Arts Fair \u2014 Final Day, April 5",
+        "url": "https://dallas.culturemap.com/news/entertainment/weekend-events-4-2-26/",
+        "summary": "The annual Deep Ellum Community Arts Fair wraps up Sunday, April 5, with eight blocks of original art, live performances across four stages, and food from more than 120 artists and 80 bands. The three-day neighborhood festival in Deep Ellum is one of Dallas's signature spring events.",
+        "image": "",
+        "source": "CultureMap Dallas"
       },
       {
-        "title": "EarthX (April 20–22, 2026)",
-        "url": "https://dfwhappens.com/april-2026-in-dallas-fort-worth-events-calendar/",
-        "summary": "EarthX returns to Dallas April 20–22 with exhibits and speaker sessions focused on sustainability, conservation, and clean energy. The event includes educational programming and community activities.",
-        "image": "https://dfwhappens.com/wp-content/uploads/2025/01/DFW-Happens-Logo.png",
-        "source": "DFW Happens"
+        "title": "Collect A Con at Fort Worth Convention Center \u2014 April 5",
+        "url": "https://fortworth.events/april/",
+        "summary": "Collect A Con returns to the Fort Worth Convention Center Arena on Sunday, April 5 at 10:00 a.m., featuring pop culture collectibles, celebrity meet-and-greets, comic books, toys, and memorabilia for fans of all ages. The convention center holds up to 13,500 guests.",
+        "image": "",
+        "source": "Fort Worth Events"
       },
       {
-        "title": "Breakaway Music Festival Dallas 2026 (April 10–11)",
-        "url": "https://www.fairparkdallas.com/events/detail/breakaway-music-festival-dallas-2026",
-        "summary": "Breakaway Music Festival comes to Fair Park April 10–11 with two days of EDM performances and festival activities. Doors open at 3 p.m. each day and the event is 18+.",
-        "image": "https://www.fairparkdallas.com/images/default-source/default-album/fair-park-logo.png",
-        "source": "Fair Park Dallas"
+        "title": "The SpongeBob Musical at Casa Ma\u00f1ana \u2014 Easter Weekend",
+        "url": "https://fortworth.culturemap.com/news/entertainment/weekend-events-4-2-26/",
+        "summary": "The SpongeBob Musical runs at Casa Ma\u00f1ana in Fort Worth with an Easter Sunday matinee at 3:00 p.m., offering family-friendly Broadway entertainment for the holiday weekend. Casa Ma\u00f1ana holds 1,805 guests at 3101 W Lancaster Ave, Fort Worth.",
+        "image": "",
+        "source": "CultureMap Fort Worth"
       },
       {
-        "title": "Dallas International Film Festival (April 23–30, 2026)",
-        "url": "https://dfwhappens.com/april-2026-in-dallas-fort-worth-events-calendar/",
-        "summary": "The Dallas International Film Festival runs April 23–30 featuring screenings, filmmaker talks, and panel discussions around independent and international cinema. Multiple venues host programs across the week.",
-        "image": "https://dfwhappens.com/wp-content/uploads/2025/01/DFW-Happens-Logo.png",
-        "source": "DFW Happens"
+        "title": "The Jazz Room: A Tribute to Frank Sinatra & Louis Armstrong \u2014 April 5 at Edison's Dallas",
+        "url": "https://resident.com/amp/story/dallas/2026/04/03/best-things-to-do-in-dallasfort-worth-in-april-2026",
+        "summary": "The Jazz Room presents a tribute to Frank Sinatra and Louis Armstrong at Edison's (1724 Cockrell Ave, Dallas) on Sunday, April 5, offering an intimate evening of classic jazz in one of Dallas's most atmospheric venues. The show is part of a monthly jazz series running through late April.",
+        "image": "",
+        "source": "Resident Magazine"
       },
       {
-        "title": "FoodieLand Food Festival - Dallas (April 17–19, 2026)",
-        "url": "https://www.eventbrite.com/e/foodieland-food-festival-dallas-april-17-19-2026-tickets-1977100811750",
-        "summary": "FoodieLand’s traveling food festival lands at Fair Park April 17–19 with hundreds of vendors, games, and live entertainment. Tickets must be purchased online in advance.",
-        "image": "https://cdn.evbuc.com/images/813760079/1121749110773/1/original.20241205-214653",
-        "source": "Eventbrite"
+        "title": "Flip Circus at North East Mall, Hurst \u2014 April 5",
+        "url": "https://fortworth.events/april/",
+        "summary": "Flip Circus brings its high-energy acrobatic spectacular to North East Mall in Hurst on Sunday, April 5 at 1:00 p.m., with death-defying acts, clowns, and family entertainment under the big top. The traveling circus runs multiple shows throughout April across the DFW area.",
+        "image": "",
+        "source": "Fort Worth Events"
       }
     ]
   }
